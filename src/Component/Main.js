@@ -4,6 +4,7 @@ export class Main extends Component {
     render() {
         return (
             <div className="main_body">
+                
               main
 
             </div>
