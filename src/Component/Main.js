@@ -4,7 +4,8 @@ export class Main extends Component {
     render() {
         return (
             <div>
-                <h1>this the main </h1>
+              main
+
             </div>
         )
     }
