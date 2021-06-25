@@ -8,6 +8,8 @@ import News from "./Pages/News";
 import Store from "./Pages/Store";
 import LogoutButton from "./user/LogoutButton";
 import Profile from './user/Profile';
+import Aboutus from "./Pages/Aboutus";
+
 
 export class Main extends Component {
   render() {
@@ -33,6 +35,11 @@ export class Main extends Component {
             <Route path="/profile">
               <Profile />
             </Route>
+
+            <Route path="/aboutUs">
+              <Aboutus />
+            </Route>
+
             <Route path="/logout">
               
               <LogoutButton /> 
