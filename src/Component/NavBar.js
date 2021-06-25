@@ -25,7 +25,7 @@ export class NavBar extends Component {
                 <Nav.Link href="/store">Store</Nav.Link>
                 <Nav.Link href="/news">News</Nav.Link>
                 <Nav.Link href="/community"> Our Community</Nav.Link>
-
+                <Nav.Link href="/aboutUs"> About us</Nav.Link>
               </Nav>
                   <Nav className='other_side'>
                     { isAuthenticated &&
