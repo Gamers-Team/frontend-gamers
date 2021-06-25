@@ -43,7 +43,7 @@ export class NavBar extends Component {
                   </NavDropdown.Item>
                 </NavDropdown>}
 
-                { isAuthenticated ? <LogoutButton/>: <LoginButton/>}
+                { isAuthenticated ? " ": <LoginButton/>}
 
               </Nav>
             </Navbar.Collapse>

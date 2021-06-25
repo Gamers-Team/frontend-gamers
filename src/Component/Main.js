@@ -34,7 +34,9 @@ export class Main extends Component {
               <Profile />
             </Route>
             <Route path="/logout">
-              <LogoutButton />
+              
+              <LogoutButton /> 
+
             </Route>
 
           </Switch>
