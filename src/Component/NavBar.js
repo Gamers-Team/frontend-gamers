@@ -7,7 +7,11 @@ import './NavBar.css'
 
 
 export class NavBar extends Component {
+  
   render() {
+    
+    const { user, isAuthenticated } = this.props.auth0;
+
     return (
       <div>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -23,8 +27,9 @@ export class NavBar extends Component {
                 <Nav.Link href="/community"> Our Community</Nav.Link>
 
               </Nav>
-              <Nav className='other_side'>
-                  <NavDropdown title="UserNameis here " id="collasible-nav-dropdown">
+                  <Nav className='other_side'>
+                    { isAuthenticated &&
+                  <NavDropdown title= {`${user.name}`}  id="collasible-nav-dropdown">
                   <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
                   <NavDropdown.Item href="/wishlist">
                     My Wish List 
@@ -33,13 +38,13 @@ export class NavBar extends Component {
                     Something
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">
+                  <NavDropdown.Item href="/logout">
                     log out 
                   </NavDropdown.Item>
-                </NavDropdown>
+                </NavDropdown>}
 
-                { this.props.auth0.isAuthenticated ? <LogoutButton/> : <LoginButton/>}
-                
+                { isAuthenticated ? <LogoutButton/>: <LoginButton/>}
+
               </Nav>
             </Navbar.Collapse>
           </Container>

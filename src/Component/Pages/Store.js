@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { withAuth0 } from '@auth0/auth0-react';
 
 export class Store extends Component {
     render() {
@@ -10,4 +11,4 @@ export class Store extends Component {
     }
 }
 
-export default Store
+export default withAuth0(Store)
