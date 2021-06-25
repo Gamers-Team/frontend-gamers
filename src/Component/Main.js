@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withAuth0 } from "@auth0/auth0-react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Test from "./Test";
 import "./Main.css";
@@ -34,4 +35,4 @@ export class Main extends Component {
   }
 }
 
-export default Main;
+export default withAuth0(Main);

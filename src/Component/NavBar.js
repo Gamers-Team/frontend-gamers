@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { Container, Navbar, NavDropdown,Nav} from 'react-bootstrap';
+import { withAuth0 } from '@auth0/auth0-react';
+import LoginButton from "./user/LoginButton";
+import LogoutButton from "./user/LogoutButton";
 import './NavBar.css'
 
 
@@ -21,7 +24,6 @@ export class NavBar extends Component {
 
               </Nav>
               <Nav className='other_side'>
-                <button> log in</button>
                   <NavDropdown title="UserNameis here " id="collasible-nav-dropdown">
                   <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
                   <NavDropdown.Item href="/wishlist">
@@ -35,6 +37,9 @@ export class NavBar extends Component {
                     log out 
                   </NavDropdown.Item>
                 </NavDropdown>
+
+                { this.props.auth0.isAuthenticated ? <LogoutButton/> : <LoginButton/>}
+                
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -44,4 +49,4 @@ export class NavBar extends Component {
   }
 }
 
-export default NavBar;
+export default withAuth0(NavBar);
