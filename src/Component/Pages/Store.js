@@ -64,8 +64,6 @@ export class Store extends Component {
                     </Button>
                   </Card.Body>
                 </Card>
-
-                
               );
             })}
 
