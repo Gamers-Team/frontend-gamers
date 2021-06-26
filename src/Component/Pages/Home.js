@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
-import { Card, Button } from 'react-bootstrap';
+import { Card, CardGroup } from 'react-bootstrap';
 import "./Home.css";
 
 
@@ -16,8 +16,13 @@ export class Home extends Component {
             second: {},
             third: {},
             forth: {},
+            firstCard: {},
+            secondCard: {},
+            thirdCard: {},
+            forthCard: {},
+
             highestNum: [],
-            x: []
+
 
         }
     }
@@ -40,7 +45,7 @@ export class Home extends Component {
                 //     c = [Math.floor(Math.random() * 20)];
                 //     d = [Math.floor(Math.random() * 20)];
                 // }
-                let x = gamedata.sort(function (a, b) {
+                let sortGame = gamedata.sort(function (a, b) {
                     return b.ratings_count - a.ratings_count;
                 });
 
@@ -50,7 +55,11 @@ export class Home extends Component {
                     second: gamedata[b],
                     third: gamedata[c],
                     forth: gamedata[d],
-                    x: x,
+
+                    firstCard: sortGame[0],
+                    secondCard: sortGame[1],
+                    thirdCard: sortGame[2],
+                    forthCard: sortGame[3],
 
                 })
 
@@ -59,18 +68,12 @@ export class Home extends Component {
             .catch((err) => {
                 this.setState({ err: 'there is no games' })
             })
-
-
     }
-
-
-
-
 
     render() {
         return (
             <>
-                {console.log(this.x)}
+
 
 
                 <div className='heroBox'>
@@ -101,24 +104,69 @@ export class Home extends Component {
                     </div>
 
                 </div>
+
                 <div>
-                    {this.state.game.map((item) => {
-                        return (
-                            <div>
-                                <Card style={{ width: '18rem' }}>
-                                    <Card.Img variant="top" src={item.background_image} />
-                                    <Card.Body>
-                                        <Card.Title>{item.name}</Card.Title>
-                                        <Card.Text>
-                                            {/* {item.thumbnail} */}
-                                        </Card.Text>
-                                        <Button variant="primary">Go somewhere</Button>
-                                    </Card.Body>
-                                </Card>
-                            </div>
-                        )
-                    })
-                    }
+
+                    <CardGroup>
+                        <Card>
+                            <Card.Img variant="top"  style={{ height: '12rem' }} src={this.state.firstCard.background_image} />
+                            <Card.Body>
+                                <Card.Title>{this.state.firstCard.name}</Card.Title>
+                                <Card.Text>
+                                    This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This content is a little bit longer.
+                                </Card.Text>
+                            </Card.Body>
+                            <Card.Footer>
+                                <small className="text-muted">Last updated 3 mins ago</small>
+                            </Card.Footer>
+                        </Card>
+                        <Card>
+                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.secondCard.background_image} />
+                            <Card.Body>
+                                <Card.Title>{this.state.secondCard.name}</Card.Title>
+                                <Card.Text>
+                                    This card has supporting text below as a natural lead-in to additional
+                                    content.{' '}
+                                </Card.Text>
+                            </Card.Body>
+                            <Card.Footer>
+                                <small className="text-muted">Last updated 3 mins ago</small>
+                            </Card.Footer>
+                        </Card>
+                        <Card>
+                            <Card.Img variant="top"  style={{ height: '12rem' }} src={this.state.thirdCard.background_image} />
+                            <Card.Body>
+                                <Card.Title>{this.state.thirdCard.name}</Card.Title>
+                                <Card.Text>
+                                    This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This card has even longer content than the first to
+                                    show that equal height action.
+                                </Card.Text>
+                            </Card.Body>
+                            <Card.Footer>
+                                <small className="text-muted">Last updated 3 mins ago</small>
+                            </Card.Footer>
+                        </Card>
+                        <Card>
+                            <Card.Img variant="top"  style={{ height: '12rem' }} src={this.state.forthCard.background_image} />
+                            <Card.Body>
+                                <Card.Title>{this.state.forthCard.name}</Card.Title>
+                                <Card.Text>
+                                    This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This card has even longer content than the first to
+                                    show that equal height action.
+                                </Card.Text>
+                            </Card.Body>
+                            <Card.Footer>
+                                <small className="text-muted">Last updated 3 mins ago</small>
+                            </Card.Footer>
+                        </Card>
+                    </CardGroup>
+
+
+
+
                 </div>
 
             </>
