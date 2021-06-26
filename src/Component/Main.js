@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { withAuth0 } from "@auth0/auth0-react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Test from "./Test";
+import Home from "./Home";
+
 import "./Main.css";
 import Community from "./Pages/Community";
 import News from "./Pages/News";
@@ -12,6 +14,25 @@ import Aboutus from "./Pages/Aboutus";
 
 
 export class Main extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+
+    }
+
+
+  }
+  componentDidMount() {
+    this.getPictures()
+  }
+  getPictures = () => {
+    let serverUrl = process.env.React_APP_SERVER
+    let url=
+
+  }
+
+
+
   render() {
     return (
       <div className="main_body">
@@ -19,6 +40,7 @@ export class Main extends Component {
           <Switch>
             <Route exact path="/">
               <Test />
+              <Home />
             </Route>
 
             <Route path="/store">
@@ -41,8 +63,8 @@ export class Main extends Component {
             </Route>
 
             <Route path="/logout">
-              
-              <LogoutButton /> 
+
+              <LogoutButton />
 
             </Route>
 

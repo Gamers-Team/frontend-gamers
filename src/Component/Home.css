@@ -1,0 +1,26 @@
+.main_body{
+    width: 70%;
+    margin: auto;
+}
+
+.heroDiv{
+display: flex;
+}
+
+.leftImage{
+background-color: aqua;}
+
+
+.rightColumn{
+    background-color: rgb(24, 24, 24);
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+.card-columns{
+    display: flex;
+    flex-direction: column;
+}
+.cardcss{
+    height: 3rem;
+}
