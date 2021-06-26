@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
-import { Card, Button, CardColumns } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
+import "./Home.css";
 
 
 
@@ -10,7 +11,13 @@ export class Home extends Component {
         super(props)
         this.state = {
             game: [],
-            err: " "
+            err: " ",
+            first: {},
+            second: {},
+            third: {},
+            forth: {},
+            highestNum: [],
+            x: []
 
         }
     }
@@ -23,61 +30,77 @@ export class Home extends Component {
             .get(homeUrl)
             .then((result => {
                 let gamedata = result.data.results;
+
+                let a = [Math.floor(Math.random() * 20)];
+                let b = [Math.floor(Math.random() * 20)];
+                let c = [Math.floor(Math.random() * 20)];
+                let d = [Math.floor(Math.random() * 20)];
+                // while (a === b || a === c || a === d || b === c || b === d || c === d) {
+                //     b = [Math.floor(Math.random() * 20)];
+                //     c = [Math.floor(Math.random() * 20)];
+                //     d = [Math.floor(Math.random() * 20)];
+                // }
+                let x = gamedata.sort(function (a, b) {
+                    return b.ratings_count - a.ratings_count;
+                });
+
                 this.setState({
-                    game: gamedata
+                    game: gamedata,
+                    first: gamedata[a],
+                    second: gamedata[b],
+                    third: gamedata[c],
+                    forth: gamedata[d],
+                    x: x,
 
                 })
 
+
             }))
-        // .catch((err) => {
-        //     this.setState({ err: 'there is no games' })
-        // })
+            .catch((err) => {
+                this.setState({ err: 'there is no games' })
+            })
+
 
     }
+
+
+
+
+
     render() {
         return (
             <>
-                {console.log(this.state.game)}
-                { for (let index = 0; index < array.length; index++) {
-                 
-                 return(
+                {console.log(this.x)}
 
-                    <div>
-                    <h1>Home page</h1>
-                    <div className='heroDiv'>
-                        <div className='leftImage'>
-                            <Card style={{ width: '35rem', height: '20rem' }}>
-                                <Card.Img variant="top" src={item.background_image} />
-                                <Card.Body>
-                                    <Card.Title></Card.Title>
-                                    <Card.Text>
 
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </div>
-                        <div className='rightColumn' style={{ width: '10rem', height: '20rem' }}>
-                            <CardColumns>
-                                <Card className='cardcss' >
-                                    <Card.Img variant="top" src="" />
-                                    <Card.Body>
-                                        <Card.Title>1 </Card.Title>
-                                        <Card.Text>
+                <div className='heroBox'>
+                    <div className='rightBar'> {console.log(this.state.game)}
 
-                                        </Card.Text>
-                                    </Card.Body>
-                                </Card>
+                        <Card style={{ width: '10rem' }}>
+                            <Card.Img variant="top" style={{ height: '6rem' }} src={this.state.first.background_image} />
 
-                            </CardColumns></div>
+                        </Card>
+                        <Card style={{ width: '10rem' }}>
+                            <Card.Img variant="top" style={{ height: '6rem' }} src={this.state.second.background_image} />
+
+                        </Card>
+                        <Card style={{ width: '10rem' }}>
+                            <Card.Img variant="top" style={{ height: '6rem' }} src={this.state.third.background_image} />
+
+                        </Card>
+                        <Card style={{ width: '10rem' }}>
+                            <Card.Img variant="top" style={{ height: '6rem' }} src={this.state.forth.background_image} />
+
+                        </Card>
                     </div>
-                    <div className='trending'>
+                    <div className='leftImage'>
+                        <Card style={{ width: '50rem' }}>
+                            <Card.Img variant="maina" style={{ height: '25rem' }} src={this.state.forth.background_image} />
 
+                        </Card>
                     </div>
 
                 </div>
-                  )
-                  }
-                }
                 <div>
                     {this.state.game.map((item) => {
                         return (
@@ -92,13 +115,12 @@ export class Home extends Component {
                                         <Button variant="primary">Go somewhere</Button>
                                     </Card.Body>
                                 </Card>
-
-
                             </div>
                         )
                     })
                     }
                 </div>
+
             </>
         )
     }
