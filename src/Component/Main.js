@@ -41,8 +41,8 @@ export class Main extends Component {
             </Route>
 
             <Route path="/logout">
-              
-              <LogoutButton /> 
+
+              <LogoutButton />
 
             </Route>
 
