@@ -11,6 +11,7 @@ import Store from "./Pages/Store";
 import LogoutButton from "./user/LogoutButton";
 import Profile from './user/Profile';
 import Aboutus from "./Pages/Aboutus";
+import Home from './Component/Pages/Home';
 
 
 export class Main extends Component {
@@ -70,6 +71,7 @@ export class Main extends Component {
 
           </Switch>
         </Router>
+        <Home/>
       </div>
     );
   }
