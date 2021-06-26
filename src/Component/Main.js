@@ -7,8 +7,9 @@ import Community from "./Pages/Community";
 import News from "./Pages/News";
 import Store from "./Pages/Store";
 import LogoutButton from "./user/LogoutButton";
-import Profile from './user/Profile';
+import Profile from "./user/Profile";
 import Aboutus from "./Pages/Aboutus";
+import Wishlist from "./Pages/Wishlist";
 
 
 export class Main extends Component {
@@ -40,12 +41,13 @@ export class Main extends Component {
               <Aboutus />
             </Route>
 
-            <Route path="/logout">
-              
-              <LogoutButton /> 
-
+            <Route path="/wishlist">
+              <Wishlist />
             </Route>
 
+            <Route path="/logout">
+              <LogoutButton />
+            </Route>
           </Switch>
         </Router>
       </div>
