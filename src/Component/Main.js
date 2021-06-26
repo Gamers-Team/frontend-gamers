@@ -11,9 +11,11 @@ import Profile from './user/Profile';
 import Aboutus from "./Pages/Aboutus";
 
 
+
 export class Main extends Component {
   render() {
     return (
+
       <div className="main_body">
         <Router>
           <Switch>

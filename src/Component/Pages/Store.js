@@ -11,6 +11,8 @@ export class Store extends Component {
     gamesData: [],
     error: "",
     showModal: false,
+    item: [],
+    photos:[],
   };
 
   componentDidMount() {
@@ -34,6 +36,15 @@ export class Store extends Component {
   showModal = () => {
     this.setState({ showModal: true });
   };
+  showGames = (item) => {
+    console.log(item,item.short_screenshots);
+    this.setState({
+      item:item,
+      photos:item.short_screenshots,
+    })
+
+    this.showModal();
+  };
 
   closeModal = () => {
     this.setState({ showModal: false });
@@ -46,9 +57,9 @@ export class Store extends Component {
           <p>{this.state.gamesData}</p>
         ) : (
           <div>
-            {this.state.gamesData.map((item) => {
+            {this.state.gamesData.map((item, idx) => {
               return (
-                <Card style={{ width: "18rem" }}>
+                <Card style={{ width: "18rem" }} key={idx}>
                   <Card.Img variant="top" src={item.background_image} />
                   <Card.Body>
                     <Card.Title>{item.name}</Card.Title>
@@ -57,24 +68,26 @@ export class Store extends Component {
                     <Card.Text>Ratings Count: {item.ratings_count}</Card.Text>
                     <Card.Text>Updated: {item.updated}</Card.Text>
                     <Card.Text>Price : {item.playtime}</Card.Text>
-                    <Card.Text>Platforms:  {item.parent_platforms}</Card.Text>
-                    <Card.Text>Genres:  {item.genres}</Card.Text>
-                    <Button variant="primary" onClick={this.showModal}>
+                    <Card.Text>Platforms: {item.parent_platforms}</Card.Text>
+                    <Card.Text>Genres: {item.genres}</Card.Text>
+                    <Button
+                      variant="primary"
+                      onClick={() => this.showGames(item)}
+                    >
                       Go somewhere
                     </Button>
                   </Card.Body>
                 </Card>
-
-                
               );
             })}
-
-            <GamesFromModal
-              show={this.state.showModal}
-              closeFunc={this.closeModal}
-            />
           </div>
         )}
+        <GamesFromModal
+          show={this.state.showModal}
+          closeFunc={this.closeModal}
+          item={this.state.item}
+          photos={this.state.photos}
+        />
       </div>
     );
   }
