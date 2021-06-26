@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { withAuth0 } from "@auth0/auth0-react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Test from "./Test";
-import Home from "./Home";
+// import Home from "./Home";
 
 import "./Main.css";
 import Community from "./Pages/Community";
@@ -11,27 +11,11 @@ import Store from "./Pages/Store";
 import LogoutButton from "./user/LogoutButton";
 import Profile from './user/Profile';
 import Aboutus from "./Pages/Aboutus";
-import Home from './Component/Pages/Home';
+import Home from "./Pages/Home";
 
 
 export class Main extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-
-    }
-
-
-  }
-  componentDidMount() {
-    this.getPictures()
-  }
-  getPictures = () => {
-    let serverUrl = process.env.React_APP_SERVER
-    let url=
-
-  }
-
+  
 
 
   render() {
@@ -71,7 +55,6 @@ export class Main extends Component {
 
           </Switch>
         </Router>
-        <Home/>
       </div>
     );
   }

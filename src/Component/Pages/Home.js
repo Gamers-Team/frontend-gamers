@@ -8,36 +8,36 @@ export class Home extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            gameData: '',
+            gameData: [],
+            err:" "
 
         }
     }
 
+    componentDidMount() {
+        this.gitinggame()
+    }
     // `https://www.gamerpower.com/api/giveaways`
-    gitinggame = async (event) => {
-        event.preventDefault();
-        try {
-            let homeUrl = 'https://www.gamerpower.com/api/giveaways';
-            let gamesCome = await axios.get(homeUrl)
-            this.setState({
-                gameData: gamesCome.data,
+    gitinggame = async () => {
+        let server = process.env.React_APP_SERVER;
+        let homeUrl = `${server}/Home`;
+     
 
-
-            })
-
-        }
-        catch {
-
-            this.setState({
-                messageForWrongInput: 'error this is a bad response',
-            })
-        }
+        axios
+        .get(homeUrl)
+        .then((data=>{
+            this.setState({data:data.data})
+        }))
+        .catch((err)=>{
+            this.setState({err:there is no games})
+        }) 
+               console.log(this.state.data);
 
     }
     render() {
         return (
             <>
-                {this.props.gameData.map((item) => {
+                {this.state.gameData.map((item) => {
                     return (
                         <div>
                             <Card style={{ width: '18rem' }}>
