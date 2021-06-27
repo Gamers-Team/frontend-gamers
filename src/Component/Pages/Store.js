@@ -17,20 +17,47 @@ export class Store extends Component {
     photos: [],
     value: "all",
     keyWord: "",
-    searchBy: "",
+    searchBy: "search",
   };
   componentDidMount() {
     this.getGamesInfo();
   }
-  getGamesInfo = () => {
+
+  searchData=(arr)=>{
+    // this.setState({
+    //   keyWord:data[0],
+    //   searchBy:data[1],
+    // })
+
+
     let serverURL = process.env.REACT_APP_SERVER;
+    let keyWord = arr[0];
+    let searchBy = arr[1];
 
-    let keyWord = this.state.keyWord;
-    let searchBy = this.state.searchBy;
-
-    let url = `${serverURL}/games`;
+    let url = `${serverURL}/games?keyword=${keyWord}&searchBy=${searchBy}`;
     axios
-      .get(url, keyWord, searchBy)
+      .get(url)
+      .then((data) => {
+        this.setState({ gamesData: data.data, error: "" });
+      })
+      .catch((error) => {
+        this.setState({ error: "THERE IS AN ERROR" });
+      });
+
+      console.log(this.state.error);
+    
+  }
+
+
+  getGamesInfo = () => {
+
+    let serverURL = process.env.REACT_APP_SERVER;
+    let keyWord = "";
+    let searchBy = "search";
+
+    let url = `${serverURL}/games?keyword=${keyWord}&searchBy=${searchBy}`;
+    axios
+      .get(url)
       .then((data) => {
         this.setState({ gamesData: data.data, error: "" });
       })
@@ -42,7 +69,6 @@ export class Store extends Component {
     this.setState({ showModal: true });
   };
   showGames = (item) => {
-    console.log(item, item.short_screenshots);
     this.setState({
       item: item,
       photos: item.short_screenshots,
@@ -62,7 +88,7 @@ export class Store extends Component {
   render() {
     return (
       <div>
-        <SearchBar />
+        <SearchBar searchData={this.searchData} />
 
         {typeof this.state.gamesData == "string" ? (
           <p>{this.state.gamesData}</p>
