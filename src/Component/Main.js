@@ -11,6 +11,7 @@ import Profile from "./user/Profile";
 import Aboutus from "./Pages/Aboutus";
 import Wishlist from "./Pages/Wishlist";
 
+import CardColumns from "react-bootstrap/CardColumns";
 
 export class Main extends Component {
   render() {
@@ -23,7 +24,9 @@ export class Main extends Component {
             </Route>
 
             <Route path="/store">
-              <Store />
+              <CardColumns>
+                <Store />
+              </CardColumns>
             </Route>
 
             <Route path="/news">
