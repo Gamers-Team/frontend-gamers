@@ -12,7 +12,7 @@ export class App extends Component {
 
         <Header/>
          <Main/>
-        <Footer/> 
+        {/* <Footer/>  */}
         
       </div>
     )

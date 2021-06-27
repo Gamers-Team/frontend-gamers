@@ -10,7 +10,7 @@ export class Wishlist extends Component {
     constructor(props){
         super(props)
         this.state={
-            wishListData:{},
+            wishListData:[],
         }
     }
 
@@ -19,19 +19,18 @@ export class Wishlist extends Component {
         let email=this.props.auth0.user.email;
         let url=`http://localhost:3001/wishlist?email=${email}`
         axios.get(url).then((result)=>{
-            // console.log(result.data[0].name);
             this.setState({
                 wishListData:result.data,
             })
-
+            
         })
 
     }
 
 
-    deletegame=(idx)=>{
-        console.log(idx);
-    }
+    // deletegame=(idx)=>{
+    //     console.log(idx);
+    // }
 
     render() {
 
@@ -43,18 +42,21 @@ export class Wishlist extends Component {
                {isAuthenticated && this.getFavarite()}
                {this.state.wishListData.map((item,idx) => {
                   return (
-           
-                <Card className="text-center" key={idx}>
-                <Card.Body>
-                  <Card.Title>{item.name}</Card.Title>
-                  <Card.Text>
-                  {item.description}
-                  </Card.Text>
-                  <Button variant="primary"  onClick={()=>this.deletegame(idx)}>Delete</Button>
-                
-                </Card.Body>
-                <Card.Footer className="text-muted">{item.status}</Card.Footer>
-              </Card>
+                    <Card className="editCard" style={{ width: "18rem" }} key={idx}>
+                    <Card.Img variant="top" src={item.background_image} />
+                    <Card.Body>
+                      <Card.Title>{item.name}</Card.Title>
+                      <Card.Text>Rating: {item.rating} /5</Card.Text>
+                      <Card.Text>Ratings Count: {item.ratings_count} </Card.Text>
+                      <Card.Text>Price : {item.playtime} $ </Card.Text>
+                      <Button
+                        variant="primary"
+                        onClick={() => this.showGames(item)}
+                      >
+                        More...
+                      </Button>
+                    </Card.Body>
+                  </Card>
 
              );
         })}

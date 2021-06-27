@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaHeart } from "react-icons/all";
+import axios from "axios";
 
 export default class GamesFromModal extends Component {
   // check() {
@@ -11,7 +12,14 @@ export default class GamesFromModal extends Component {
   // }
 
   AddToList(item) {
+    let serverURL = process.env.REACT_APP_SERVER;
+    let url=`${serverURL}/addTowishList`
+    let email=this.props.auth0.user.email;
+    item.email=email;
+    axios.post(url,item)
+
     console.log(item);
+    let url=process.env.
   }
 
   render() {
