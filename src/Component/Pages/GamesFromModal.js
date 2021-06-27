@@ -13,16 +13,24 @@ class GamesFromModal extends Component {
   //   console.log(this.props.item);
   // }
 
+  state = {
+    data: [],
+  };
+
   AddToList(item) {
     let serverURL = process.env.REACT_APP_SERVER;
-    let url=`${serverURL}/addTowishList`
-    let email=this.props.auth0.user.email;
-    item['email']=email
+    let url = `${serverURL}/addTowishList`;
+    let email = this.props.auth0.user.email;
+    item["email"] = email;
     console.log(item);
-    axios.post(url,item).then((result)=>{
-      
-    })
-
+    axios
+      .post(url, item)
+      .then((result) => {
+        this.setState({ data: result.data });
+      })
+      .catch((err) => {
+        this.setState({ err: "there is an error" });
+      });
   }
 
   render() {
@@ -35,7 +43,7 @@ class GamesFromModal extends Component {
           </Modal.Header>
           <Modal.Body>
             <Carousel>
-              {this.props.photos.map((item,idx) => {
+              {this.props.photos.map((item, idx) => {
                 return (
                   <Carousel.Item key={idx}>
                     <img
