@@ -1,17 +1,22 @@
+body {
+  background-color: rgb(43, 43, 43);
+}
 .main_body {
-  width: 70%;
+  width: 80%;
   margin: auto;
 }
 
 .heroBox {
   display: flex;
   flex-direction: row-reverse;
+  margin-top: 20px;
 }
 
 .rightBar {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 5;
 }
 .top {
   height: 10rem;
@@ -20,4 +25,33 @@
 .card-img {
   padding: 0px 0px 0px 0px;
   margin: 0px;
+}
+/* .middle {
+  margin-left: 20px;
+  margin-right: 20px;
+} */
+.trending {
+  margin-top: 30px;
+}
+.trendingword {
+  margin-top: 30px;
+  background-color: rgb(43, 43, 43);
+  border-radius: 0%;
+}
+
+.cardbodyyy {
+  margin: auto;
+  font-size: 2rem;
+  color: aliceblue;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bolder;
+}
+
+.imagemain:hover {
+  transform: scale(1.0065);
+  transition: all 0.5s ease-in-out;
+  z-index: 0;
+}
+.abd {
+  background-color: rgb(43, 43, 43);
 }

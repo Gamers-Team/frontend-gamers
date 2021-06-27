@@ -12,22 +12,27 @@ export class Home extends Component {
         this.state = {
             game: [],
             err: " ",
-            first: {},
-            second: {},
-            third: {},
-            forth: {},
+            array: [],
             firstCard: {},
             secondCard: {},
             thirdCard: {},
-            // forthCard: {},
-
-            highestNum: [],
+            heroimg: "https://media.rawg.io/media/games/f25/f2560e90d42949725b2edb771764e0f4.jpg"
 
 
         }
     }
 
+
+
+
     componentDidMount = async () => {
+        let array = [
+            { url: "https://media.rawg.io/media/games/14a/14a83c56ff668baaced6e8c8704b6391.jpg" },
+            { url: "https://media.rawg.io/media/games/85c/85c8ae70e7cdf0105f06ef6bdce63b8b.jpg" },
+            { url: "https://media.rawg.io/media/games/f25/f2560e90d42949725b2edb771764e0f4.jpg" },
+            { url: "https://media.rawg.io/media/screenshots/b07/b07592c9fa757d99f3f56ae4626754dc.jpg" },
+            { url: "https://media.rawg.io/media/games/0e9/0e9d75008321d640e4a14a8b5e322620.jpg" }
+        ]
 
         // let server = process.env.React_APP_SERVER;
         let homeUrl = `https://api.rawg.io/api/games?key=995491d1a18f47709f7ba3b66bce85c1&page=2&page_size=40`;
@@ -36,30 +41,18 @@ export class Home extends Component {
             .then((result => {
                 let gamedata = result.data.results;
 
-                let a = [Math.floor(Math.random() * 20)];
-                let b = [Math.floor(Math.random() * 20)];
-                let c = [Math.floor(Math.random() * 20)];
-                let d = [Math.floor(Math.random() * 20)];
-                // while (a === b || a === c || a === d || b === c || b === d || c === d) {
-                //     b = [Math.floor(Math.random() * 20)];
-                //     c = [Math.floor(Math.random() * 20)];
-                //     d = [Math.floor(Math.random() * 20)];
-                // }
+
+
                 let sortGame = gamedata.sort(function (a, b) {
                     return b.ratings_count - a.ratings_count;
                 });
 
                 this.setState({
                     game: gamedata,
-                    first: gamedata[a],
-                    second: gamedata[b],
-                    third: gamedata[c],
-                    forth: gamedata[d],
-
+                    array: array,
                     firstCard: sortGame[0],
                     secondCard: sortGame[1],
                     thirdCard: sortGame[2],
-                    // forthCard: sortGame[3],
 
                 })
 
@@ -69,59 +62,78 @@ export class Home extends Component {
                 this.setState({ err: 'there is no games' })
             })
     }
+    handleChange = (event) => {
+        console.log(event)
+        let hero = event.target.currentSrc
+        this.setState({
+            heroimg: hero
+        })
+    }
+
 
     render() {
         return (
             <>
-
-
-
+                {/* {console.log(this.state.game)} */}
                 <div className='heroBox'>
-                    <div className='rightBar'> {console.log(this.state.game)}
 
-                        <Card style={{ width: '10rem' }}>
-                            <Card.Img variant="top" style={{ height: '6rem' }} src={this.state.first.background_image} />
 
-                        </Card>
-                        <Card style={{ width: '10rem' }}>
-                            <Card.Img variant="top" style={{ height: '6rem' }} src={this.state.second.background_image} />
+                    <div className='rightBar'>
 
-                        </Card>
-                        <Card style={{ width: '10rem' }}>
-                            <Card.Img variant="top" style={{ height: '6rem' }} src={this.state.third.background_image} />
+                        {this.state.array.map((item) => {
 
-                        </Card>
-                        <Card style={{ width: '10rem' }}>
-                            <Card.Img variant="top" style={{ height: '6rem' }} src={this.state.forth.background_image} />
+                            return (
+                                <Card style={{ width: '10rem' }} className='abd'  >
+                                    <Card.Img variant="top" style={{ height: '5.5rem' }} src={item.url} onClick={this.handleChange}
+                                    />
 
-                        </Card>
+                                </Card>
+                            )
+
+                        })}
                     </div>
-                    <div className='leftImage'>
-                        <Card style={{ width: '50rem' }}>
-                            <Card.Img variant="maina" style={{ height: '25rem' }} src={this.state.forth.background_image} />
+
+
+                    <div className='leftImage' >
+                        <Card className='abd' style={{ width: '57.5rem', }}>
+                            <Card.Img variant="maina" className='imagemain' style={{ height: '28rem' }} src={this.state.heroimg} />
 
                         </Card>
                     </div>
 
                 </div>
-
                 <div>
+                    <Card className='trendingword'>
+                        <Card.Body className='cardbodyyy'>Trending Games</Card.Body>
+                    </Card>
+                </div>
+                <div className='trending'>
 
                     <CardGroup>
-                        <Card>
+                        <Card  >
                             <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.firstCard.background_image} />
                             <Card.Body>
                                 <Card.Title>{this.state.firstCard.name}</Card.Title>
-                                <Card.Text>
-
-                                </Card.Text>
+                                {/* <Card.Text> 
+                                </Card.Text> */}
                             </Card.Body>
-                            <Card.Footer>
-                                <small className="text-muted">Last updated 3 mins ago</small>
-                            </Card.Footer>
                         </Card>
-
-
+                        <Card className='middle'>
+                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.secondCard.background_image} />
+                            <Card.Body>
+                                <Card.Title>{this.state.secondCard.name}</Card.Title>
+                                {/* <Card.Text> 
+                                </Card.Text> */}
+                            </Card.Body>
+                        </Card>
+                        <Card  >
+                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.thirdCard.background_image} />
+                            <Card.Body>
+                                <Card.Title>{this.state.thirdCard.name}</Card.Title>
+                                {/* <Card.Text> 
+                                </Card.Text> */}
+                            </Card.Body>
+                        </Card>
 
 
                     </CardGroup>
