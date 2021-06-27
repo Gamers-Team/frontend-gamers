@@ -19,7 +19,7 @@ export class Home extends Component {
             firstCard: {},
             secondCard: {},
             thirdCard: {},
-            forthCard: {},
+            // forthCard: {},
 
             highestNum: [],
 
@@ -30,7 +30,7 @@ export class Home extends Component {
     componentDidMount = async () => {
 
         // let server = process.env.React_APP_SERVER;
-        let homeUrl = `https://api.rawg.io/api/games?key=995491d1a18f47709f7ba3b66bce85c1`;
+        let homeUrl = `https://api.rawg.io/api/games?key=995491d1a18f47709f7ba3b66bce85c1&page=2&page_size=40`;
         axios
             .get(homeUrl)
             .then((result => {
@@ -59,7 +59,7 @@ export class Home extends Component {
                     firstCard: sortGame[0],
                     secondCard: sortGame[1],
                     thirdCard: sortGame[2],
-                    forthCard: sortGame[3],
+                    // forthCard: sortGame[3],
 
                 })
 
@@ -109,59 +109,21 @@ export class Home extends Component {
 
                     <CardGroup>
                         <Card>
-                            <Card.Img variant="top"  style={{ height: '12rem' }} src={this.state.firstCard.background_image} />
+                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.firstCard.background_image} />
                             <Card.Body>
                                 <Card.Title>{this.state.firstCard.name}</Card.Title>
                                 <Card.Text>
-                                    This is a wider card with supporting text below as a natural lead-in to
-                                    additional content. This content is a little bit longer.
+
                                 </Card.Text>
                             </Card.Body>
                             <Card.Footer>
                                 <small className="text-muted">Last updated 3 mins ago</small>
                             </Card.Footer>
                         </Card>
-                        <Card>
-                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.secondCard.background_image} />
-                            <Card.Body>
-                                <Card.Title>{this.state.secondCard.name}</Card.Title>
-                                <Card.Text>
-                                    This card has supporting text below as a natural lead-in to additional
-                                    content.{' '}
-                                </Card.Text>
-                            </Card.Body>
-                            <Card.Footer>
-                                <small className="text-muted">Last updated 3 mins ago</small>
-                            </Card.Footer>
-                        </Card>
-                        <Card>
-                            <Card.Img variant="top"  style={{ height: '12rem' }} src={this.state.thirdCard.background_image} />
-                            <Card.Body>
-                                <Card.Title>{this.state.thirdCard.name}</Card.Title>
-                                <Card.Text>
-                                    This is a wider card with supporting text below as a natural lead-in to
-                                    additional content. This card has even longer content than the first to
-                                    show that equal height action.
-                                </Card.Text>
-                            </Card.Body>
-                            <Card.Footer>
-                                <small className="text-muted">Last updated 3 mins ago</small>
-                            </Card.Footer>
-                        </Card>
-                        <Card>
-                            <Card.Img variant="top"  style={{ height: '12rem' }} src={this.state.forthCard.background_image} />
-                            <Card.Body>
-                                <Card.Title>{this.state.forthCard.name}</Card.Title>
-                                <Card.Text>
-                                    This is a wider card with supporting text below as a natural lead-in to
-                                    additional content. This card has even longer content than the first to
-                                    show that equal height action.
-                                </Card.Text>
-                            </Card.Body>
-                            <Card.Footer>
-                                <small className="text-muted">Last updated 3 mins ago</small>
-                            </Card.Footer>
-                        </Card>
+
+
+
+
                     </CardGroup>
 
 
