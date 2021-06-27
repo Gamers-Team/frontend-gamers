@@ -20,7 +20,9 @@ class GamesFromModal extends Component {
     item['email']=email
     console.log(item);
     axios.post(url,item).then((result)=>{
-      
+
+    // console.log(result.data);
+
     })
 
   }
@@ -47,16 +49,18 @@ class GamesFromModal extends Component {
                 );
               })}
             </Carousel>
-            <p>Genres : {this.props.item.genres}</p>
+            <p>Genres : {this.props.genres.map(thing=> thing+" " )}</p>
             <p>
               This game released on {this.props.item.released}, The last update
               was in {this.props.item.updated}, game plateforms{" "}
-              {this.props.item.parent_platforms}
+              {this.props.parent_platforms.map(thing=> thing+" " )}
             </p>
-            <p>
+
+           { this.props.flage && <p>
               Add To Wishlist
               <FaHeart onClick={() => this.AddToList(this.props.item)} />{" "}
-            </p>
+            </p>}
+
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={this.props.closeFunc}>
