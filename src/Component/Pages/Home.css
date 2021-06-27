@@ -68,7 +68,8 @@ body {
 .textHome {
   position: absolute;
   bottom: 7.5rem;
-  background-color: rgb(255, 102, 0);
+ opacity: 90%;
+ color:rgb(138, 230, 1);
   margin-left: 1rem;
   z-index: 100;
 }

@@ -62,11 +62,19 @@ export class Home extends Component {
                 this.setState({ err: 'there is no games' })
             })
     }
-    handleChange = (event) => {
-        console.log(event)
-        let hero = event.target.currentSrc
+    handleChange = (idx) => {
+        let array = [
+            { url: "https://media.rawg.io/media/games/b49/b4912b5dbfc7ed8927b65f05b8507f6c.jpg", desc: 'The player can select from four difficulty levels: Walk on the Beach, Combat Op, Suicide Mission, and the hardest difficulty, FUBAR, which is only unlocked after completing the game on Suicide Mission.[1] Various new weapons and equipment become available as the game progresses, some dropped by downed enemies.' },
+            { url: "https://media.rawg.io/media/games/d69/d69810315bd7e226ea2d21f9156af629.jpg", desc: 'Saints Row: The Third is an action-adventure game[2][3] played from the third-person perspective[4] in an open world,[3] such that players explore an unrestricted environment' },
+            { url: "https://media.rawg.io/media/games/f25/f2560e90d42949725b2edb771764e0f4.jpg", desc: 'Set in 2152, two years before the events of the film, Avatar: The Game starts out with a new signals specialist, named Able Ryder, arriving at Pandora, assigned to an area called Blue Lagoon, a large piece of jungle, fenced in to make sure no larger predators get inside.' },
+            { url: "https://media.rawg.io/media/games/e04/e04963f3ac4c4fa83a1dc0b9231e50db.jpg", desc: 'Super Meat Boy is a platform game in which players control a small, dark red, cube-shaped character named Meat Boy, who must save his cube-shaped, heavily bandaged girlfriend Bandage Girl from the evil scientist Dr. Fetus' },
+            { url: "https://media.rawg.io/media/games/0e9/0e9d75008321d640e4a14a8b5e322620.jpg", desc: ' The Sonic franchise is known for its large cast of characters;[187] Sonic the Fighters (1996) producer Yu Suzuki joked that anyone who makes a Sonic game has the duty to create new characters.[188] The first game introduced Sonic, a blue hedgehog who can run at incredible speeds, and Doctor Eggman, a rotund mad scientist.' }
+        ]
+    
+        // console.log();
         this.setState({
-            heroimg: hero,
+            heroimg: array[idx].url,
+            text:array[idx].desc,
         })
     }
 
@@ -80,11 +88,11 @@ export class Home extends Component {
 
                     <div className='rightBar'>
 
-                        {this.state.array.map((item) => {
+                        {this.state.array.map((item,idx) => {
 
                             return (
                                 <Card style={{ width: '100%' }} className='abd'  >
-                                    <Card.Img variant="top" style={{ height: '5.5rem' }} src={item.url} desc={item.desc} onClick={this.handleChange}
+                                    <Card.Img variant="top" style={{ height: '5.5rem' }} src={item.url} onClick={() => this.handleChange(idx)}
                                     />
 
                                 </Card>
@@ -99,7 +107,7 @@ export class Home extends Component {
                             <Card.Img variant="maina" className='imagemain' style={{ height: '28rem' }} src={this.state.heroimg} />
                             <Button className='butHome' variant="primary" style={{ width: '5rem', }} >Primary</Button>
                             <Card.Text className='textHome' style={{ width: '15rem', }}>
-
+                                {this.state.text}
                             </Card.Text>
                         </Card>
                     </div>
