@@ -27,7 +27,7 @@ export class News extends Component {
     }
     changingPlatform = async (choice) => {
 
-        const url = `https://gnews.io/api/v4/top-headlines?q=${choice}&token=c4cb129e3105914ea26807a3ddde1fd8&lang=en&topic=entertainment&max=10`;
+        const url = `https://newsapi.org/v2/everything?domains=gameinformer.com,destructoid.com&q=${choice}&sortBy=popularity&apiKey=3c9471ccb160424d9d34f0326977cc88`;
         try {
             const news = await axios.get(url);
             console.log(news.data.articles);
@@ -56,7 +56,7 @@ export class News extends Component {
     componentDidMount = async () => {
         console.log(this.state.platform);
 
-        const url = `https://gnews.io/api/v4/top-headlines?q=${this.state.platform}&token=c4cb129e3105914ea26807a3ddde1fd8&lang=en&topic=entertainment&max=10`;
+        const url = `https://newsapi.org/v2/everything?domains=gameinformer.com,destructoid.com&q=games%20And%20gaming&sortBy=popularity&apiKey=3c9471ccb160424d9d34f0326977cc88`;
         try {
             const news = await axios.get(url);
             console.log(news.data.articles);
@@ -84,8 +84,8 @@ export class News extends Component {
                             alt="First slide"
                         />
                         <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h3>Shadowrun Trilogy is free to claim during the GOG Summer Sale</h3>
+                            <p>Just as one summer sale starts, another is coming to a close. As the GOG Summer Sale winds down, you may want to take a look at these deals even if you have no intention of spending — there’s a 72-hour Shadowrun Trilogy freebie just for showing up.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -96,20 +96,20 @@ export class News extends Component {
                         />
 
                         <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h3>CDPR confirms no new Witcher game to be revealed at WitcherCon</h3>
+                            <p>As you may have read, CD Projekt RED is teaming up with Neflix in order to present a special live stream next month, entirely based around the fantasy franchise, The Witcher.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src="https://www.destructoid.com/wp-content/uploads/2021/06/Shadowrun-Dragonfall-artwork.jpg"
+                            src="https://www.destructoid.com/wp-content/uploads/2021/06/Drizzt-Art-1536x927.png"
                             alt="Third slide"
                         />
 
                         <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <h3>Extremely Giorgio A. Tsoukalos voice:: Dungeons</h3>
+                            <p>Magic: The Gathering‘s Dungeons and Dragons set is so thematic that the lands have flavor text. That was my main takeaway from attending an advanced preview event of the next set, which is ready to debut in both Magic: Arena and paper Magic next month. Wizards put an extraordinary amount of effort into this one.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
@@ -122,10 +122,10 @@ export class News extends Component {
                                 <NavDropdown
                                     id="nav-dropdown-dark-example"
                                     title="Browse by platform"
-                                    menuvariant="dark"
+                                    menuVariant="dark"
 
                                 >
-                                    <NavDropdown.Item className='drop' onClick={() => this.changingPlatform('xbox')}>Xbox one</NavDropdown.Item>
+                                    <NavDropdown.Item bg="dark" variant="dark" className='drop' onClick={() => this.changingPlatform('xbox')}>Xbox one</NavDropdown.Item>
                                     <NavDropdown.Item onSelect={() => this.changingPlatform('pc')}>PC</NavDropdown.Item>
                                     <NavDropdown.Item onSelect={() => this.changingPlatform('3ds')}>3Ds</NavDropdown.Item>
                                     <NavDropdown.Divider />
@@ -139,14 +139,24 @@ export class News extends Component {
                     {this.state.defaultData.map(element => {
                         return <Col>
                             <Card>
-                                <Card.Img variant="top" src={element.image} />
+                                <Card.Img variant="top" src={element.urlToImage} />
                                 <Card.Body>
                                     <Card.Title>{element.title}</Card.Title>
                                     <Card.Text>
                                         {element.description}
                                     </Card.Text>
                                     <Card.Text>
-                                        {element.publishedAt}
+                                        The Publish date is :{element.publishedAt}
+                                    </Card.Text>
+                                    <Card.Text>
+
+                                        <Navbar bg="dark" variant="dark">
+                                            <Container>
+                                                <Navbar.Brand href={element.author}> Read More</Navbar.Brand>
+                                            </Container>
+                                        </Navbar>
+
+
                                     </Card.Text>
                                 </Card.Body>
                             </Card>

@@ -5,3 +5,68 @@
 .drop{
     background-color: grey;
 }
+
+.image{
+    width: 100%;
+    max-height: 30%;
+    align-items: center;
+}
+.cont{
+    font-family:fantasy;
+    position: absolute;
+    top: 50%;
+    z-index:1;
+    color:Black;
+    font-weight: bolder;
+    /* right:10%; */
+  
+    
+    /* text-align: center; */
+    
+}
+.logo {
+   
+    position: absolute;
+    top:20%;
+    z-index:1;
+    right: 40%;
+}
+
+.cont h3 {
+    padding-bottom: 20px;
+}
+.cont h5{
+    font-family:cursive;
+    
+}
+.discover{
+    color:black;
+    margin-top: 3%;
+    
+}
+
+.cont2{
+    
+        font-family:fantasy;
+        position: absolute;
+        top: 50%;
+        z-index:1;
+        color:Black;
+        font-weight: bolder;
+        text-align: right;
+       left:15%;
+}
+.cont2 h5{
+    font-family:cursive;
+    
+}
+.cont3{
+    background-image:url('https://images.unsplash.com/photo-1485841890310-6a055c88698a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+    background-size: 100%;
+    min-width: 100%;
+    margin: 0%; 
+    padding: 10px;
+
+}
+
+
