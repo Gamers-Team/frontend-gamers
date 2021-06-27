@@ -17,6 +17,8 @@ body {
   flex-direction: column;
   justify-content: center;
   z-index: 5;
+  width: 20%;
+  background-color: rgb(43, 43, 43);
 }
 .top {
   height: 10rem;
@@ -56,6 +58,7 @@ body {
   background-color: rgb(43, 43, 43);
   position: relative;
   width: 80%;
+  background-color: rgb(43, 43, 43);
 }
 .butHome {
   position: absolute;
@@ -67,9 +70,21 @@ body {
 
 .textHome {
   position: absolute;
+  background-color: rgba(0, 0, 0, 0.527);
+
   bottom: 7.5rem;
- opacity: 90%;
- color:rgb(138, 230, 1);
+  color: rgb(255, 255, 255);
   margin-left: 1rem;
   z-index: 100;
+  opacity: 100%;
+
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.abd {
+  background-color: rgb(43, 43, 43);
 }
