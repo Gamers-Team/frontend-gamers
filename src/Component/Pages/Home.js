@@ -16,6 +16,7 @@ export class Home extends Component {
             firstCard: {},
             secondCard: {},
             thirdCard: {},
+            text:'Set in 2152, two years before the events of the film, Avatar: The Game starts out with a new signals specialist, named Able Ryder, arriving at Pandora, assigned to an area called Blue Lagoon, a large piece of jungle, fenced in to make sure no larger predators get inside.',
             heroimg: "https://media.rawg.io/media/games/f25/f2560e90d42949725b2edb771764e0f4.jpg"
 
 
