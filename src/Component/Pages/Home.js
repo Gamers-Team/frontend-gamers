@@ -20,8 +20,8 @@ export class Home extends Component {
             secondCard: {},
             thirdCard: {},
             forthCard: {},
-
             highestNum: [],
+            image :'',
 
 
         }
@@ -69,6 +69,13 @@ export class Home extends Component {
                 this.setState({ err: 'there is no games' })
             })
     }
+    change=(event)=>{
+        event.preventDefault();
+        console.log(event);
+        this.setState({
+           image:"https://media.rawg.io/media/games/14a/14a83c56ff668baaced6e8c8704b6391.jpg"
+        })
+    }
 
     render() {
         return (
@@ -80,25 +87,29 @@ export class Home extends Component {
                     <div className='rightBar'> {console.log(this.state.game)}
 
                         <Card style={{ width: '10rem' }}>
-                            <Card.Img variant="top" style={{ height: '6rem' }} src={this.state.first.background_image} />
+                            <Card.Img variant="top" style={{ height: '6rem' }} src="https://media.rawg.io/media/games/14a/14a83c56ff668baaced6e8c8704b6391.jpg" onclick={this.change}/>
 
                         </Card>
                         <Card style={{ width: '10rem' }}>
-                            <Card.Img variant="top" style={{ height: '6rem' }} src={this.state.second.background_image} />
+                            <Card.Img variant="top" style={{ height: '6rem' }} src="https://media.rawg.io/media/games/85c/85c8ae70e7cdf0105f06ef6bdce63b8b.jpg" onclick={this.change}/>
 
                         </Card>
                         <Card style={{ width: '10rem' }}>
-                            <Card.Img variant="top" style={{ height: '6rem' }} src={this.state.third.background_image} />
+                            <Card.Img variant="top" style={{ height: '6rem' }} src="https://media.rawg.io/media/games/f25/f2560e90d42949725b2edb771764e0f4.jpg" onclick={this.change}/>
 
                         </Card>
                         <Card style={{ width: '10rem' }}>
-                            <Card.Img variant="top" style={{ height: '6rem' }} src={this.state.forth.background_image} />
+                            <Card.Img variant="top" style={{ height: '6rem' }} src="https://media.rawg.io/media/screenshots/b07/b07592c9fa757d99f3f56ae4626754dc.jpg" onclick={this.change}/>
+
+                        </Card>
+                        <Card style={{ width: '10rem' }}>
+                            <Card.Img variant="top" style={{ height: '6rem' }} src="https://media.rawg.io/media/games/0e9/0e9d75008321d640e4a14a8b5e322620.jpg" onclick={this.change}/>
 
                         </Card>
                     </div>
                     <div className='leftImage'>
                         <Card style={{ width: '50rem' }}>
-                            <Card.Img variant="maina" style={{ height: '25rem' }} src={this.state.forth.background_image} />
+                            <Card.Img variant="maina" style={{ height: '25rem' }} src="" />
 
                         </Card>
                     </div>
@@ -108,8 +119,8 @@ export class Home extends Component {
                 <div>
 
                     <CardGroup>
-                        <Card>
-                            <Card.Img variant="top"  style={{ height: '12rem' }} src={this.state.firstCard.background_image} />
+                        <Card style={{margin: '25px' }} >
+                            <Card.Img variant="top"  style={{ height: '12rem' }} src={this.state.first.background_image} />
                             <Card.Body>
                                 <Card.Title>{this.state.firstCard.name}</Card.Title>
                                 <Card.Text>
@@ -121,8 +132,8 @@ export class Home extends Component {
                                 <small className="text-muted">Last updated 3 mins ago</small>
                             </Card.Footer>
                         </Card>
-                        <Card>
-                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.secondCard.background_image} />
+                        <Card style={{margin: '25px' }} >
+                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.second.background_image} />
                             <Card.Body>
                                 <Card.Title>{this.state.secondCard.name}</Card.Title>
                                 <Card.Text>
@@ -134,8 +145,8 @@ export class Home extends Component {
                                 <small className="text-muted">Last updated 3 mins ago</small>
                             </Card.Footer>
                         </Card>
-                        <Card>
-                            <Card.Img variant="top"  style={{ height: '12rem' }} src={this.state.thirdCard.background_image} />
+                        <Card style={{margin: '25px' }} >
+                            <Card.Img variant="top"  style={{ height: '12rem' }} src={this.state.third.background_image} />
                             <Card.Body>
                                 <Card.Title>{this.state.thirdCard.name}</Card.Title>
                                 <Card.Text>
@@ -148,7 +159,7 @@ export class Home extends Component {
                                 <small className="text-muted">Last updated 3 mins ago</small>
                             </Card.Footer>
                         </Card>
-                        <Card>
+                        {/* <Card>
                             <Card.Img variant="top"  style={{ height: '12rem' }} src={this.state.forthCard.background_image} />
                             <Card.Body>
                                 <Card.Title>{this.state.forthCard.name}</Card.Title>
@@ -161,7 +172,7 @@ export class Home extends Component {
                             <Card.Footer>
                                 <small className="text-muted">Last updated 3 mins ago</small>
                             </Card.Footer>
-                        </Card>
+                        </Card> */}
                     </CardGroup>
 
 
