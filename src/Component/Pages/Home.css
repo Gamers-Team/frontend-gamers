@@ -52,15 +52,17 @@ body {
   transition: all 0.5s ease-in-out;
   z-index: 0;
 }
-.abd {
+.leftImage {
   background-color: rgb(43, 43, 43);
   position: relative;
+  width: 80%;
 }
 .butHome {
   position: absolute;
   bottom: 3rem;
   background-color: aqua;
   margin-left: 1rem;
+  z-index: 100;
 }
 
 .textHome {
@@ -68,4 +70,5 @@ body {
   bottom: 7.5rem;
   background-color: rgb(255, 102, 0);
   margin-left: 1rem;
+  z-index: 100;
 }

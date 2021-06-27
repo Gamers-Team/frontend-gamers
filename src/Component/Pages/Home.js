@@ -83,7 +83,7 @@ export class Home extends Component {
                         {this.state.array.map((item) => {
 
                             return (
-                                <Card style={{ width: '10rem' }} className='abd'  >
+                                <Card style={{ width: '100%' }} className='abd'  >
                                     <Card.Img variant="top" style={{ height: '5.5rem' }} src={item.url} desc={item.desc} onClick={this.handleChange}
                                     />
 
@@ -95,7 +95,7 @@ export class Home extends Component {
 
 
                     <div className='leftImage' >
-                        <Card className='abd' style={{ width: '57.5rem', }}>
+                        <Card className='abd' style={{ width: '100%', }}>
                             <Card.Img variant="maina" className='imagemain' style={{ height: '28rem' }} src={this.state.heroimg} />
                             <Button className='butHome' variant="primary" style={{ width: '5rem', }} >Primary</Button>
                             <Card.Text className='textHome' style={{ width: '15rem', }}>
@@ -151,4 +151,4 @@ export class Home extends Component {
     }
 }
 
-export default Home
+export default Home;
