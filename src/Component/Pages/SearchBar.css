@@ -2,6 +2,13 @@
     position: absolute;
     top: 12%;
     right:7%;
-    width:30%
+    width:87%;
+    /* background-color: black; */
 
+}
+
+.searchBAR{
+    background-color: rgb(44, 44, 44);
+    border-style:dotted;
+    border-color: rgb(117, 117, 117);
 }

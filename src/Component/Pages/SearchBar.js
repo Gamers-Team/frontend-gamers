@@ -7,7 +7,7 @@ import {
   Button,
 } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
-import "./SearchBar.css"
+import "./SearchBar.css";
 export class SearchBar extends Component {
   state = {
     SearchBy: "search",
@@ -46,20 +46,20 @@ export class SearchBar extends Component {
   render() {
     return (
       <div className="editsearchBar">
-        <form onSubmit={this.handlSubmition}  >
-          <InputGroup className="mb-3"   >
-            <FormControl className="searchBAR"
+        <form onSubmit={this.handlSubmition}>
+          <InputGroup className="mb-3">
+            <FormControl
+              className="searchBAR"
               name="status"
               aria-label="Text input with dropdown button"
               aria-describedby="basic-addon2"
-              
             />
-            <SplitButton 
+            <SplitButton
+           
               type="submit"
-              variant="outline-secondary"
+              variant="secondary"
               title="Search"
               id="segmented-button-dropdown-2"
-              alignRight
             >
               <Dropdown.Item onClick={() => this.date("Dates")}>
                 Search by Dates

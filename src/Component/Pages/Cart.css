@@ -1,0 +1,26 @@
+/* .editDataInCart{
+    margin:10%;
+ 
+}
+
+
+
+
+
+.editDataInCart p, h1{
+width:10%;
+color: blanchedalmond;
+display: inline-block;
+}
+
+ */
+ .editDataInCart img{
+    width:29%;
+    display: inline-block;
+}
+
+ .editDataInCart{
+     width:100%;
+     display: flex;
+     flex-direction: row;
+ }

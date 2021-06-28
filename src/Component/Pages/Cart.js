@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { withAuth0 } from "@auth0/auth0-react";
 import { Card, Button } from "react-bootstrap";
+import "./Cart.css"
 
 export class Cart extends Component {
   constructor(props) {
@@ -40,7 +41,6 @@ export class Cart extends Component {
       console.log(result.data);
     });
   };
-  
 
   render() {
     const { isAuthenticated } = this.props.auth0;
@@ -51,22 +51,41 @@ export class Cart extends Component {
         <h2>{this.state.total} </h2>
         {this.state.cartData.map((item, idx) => {
           return (
-            <Card className="editCard" style={{ width: "18rem" }} key={idx}>
-              <Card.Img variant="top" src={item.background_image} />
-              <Card.Body>
-                <Card.Title>{item.name}</Card.Title>
+            <div className="editDataInCart">
+              <img src={item.background_image} />
+      
+              <h2>{item.name}</h2>
+              <br />
 
-                {Number(item.playtime) ? (
-                  <Card.Text>Price : {item.playtime} $ </Card.Text>
-                ) : (
-                  <Card.Text>Price : 15 $ </Card.Text>
-                )}
+              {Number(item.playtime) ? (
+                <p>Price : {item.playtime} $ </p>
+              ) : (
+                <p>Price : 15 $ </p>
+              )}
+              <br />
 
-                <Button variant="primary" onClick={() => this.deletecart(idx)}>
-                  Remove
-                </Button>
-              </Card.Body>
-            </Card>
+              <button variant="primary" onClick={() => this.deletecart(idx)}>
+                Remove
+              </button>
+              
+            </div>
+
+            // <Card className="editCard" style={{ width: "18rem" }} key={idx}>
+            //   <Card.Img variant="top" src={item.background_image} />
+            //   <Card.Body>
+            //     <Card.Title>{item.name}</Card.Title>
+
+            //     {Number(item.playtime) ? (
+            //       <Card.Text>Price : {item.playtime} $ </Card.Text>
+            //     ) : (
+            //       <Card.Text>Price : 15 $ </Card.Text>
+            //     )}
+
+            //     <Button variant="primary" onClick={() => this.deletecart(idx)}>
+            //       Remove
+            //     </Button>
+            //   </Card.Body>
+            // </Card>
           );
         })}
       </div>

@@ -112,10 +112,10 @@ export class Store extends Component {
 
     return (
       <div>
-        <h3>Discover Below!</h3>
+        {/* <h3>Discover Below!</h3> */}
         <SearchBar searchData={this.searchData} />
 
-        <hr></hr>
+        {/* <hr></hr> */}
         
         {typeof this.state.gamesData == "string" ? (
           <p>{this.state.gamesData}</p>
@@ -124,34 +124,35 @@ export class Store extends Component {
             {this.state.gamesData.map((item, idx) => {
               return (
                 <Card className="editCard" style={{ width: "18rem" }} key={idx}>
-                  <Card.Img variant="top" src={item.background_image} />
+                  <Card.Img className="editImgCard" variant="top" src={item.background_image} />
                   <Card.Body className="editCardBody">
-                    <Card.Title>{item.name}</Card.Title>
+                    <Card.Title  className="editCardTitle">{item.name}</Card.Title>
                     <Card.Text>
                       {" "}
-                      <ImStarFull className="editRateStar" />
-                      Rating: {item.rating} /5
+                      {/* <ImStarFull className="editRateStar" /> */}
+                        Rating: {item.rating}/5 ⭐
                     </Card.Text>
                     <Card.Text>Ratings Count: {item.ratings_count} </Card.Text>
 
                     {Number(item.playtime) ? (
-                      <Card.Text>Price : {item.playtime} $ </Card.Text>
+                      <Card.Text>Price : {item.playtime}$</Card.Text>
                     ) : (
                       <Card.Text>
-                        Price : 15 <FaDollarSign />
+                        Price : 15 
                       </Card.Text>
                     )}
 
                     <Button
-                      variant="primary"
+                      variant="dark"
                       onClick={() => this.showGames(item)}
+
                     >
-                      More...
+                      See More...
                     </Button>
 
                     {isAuthenticated && (
                       <Button
-                        variant="primary"
+                        variant="dark"
                         onClick={() => this.addtocart(item)}
                       >
                         Add To Cart
