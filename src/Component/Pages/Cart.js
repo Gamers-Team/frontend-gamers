@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { withAuth0 } from "@auth0/auth0-react";
 import { Card, Button } from "react-bootstrap";
-import "./Cart.css"
+import "./Cart.css";
 
 export class Cart extends Component {
   constructor(props) {
@@ -46,28 +46,29 @@ export class Cart extends Component {
     const { isAuthenticated } = this.props.auth0;
 
     return (
-      <div>
+      <div className={"cart_page"}>
         {isAuthenticated && this.getcart()}
-        <h2>{this.state.total} </h2>
+        <div className={"cart_Title"}>
+          <h2> Shopping Cart </h2>
+          <h2>Price</h2>
+        </div>
+
         {this.state.cartData.map((item, idx) => {
           return (
             <div className="editDataInCart">
               <img src={item.background_image} />
-      
-              <h2>{item.name}</h2>
-              <br />
+
+              <h3>{item.name}</h3>
 
               {Number(item.playtime) ? (
-                <p>Price : {item.playtime} $ </p>
+                <h3> {item.playtime} $ </h3>
               ) : (
-                <p>Price : 15 $ </p>
+                <h3> 15 $ </h3>
               )}
-              <br />
-
-              <button variant="primary" onClick={() => this.deletecart(idx)}>
-                Remove
-              </button>
-              
+              <Button className={"cart_removeButton"} variant="secondary" onClick={() => this.deletecart(idx)}  active>
+              Remove
+              </Button>
+            
             </div>
 
             // <Card className="editCard" style={{ width: "18rem" }} key={idx}>
