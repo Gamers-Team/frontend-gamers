@@ -10,6 +10,9 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import InputGroup from 'react-bootstrap/InputGroup';
+import FormControl from 'react-bootstrap/FormControl';
+import Button from 'react-bootstrap/Button';
 
 
 import Form from 'react-bootstrap/Form';
@@ -26,14 +29,17 @@ export class News extends Component {
         }
     }
     changingPlatform = async (choice) => {
-
-        const url = `https://newsapi.org/v2/everything?domains=gameinformer.com,destructoid.com&q=${choice}&sortBy=popularity&apiKey=3c9471ccb160424d9d34f0326977cc88`;
+        this.setState({
+            platform: choice,
+        })
+        console.log(this.state.platform);
+        const url = `https://newsapi.org/v2/everything?domains=gameinformer.com,destructoid.com&q=${this.state.platform}&sortBy=popularity&apiKey=3c9471ccb160424d9d34f0326977cc88`;
         try {
             const news = await axios.get(url);
             console.log(news.data.articles);
             this.setState({
                 defaultData: news.data.articles,
-                platform: choice,
+
             })
             console.log(this.state.defaultData);
         }
@@ -50,9 +56,13 @@ export class News extends Component {
         // console.log(choice);
         // this.componentDidMount();
     }
-    // test = (test) => {
-    //     console.log(test);
-    // }
+    test = (test) => {
+        console.log(test);
+        this.setState({
+            platform: test,
+        })
+        // this.changingPlatform();
+    }
     componentDidMount = async () => {
         console.log(this.state.platform);
 
@@ -134,8 +144,21 @@ export class News extends Component {
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
+                    <InputGroup className="mb-3">
+                        <Button variant="outline-secondary" id="button-addon1" onClick={() => this.changingPlatform(this.state.platform)}>
+                            Search By Name
+                        </Button>
+                        <FormControl
+                            aria-label="Example text with button addon"
+                            aria-describedby="basic-addon1"
+                            className='search'
+                            onChange={(event) => this.test(event.target.value)}
+
+                        />
+                    </InputGroup>
+
                 </Navbar>
-                <Row xs={1} md={2} className="g-4">
+                <Row xs={1} md={3} className="g-4">
                     {this.state.defaultData.map(element => {
                         return <Col>
                             <Card>

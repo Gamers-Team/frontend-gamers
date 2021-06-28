@@ -14,6 +14,7 @@ export class Aboutus extends Component {
             <div>
                 <Image className='image' src="https://images.unsplash.com/photo-1577741314755-048d8525d31e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80" fluid />
                 <img className="logo" src={logo} />
+                <Image className='image' src="https://images.unsplash.com/photo-1594652634010-275456c808d0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" fluid />
 
                 <Container className='cont'>
 
@@ -41,59 +42,76 @@ export class Aboutus extends Component {
 
 
                 <Container className='cont3'>
-                    <Row xs={1} md={5} className="g-4">
+                    <Row xs={1} md={2} className="g-3">
 
                         <Col>
-                            <Card>
+                            <Card className="stylingCard">
+                                <Card.Img variant="top" src="https://ca.slack-edge.com/TNGRRLUMA-U01SMM4H0AC-4c32b771444c-512" />
+
+                                <Card.Body className="cardBodyStyle">
+                                    <Card.Title>Anas AbuGhaliha</Card.Title>
+                                    <Card.Text>
+                                        <Button href={'https://github.com/AnasAGc'} variant="secondary" size="sm">
+                                            Small button
+                                        </Button>
+
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                        {/* <Col className='column'>
+                            <Card className="stylingCard">
                                 <Card.Img variant="top" src="http://demos.subinsb.com/isl-profile-pic/image/person.png" />
                                 <Card.Body>
-                                    <Card.Title>Card title</Card.Title>
+                                    <Card.Title>Haya Balasmeh</Card.Title>
                                     <Card.Text>
-                                        info
+
+                                        <Button href={'https://github.com/abdu-zeyad'} variant="secondary" size="sm">
+                                            Contact
+                                        </Button>
+
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Col> */}
+                        <Col>
+                            <Card className="stylingCard">
+                                <Card.Img variant="top" src="https://avatars.githubusercontent.com/u/81154074?v=4" />
+                                <Card.Body>
+                                    <Card.Title>Maram Mustafa</Card.Title>
+                                    <Card.Text>
+                                        <Button href={'https://github.com/maram-mustafa'} variant="secondary" size="sm">
+                                            Contact
+                                        </Button>
+
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
                         </Col>
                         <Col>
-                            <Card>
-                                <Card.Img variant="top" src="http://demos.subinsb.com/isl-profile-pic/image/person.png" />
+                            <Card className="stylingCard">
+                                <Card.Img variant="top" src="https://avatars.githubusercontent.com/u/81154281?v=4" />
                                 <Card.Body>
-                                    <Card.Title>Card title</Card.Title>
+                                    <Card.Title>Abelmajeed Alabedalraheem</Card.Title>
                                     <Card.Text>
-                                        info
+                                        <Button href={'https://github.com/abdu-zeyad'} variant="secondary" size="sm">
+                                            Contact
+                                        </Button>
+
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
                         </Col>
                         <Col>
-                            <Card>
-                                <Card.Img variant="top" src="http://demos.subinsb.com/isl-profile-pic/image/person.png" />
+                            <Card className="stylingCard">
+                                <Card.Img variant="top" src="https://avatars.githubusercontent.com/u/81149478?v=4" />
                                 <Card.Body>
-                                    <Card.Title>Card title</Card.Title>
+                                    <Card.Title>Mohammad Hayajneh</Card.Title>
                                     <Card.Text>
-                                        info
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col>
-                            <Card>
-                                <Card.Img variant="top" src="http://demos.subinsb.com/isl-profile-pic/image/person.png" />
-                                <Card.Body>
-                                    <Card.Title>Card title</Card.Title>
-                                    <Card.Text>
-                                        info
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col>
-                            <Card>
-                                <Card.Img variant="top" src="http://demos.subinsb.com/isl-profile-pic/image/person.png" />
-                                <Card.Body>
-                                    <Card.Title>Card title</Card.Title>
-                                    <Card.Text>
-                                        info
+                                        <Button href={'https://github.com/mohammadhayajneh2014'} variant="secondary" size="sm">
+                                            Contact
+                                        </Button>
+
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
@@ -102,7 +120,7 @@ export class Aboutus extends Component {
                     </Row>
                 </Container>
 
-            </div>
+            </div >
         )
     }
 }
