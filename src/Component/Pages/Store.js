@@ -6,7 +6,6 @@ import axios from "axios";
 import GamesFromModal from "./GamesFromModal";
 import "./Store.css";
 import SearchBar from "./SearchBar";
-import { keyword } from "chalk";
 
 export class Store extends Component {
   state = {

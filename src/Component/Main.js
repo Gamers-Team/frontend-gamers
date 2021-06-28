@@ -53,9 +53,7 @@ export class Main extends Component {
               <Cart/>
             </Route>
 
-            <Route path="/logout">
-              <LogoutButton />
-            </Route>
+           
           </Switch>
         </Router>
       </div>

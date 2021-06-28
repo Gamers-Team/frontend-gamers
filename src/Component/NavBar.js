@@ -6,8 +6,11 @@ import LogoutButton from "./user/LogoutButton";
 import "./NavBar.css";
 
 export class NavBar extends Component {
+  
+  
   render() {
-    const { user, isAuthenticated } = this.props.auth0;
+    const { user, isAuthenticated,logout } = this.props.auth0;
+    // const {    isAuthenticated,logout, } = useAuth0();
 
     return (
       <div>
@@ -42,7 +45,12 @@ export class NavBar extends Component {
                         Something
                       </NavDropdown.Item>
                       <NavDropdown.Divider />
-                      <NavDropdown.Item href="/logout">
+                      <NavDropdown.Item
+                        href="/logout"
+                        onClick={() => {
+                          logout({ returnTo: window.location.origin });
+                        }}
+                      >
                         log out
                       </NavDropdown.Item>
                     </NavDropdown>
