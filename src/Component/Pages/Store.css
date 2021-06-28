@@ -1,9 +1,14 @@
-/* *{
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+body{
   background-color: #222222;
-} */
+}
 
 .editCard {
-  margin: 15%;
+  margin-top: 25%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .editCard:hover {
@@ -23,5 +28,11 @@
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+.editCardBody{
+  text-align: center;
+  font-family: 'Castoro', serif;
+  
 }
 
