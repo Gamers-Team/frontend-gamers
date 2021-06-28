@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import { Card, CardGroup, } from 'react-bootstrap';
 import "./Home.css";
+import Carousel from 'react-3d-carousels';
 
 
 
@@ -18,6 +19,7 @@ export class Home extends Component {
             thirdCard: {},
             forthcard: {},
             fifthcard: {},
+
 
 
             text: 'Set in 2152, two years before the events of the film, Avatar: The Game starts out with a new signals specialist.',
@@ -87,7 +89,11 @@ export class Home extends Component {
             heroimg: array[idx].url,
             text: array[idx].desc,
         })
+
+
+
     }
+
 
 
     render() {
@@ -302,12 +308,54 @@ export class Home extends Component {
 
 
                 </div>
-                <div>
+
+
+                <div className='carousel3d'>
                     
+                    <div className='carouselDiv'
+                        style={{
+                            width: 300,
+                            height: 300,
+                            margin: '0 auto'
+                        }}
+                    >
+                        <Carousel
+                        
+
+                            ref={carousel => (this.carousel = carousel)}
+
+                            width={200}
+                            height={200}
+                            direction={'horizontal'}
+                            effect={'3d'}
+                            index={0}
+
+                        >
+                            
+                           
+                            <img src="https://wallpaper.dog/large/10907.png" alt='first' style={{ width: 200, height: 200 }}  data-interval="1"/>
+                            <img src="https://www.destructoid.com/wp-content/uploads/2021/06/dead-space-rumor.jpg" alt='first' style={{ width: 200, height: 200 }}  data-interval="1"/>
+                            <img src="https://wallpapercave.com/wp/wp6122114.jpg" alt='first' style={{ width: 200, height: 200 }} data-interval="1" />
+                            <img src="https://wallpapercave.com/wp/wp6800972.jpg" alt='first' style={{ width: 200, height: 200 }} data-interval="1" />
+                            <img src="https://wallpapercave.com/wp/wp6520697.jpg" alt='first' style={{ width: 200, height: 200 }} data-interval="1" />
+                           
+                               
+                              {/* <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a> */}
+                           
+                        </Carousel>
+
+                       
+                    </div>
                 </div>
             </>
         )
     }
 }
-
 export default Home;
