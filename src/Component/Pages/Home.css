@@ -105,3 +105,24 @@ body {
 .tren:hover {
   opacity: 80%;
 }
+
+.carousel3d{ 
+  height: 400px;
+  background-color:blue; /* For browsers that do not support gradients */
+  background-image: linear-gradient(blue, rgb(0, 247, 255));
+  margin-bottom: 20px;
+ 
+  
+ 
+}
+.carouselDiv{
+  
+  float:right; 
+  margin: 50px;
+  
+  
+   
+ 
+
+}
+
