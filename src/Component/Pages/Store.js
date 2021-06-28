@@ -112,12 +112,15 @@ export class Store extends Component {
 
     return (
       <div>
+        <h3>Discover Below!</h3>
         <SearchBar searchData={this.searchData} />
 
+        <hr></hr>
+        
         {typeof this.state.gamesData == "string" ? (
           <p>{this.state.gamesData}</p>
         ) : (
-          <div>
+          <div className="editDivCard">
             {this.state.gamesData.map((item, idx) => {
               return (
                 <Card className="editCard" style={{ width: "18rem" }} key={idx}>
@@ -145,13 +148,15 @@ export class Store extends Component {
                     >
                       More...
                     </Button>
-                  
-                   { isAuthenticated && <Button
-                      variant="primary"
-                      onClick={() => this.addtocart(item)}
-                    >
-                      Add To Cart
-                    </Button>}
+
+                    {isAuthenticated && (
+                      <Button
+                        variant="primary"
+                        onClick={() => this.addtocart(item)}
+                      >
+                        Add To Cart
+                      </Button>
+                    )}
                   </Card.Body>
                 </Card>
               );
