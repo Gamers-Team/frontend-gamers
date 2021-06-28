@@ -2,14 +2,22 @@ import React, { Component } from "react";
 import { withAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
 import { Card, Button } from "react-bootstrap";
-
+import GamesFromModal from "./GamesFromModal";
 export class Wishlist extends Component {
   constructor(props) {
     super(props);
     this.state = {
       wishListData: [],
+      item: [],
+      photos: [],
+      genres: [],
+      parent_platforms: [],
+      showModal: false,
+      flage: false,
     };
   }
+
+  ////// form The Data Base
 
   getFavarite = () => {
     let email = this.props.auth0.user.email;
@@ -21,9 +29,39 @@ export class Wishlist extends Component {
     });
   };
 
-  // deletegame=(idx)=>{
-  //     console.log(idx);
-  // }
+  delete = (idx) => {
+    let email = this.props.auth0.user.email;
+    let serverURL = process.env.REACT_APP_SERVER;
+    let url = `${serverURL}/remove`;
+    let params = {
+      email: email,
+      index: idx,
+    };
+    console.log(params);
+    axios.delete(url, { params: params }).then((result) => {
+      console.log(result.data);
+    });
+  };
+
+  ////// For Fire the Modle
+
+  showModal = () => {
+    this.setState({ showModal: true });
+  };
+
+  showGames = (item) => {
+    this.setState({
+      item: item,
+      photos: item.short_screenshots,
+      genres: item.genres,
+      parent_platforms: item.parent_platforms,
+    });
+    this.showModal();
+  };
+
+  closeModal = () => {
+    this.setState({ showModal: false });
+  };
 
   render() {
     const { isAuthenticated } = this.props.auth0;
@@ -39,14 +77,33 @@ export class Wishlist extends Component {
                 <Card.Title>{item.name}</Card.Title>
                 <Card.Text>Rating: {item.rating} /5</Card.Text>
                 <Card.Text>Ratings Count: {item.ratings_count} </Card.Text>
-                <Card.Text>Price : {item.playtime} $ </Card.Text>
+
+                {Number(item.playtime) ? (
+                  <Card.Text>Price : {item.playtime} $ </Card.Text>
+                ) : (
+                  <Card.Text>Price : 15 $ </Card.Text>
+                )}
+
                 <Button variant="primary" onClick={() => this.showGames(item)}>
                   More...
+                </Button>
+                <Button variant="primary" onClick={() => this.delete(idx)}>
+                  Remove
                 </Button>
               </Card.Body>
             </Card>
           );
         })}
+
+        <GamesFromModal
+          show={this.state.showModal}
+          closeFunc={this.closeModal}
+          item={this.state.item}
+          photos={this.state.photos}
+          genres={this.state.genres}
+          parent_platforms={this.state.parent_platforms}
+          flage={this.state.flage}
+        />
       </div>
     );
   }

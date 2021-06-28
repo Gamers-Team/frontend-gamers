@@ -23,15 +23,12 @@ class GamesFromModal extends Component {
     let email = this.props.auth0.user.email;
     item["email"] = email;
     console.log(item);
-    axios
-      .post(url, item)
-      .then((result) => {
-        this.setState({ data: result.data });
-      })
-      .catch((err) => {
-        this.setState({ err: "there is an error" });
-      });
+    axios.post(url, item).then((result) => {
+      // console.log(result.data);
+    });
   }
+
+
 
   render() {
     return (
@@ -55,16 +52,23 @@ class GamesFromModal extends Component {
                 );
               })}
             </Carousel>
-            <p>Genres : {this.props.item.genres}</p>
+            <p>ABOUT THIS GAME</p>
+
+            <p>Genres : {this.props.genres.map((thing) => thing + " ")}</p>
             <p>
               This game released on {this.props.item.released}, The last update
               was in {this.props.item.updated}, game plateforms{" "}
-              {this.props.item.parent_platforms}
+              {this.props.parent_platforms.map((thing) => thing + " ")}
             </p>
-            <p>
-              Add To Wishlist
-              <FaHeart onClick={() => this.AddToList(this.props.item)} />{" "}
-            </p>
+
+            {this.props.flage && (
+              <p>
+                Add To Wishlist <br />
+                <Button variant="outline-dark" classNAme="FavHeart" >
+                  <FaHeart  onClick={() => this.AddToList(this.props.item)} />
+                </Button>
+              </p>
+            )}
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={this.props.closeFunc}>
