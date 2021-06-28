@@ -70,7 +70,7 @@ body {
 
 .textHome {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.527);
+  /* background-color: rgba(0, 0, 0, 0.527); */
 
   bottom: 7.5rem;
   color: rgb(255, 255, 255);
@@ -78,13 +78,17 @@ body {
   z-index: 100;
   opacity: 100%;
 
-  font-family: "Times New Roman", Times, serif;
-  font-weight: bolder;
+  font-family:fantasy;
+  /* font-weight: bolder; */
   font-size: 1.2rem;
-  text-align: justify;
+  /* text-align: justify; */
   text-justify: inter-word;
 }
 
 .abd {
   background-color: rgb(43, 43, 43);
+}
+.middle {
+
+margin-right: 20px;
 }

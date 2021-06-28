@@ -16,6 +16,8 @@ export class Home extends Component {
             firstCard: {},
             secondCard: {},
             thirdCard: {},
+            forthCard:{},
+            fifthCard:{},
             text: 'Set in 2152, two years before the events of the film, Avatar: The Game starts out with a new signals specialist.',
             heroimg: "https://media.rawg.io/media/games/f25/f2560e90d42949725b2edb771764e0f4.jpg"
 
@@ -36,7 +38,7 @@ export class Home extends Component {
         ]
 
         // let server = process.env.React_APP_SERVER;
-        let homeUrl = `https://api.rawg.io/api/games?key=995491d1a18f47709f7ba3b66bce85c1&page=2&page_size=40`;
+        let homeUrl = `https://api.rawg.io/api/games?key=995491d1a18f47709f7ba3b66bce85c1&page=1&page_size=40`;
         axios
             .get(homeUrl)
             .then((result => {
@@ -54,6 +56,9 @@ export class Home extends Component {
                     firstCard: sortGame[0],
                     secondCard: sortGame[1],
                     thirdCard: sortGame[2],
+                    forthCard:sortGame[3],
+                    fifthCard:sortGame[4],
+
 
                 })
 
@@ -126,8 +131,8 @@ export class Home extends Component {
                 <div className='trending'>
 
                     <CardGroup>
-                        <Card  >
-                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.firstCard.background_image} />
+                        <Card className='middle' >
+                            <Card.Img variant="top" style={{ height: '10rem' }} src={this.state.firstCard.background_image} />
                             <Card.Body>
                                 <Card.Title>{this.state.firstCard.name}</Card.Title>
                                 {/* <Card.Text> 
@@ -135,23 +140,38 @@ export class Home extends Component {
                             </Card.Body>
                         </Card>
                         <Card className='middle'>
-                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.secondCard.background_image} />
+                            <Card.Img variant="top" style={{ height: '10rem' }} src={this.state.secondCard.background_image} />
                             <Card.Body>
                                 <Card.Title>{this.state.secondCard.name}</Card.Title>
                                 {/* <Card.Text> 
                                 </Card.Text> */}
                             </Card.Body>
                         </Card>
-                        <Card  >
-                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.thirdCard.background_image} />
+                        <Card className='middle' >
+                            <Card.Img variant="top" style={{ height: '10rem' }} src={this.state.thirdCard.background_image} />
                             <Card.Body>
                                 <Card.Title>{this.state.thirdCard.name}</Card.Title>
                                 {/* <Card.Text> 
                                 </Card.Text> */}
                             </Card.Body>
                         </Card>
-
-
+                        <Card className='middle' >
+                            <Card.Img variant="top" style={{ height: '10rem' }} src={this.state.forthCard.background_image} />
+                            <Card.Body>
+                                <Card.Title>{this.state.forthCard.name}</Card.Title>
+                                {/* <Card.Text> 
+                                </Card.Text> */}
+                            </Card.Body>
+                        </Card>
+                        <Card  >
+                            <Card.Img variant="top" style={{ height: '10rem' }} src={this.state.fifthCard.background_image} />
+                            <Card.Body>
+                                <Card.Title>{this.state.fifthCard.name}</Card.Title>
+                                {/* <Card.Text> 
+                                </Card.Text> */}
+                            </Card.Body>
+                        </Card>
+                       
                     </CardGroup>
 
 
