@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import { Card, CardGroup, } from 'react-bootstrap';
 import "./Home.css";
+import {Carousel} from '3d-react-carousal';
 
 
 
@@ -18,6 +19,7 @@ export class Home extends Component {
             thirdCard: {},
             forthcard: {},
             fifthcard: {},
+           
 
 
             text: 'Set in 2152, two years before the events of the film, Avatar: The Game starts out with a new signals specialist.',
@@ -87,7 +89,15 @@ export class Home extends Component {
             heroimg: array[idx].url,
             text: array[idx].desc,
         })
+
+        let slides = [
+            <img  src="https://picsum.photos/800/300/?random" alt="1" />,
+            <img  src="https://picsum.photos/800/301/?random" alt="2" />  ,
+            <img  src="https://picsum.photos/800/302/?random" alt="3" />  ,
+            <img  src="https://picsum.photos/800/303/?random" alt="4" />  ,
+            <img src="https://picsum.photos/800/304/?random" alt="5" />   ];
     }
+    
 
 
     render() {
@@ -303,6 +313,9 @@ export class Home extends Component {
 
                 </div>
                 <div>
+             
+
+<Carousel slides={this.slides} autoplay={true} interval={1000}/>
                     
                 </div>
             </>
@@ -311,3 +324,6 @@ export class Home extends Component {
 }
 
 export default Home;
+
+
+
