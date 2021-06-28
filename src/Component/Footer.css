@@ -1,9 +1,18 @@
-.imagel {
-  width: 2.5%;
-  display: inline-block;
-  background-color: #343a40;
-}
-
 .maincard {
-  background-color: #343a40;
+  width: 30px;
+  height: 30px;
+  background-color: gray;
+  margin-left: 10px;
+ 
+}
+.social {
+  display: flex;
+  flex-direction: row; 
+  background-color: #212529;
+}
+.copy{
+  text-align: justify;
+/* text-size-adjust: 10px; */
+/* background-color: blue; */
+color: white;
 }

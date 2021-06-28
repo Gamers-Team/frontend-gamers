@@ -9,7 +9,7 @@ body {
 .heroBox {
   display: flex;
   flex-direction: row-reverse;
-  margin-top: 20px;
+  margin-top: 70px;
 }
 
 .rightBar {
@@ -34,15 +34,16 @@ body {
 } */
 .trending {
   margin-top: 30px;
+  margin-bottom: 100px;
 }
 .trendingword {
   margin-top: 30px;
+  margin-bottom: 30px;
   background-color: rgb(43, 43, 43);
-  border-radius: 0%;
+  border: rgb(43, 43, 43);
 }
 
 .cardbodyyy {
-  margin: auto;
   font-size: 2rem;
   color: aliceblue;
   font-family: "Times New Roman", Times, serif;
@@ -72,23 +73,35 @@ body {
   position: absolute;
   /* background-color: rgba(0, 0, 0, 0.527); */
 
-  bottom: 7.5rem;
+  bottom: 3rem;
+  left: 5rem;
   color: rgb(255, 255, 255);
   margin-left: 1rem;
   z-index: 100;
   opacity: 100%;
 
-  font-family:fantasy;
-  /* font-weight: bolder; */
-  font-size: 1.2rem;
-  /* text-align: justify; */
-  text-justify: inter-word;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bolder;
+  font-size: 1.3rem;
+  text-align: center;
 }
 
 .abd {
   background-color: rgb(43, 43, 43);
 }
-.middle {
 
-margin-right: 20px;
+.tren {
+  background-color: rgb(65, 65, 65);
+  padding: 1%;
+  color: rgb(255, 255, 255);
+  border: tomato;
+}
+.comingsoon {
+  margin-bottom: 100px;
+}
+.released {
+  margin-bottom: 100px;
+}
+.tren:hover {
+  opacity: 80%;
 }
