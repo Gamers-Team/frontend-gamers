@@ -1,10 +1,20 @@
-body{
-    background-color: white;
+body {
+  background-color: white;
 }
-.editingblock{
-    margin-top: 5%;
+.editingblock {
+  margin-top: 5%;
 }
 
-.adding{
-    margin-bottom: 5%;
+.adding {
+  margin-bottom: 5%;
+}
+.textlong1 {
+  height: 200px;
+}
+.textlong2 {
+  height: 80px;
+}
+
+.textlong3 {
+  height: 170px;
 }

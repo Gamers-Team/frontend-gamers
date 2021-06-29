@@ -12,10 +12,10 @@ export class App extends Component {
     return (
       <div>
 
-        <Header/>
-         <Main/>
-        {/* <Footer/>  */}
-        
+        <Header />
+        <Main />
+        <Footer />
+
       </div>
     )
   }

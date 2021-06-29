@@ -163,10 +163,10 @@ export class News extends Component {
                     {this.state.defaultData.map(element => {
                         return <Col>
                             <Card className='adding'>
-                                <Card.Img variant="top" src={element.urlToImage} />
-                                <Card.Body>
-                                    <Card.Title>{element.title}</Card.Title>
-                                    <Card.Text>
+                                <Card.Img variant="top" src={element.urlToImage} className='textlong1' />
+                                <Card.Body >
+                                    <Card.Title className='textlong2'>{element.title}</Card.Title>
+                                    <Card.Text className='textlong3' >
                                         {element.description}
                                     </Card.Text>
                                     <Card.Text>
