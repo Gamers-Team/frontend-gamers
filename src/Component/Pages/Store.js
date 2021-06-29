@@ -156,7 +156,7 @@ export class Store extends Component {
                       More...
                     </Button>
 
-                    {isAuthenticated && (
+                    {isAuthenticated &&  (
                       <Button
                         variant="primary"
                         onClick={() => this.addtocart(item)}
