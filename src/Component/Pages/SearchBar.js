@@ -4,9 +4,7 @@ import {
   SplitButton,
   Dropdown,
   FormControl,
-  Button,
 } from "react-bootstrap";
-import Form from "react-bootstrap/Form";
 import "./SearchBar.css";
 export class SearchBar extends Component {
   state = {
@@ -22,11 +20,7 @@ export class SearchBar extends Component {
     this.props.searchData(parameter);
   };
 
-  date = (a) => {
-    this.setState({
-      SearchBy: a,
-    });
-  };
+
   genres = (a) => {
     this.setState({
       SearchBy: a,
@@ -61,9 +55,6 @@ export class SearchBar extends Component {
               title="Search"
               id="segmented-button-dropdown-2"
             >
-              <Dropdown.Item onClick={() => this.date("Dates")}>
-                Search by Dates
-              </Dropdown.Item>
               <Dropdown.Item onClick={() => this.tags("tags")}>
                 Search by Tags
               </Dropdown.Item>

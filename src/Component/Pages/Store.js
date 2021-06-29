@@ -6,8 +6,6 @@ import axios from "axios";
 import GamesFromModal from "./GamesFromModal";
 import "./Store.css";
 import SearchBar from "./SearchBar";
-import { ImStarFull } from "react-icons/im";
-import { FaDollarSign } from "react-icons/fa";
 import "./SearchBar.css";
 
 export class Store extends Component {
