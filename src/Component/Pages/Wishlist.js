@@ -78,10 +78,9 @@ export class Wishlist extends Component {
       <div>
         {isAuthenticated && this.getFavarite()}
 
-        <div className="wishlist_title">
-          <h2> My WishList ♥️</h2>
-        </div>
-        <hr className="editHR" />
+        
+          <p className="editWishlistHeader"> My WishList ♥️</p>
+        
 
         <Row xs={1} md={3} className="g-4" className="editRowCard">
           {this.state.wishListData.map((item, idx) => {

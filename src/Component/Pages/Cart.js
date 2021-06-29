@@ -51,10 +51,9 @@ export class Cart extends Component {
     return (
       <div className={"cart_page"}>
         {isAuthenticated && this.getcart()}
-        <div className={"cart_Title"}>
-          <h2> Shopping Cart </h2>
-        </div>
-        <hr />
+
+        <p className="cartTitle"> Shopping Cart </p>
+
         {this.state.cartData.map((item, idx) => {
           return (
             <>

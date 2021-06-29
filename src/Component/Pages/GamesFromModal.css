@@ -1,0 +1,22 @@
+.modal-content {
+  width: 200%;
+  margin: auto;
+  position: relative;
+  right:50%;
+}
+
+
+ .modal-body{
+   width: 90%;
+   margin: auto;
+ }
+
+
+ .editBodyCard1{
+   color: slateblue;
+   float: left;
+ }
+
+ .editBodyCard2{
+   float:right;
+ }

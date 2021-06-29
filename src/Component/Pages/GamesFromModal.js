@@ -6,6 +6,7 @@ import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaHeart } from "react-icons/all";
 import { withAuth0 } from "@auth0/auth0-react";
+import "./GamesFromModal.css";
 
 import axios from "axios";
 
@@ -45,14 +46,15 @@ class GamesFromModal extends Component {
     const { isAuthenticated } = this.props.auth0;
 
     return (
-      <div>
-        <Modal show={this.props.show} onHide={this.props.closeFunc}>
-          {/* {this.props.show && this.check()} */}
+      <div className="divModal">
+        <Modal  show={this.props.show} onHide={this.props.closeFunc}>
           <Modal.Header closeButton>
             <Modal.Title>{this.props.item.name}</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
+          <Modal.Body className="editModal">
             <Carousel>
+
+
               {this.props.photos.map((item, idx) => {
                 return (
                   <Carousel.Item key={idx}>
@@ -66,7 +68,7 @@ class GamesFromModal extends Component {
               })}
             </Carousel>
             <Card>
-              <Card.Body>
+              <Card.Body className="editBodyCard1">
                 <Card.Title>Card Title</Card.Title>
                 <Card.Text>
                   Genres : {this.props.genres.map((thing) => thing + " ")}
@@ -77,7 +79,6 @@ class GamesFromModal extends Component {
                   {this.props.parent_platforms.map((thing) => thing + " ")}
                 </Card.Text>
 
-
                 {this.props.flage && isAuthenticated && (
                   <Card.Text>
                     Add To Wishlist <br />
@@ -87,15 +88,12 @@ class GamesFromModal extends Component {
                       />
                     </Button>
                   </Card.Text>
-                // eslint-disable-next-line react/jsx-no-comment-textnodes
+                  // eslint-disable-next-line react/jsx-no-comment-textnodes
                 )}
-
-
-
 
                 {this.props.flage && (
                   <>
-                    <Card.Body>
+                    <Card.Body className= "editBodyCard2">
                       <Card.Text>{this.state.username} </Card.Text>
                       <Card.Text> {this.state.feedback} </Card.Text>
                     </Card.Body>
@@ -116,8 +114,9 @@ class GamesFromModal extends Component {
                   </>
                 )}
               </Card.Body>
+              
             </Card>
-
+            
 
             {this.props.flage && (
               <Commits
@@ -126,8 +125,6 @@ class GamesFromModal extends Component {
                 id={this.props.item.id}
               />
             )}
-
-
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={this.props.closeFunc}>
