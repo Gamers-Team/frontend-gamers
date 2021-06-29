@@ -11,7 +11,7 @@ export class NavBar extends Component {
     const { user, isAuthenticated } = this.props.auth0;
 
     return (
-      <div>
+      <div className="navbarall">
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
           <Container>
             <Navbar.Brand href="/">
@@ -24,7 +24,6 @@ export class NavBar extends Component {
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/store">Store</Nav.Link>
                 <Nav.Link href="/news">News</Nav.Link>
-                <Nav.Link href="/community"> Our Community</Nav.Link>
                 <Nav.Link href="/aboutUs"> About us</Nav.Link>
               </Nav>
               <Nav className="other_side">
