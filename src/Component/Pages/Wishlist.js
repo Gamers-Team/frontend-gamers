@@ -11,6 +11,8 @@ export class Wishlist extends Component {
       item: [],
       photos: [],
       genres: [],
+      feedback: [],
+      username: [],
       parent_platforms: [],
       showModal: false,
       flage: false,
@@ -55,6 +57,8 @@ export class Wishlist extends Component {
       photos: item.short_screenshots,
       genres: item.genres,
       parent_platforms: item.parent_platforms,
+      feedback: item.feedback,
+      username: item.username,
     });
     this.showModal();
   };
@@ -102,6 +106,8 @@ export class Wishlist extends Component {
           photos={this.state.photos}
           genres={this.state.genres}
           parent_platforms={this.state.parent_platforms}
+          feedback={this.state.feedback}
+          username={this.state.username}
           flage={this.state.flage}
         />
       </div>

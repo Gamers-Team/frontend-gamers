@@ -1,8 +1,7 @@
-
 import Commits from "./Commits";
 import React, { Component } from "react";
 import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
+import { Button, Card } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaHeart } from "react-icons/all";
@@ -17,6 +16,9 @@ class GamesFromModal extends Component {
 
   state = {
     data: [],
+    feedflage: false,
+    username: "",
+    feedback: "",
   };
 
   AddToList(item) {
@@ -30,10 +32,16 @@ class GamesFromModal extends Component {
     });
   }
 
-
+  updata = (object) => {
+    this.setState({
+      feedflage: true,
+      username: object.username,
+      feedback: object.feedback,
+    });
+  };
+  getfeedback = (feed) => {};
 
   render() {
-    
     const { isAuthenticated } = this.props.auth0;
 
     return (
@@ -57,36 +65,75 @@ class GamesFromModal extends Component {
                 );
               })}
             </Carousel>
-            <p>ABOUT THIS GAME</p>
+            <Card>
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                  Genres : {this.props.genres.map((thing) => thing + " ")}
+                </Card.Text>
+                <Card.Text>
+                  This game released on {this.props.item.released}, The last
+                  update was in {this.props.item.updated}, game plateforms{" "}
+                  {this.props.parent_platforms.map((thing) => thing + " ")}
+                </Card.Text>
 
-            <p>Genres : {this.props.genres.map((thing) => thing + " ")}</p>
-            <p>
-              This game released on {this.props.item.released}, The last update
-              was in {this.props.item.updated}, game plateforms{" "}
-              {this.props.parent_platforms.map((thing) => thing + " ")}
-            </p>
+
+                {this.props.flage && isAuthenticated && (
+                  <Card.Text>
+                    Add To Wishlist <br />
+                    <Button variant="outline-dark" className="FavHeart">
+                      <FaHeart
+                        onClick={() => this.AddToList(this.props.item)}
+                      />
+                    </Button>
+                  </Card.Text>
+                // eslint-disable-next-line react/jsx-no-comment-textnodes
+                )}
+
+
+
+
+                {this.props.flage && (
+                  <>
+                    <Card.Body>
+                      <Card.Text>{this.state.username} </Card.Text>
+                      <Card.Text> {this.state.feedback} </Card.Text>
+                    </Card.Body>
+                    {this.props.username.map((item, idx) => {
+                      return (
+                        <Card
+                          className="editCard"
+                          style={{ width: "18rem" }}
+                          key={idx}
+                        >
+                          <Card.Body>
+                            <Card.Text> {item} </Card.Text>
+                            <Card.Text> {this.props.feedback[idx]} </Card.Text>
+                          </Card.Body>
+                        </Card>
+                      );
+                    })}
+                  </>
+                )}
+              </Card.Body>
+            </Card>
+
 
             {this.props.flage && (
-              isAuthenticated &&
-              <p>
-                Add To Wishlist <br />
-                <Button variant="outline-dark" classNAme="FavHeart" >
-                  <FaHeart  onClick={() => this.AddToList(this.props.item)} />
-                </Button>
-              </p>
+              <Commits
+                updata={this.updata}
+                getfeedback={this.getfeedback}
+                id={this.props.item.id}
+              />
             )}
-            <h2> FeedBack  </h2>
-            <Commits/>
+
+
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={this.props.closeFunc}>
               Close
             </Button>
-            {/* <Button variant="primary" onClick={handleClose}>
-              Save Changes
-            </Button> */}
           </Modal.Footer>
-
         </Modal>
       </div>
     );

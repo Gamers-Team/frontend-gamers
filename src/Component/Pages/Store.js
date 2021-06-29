@@ -6,7 +6,6 @@ import axios from "axios";
 import GamesFromModal from "./GamesFromModal";
 import "./Store.css";
 import SearchBar from "./SearchBar";
-import { keyword } from "chalk";
 import { ImStarFull } from "react-icons/im";
 import { FaDollarSign } from "react-icons/fa";
 import "./SearchBar.css";
@@ -19,6 +18,8 @@ export class Store extends Component {
     item: [],
     photos: [],
     genres: [],
+    feedback: [],
+    username: [],
     parent_platforms: [],
     value: "all",
     keyWord: "",
@@ -38,6 +39,8 @@ export class Store extends Component {
     let serverURL = process.env.REACT_APP_SERVER;
     let keyWord = arr[0];
     let searchBy = arr[1];
+
+    // http://localhost:3001/games?keyword=&searchBy=
 
     let url = `${serverURL}/games?keyword=${keyWord}&searchBy=${searchBy}`;
     axios
@@ -76,9 +79,14 @@ export class Store extends Component {
       photos: item.short_screenshots,
       genres: item.genres,
       parent_platforms: item.parent_platforms,
+      feedback: item.feedback,
+      username: item.username,
+
     });
     this.showModal();
   };
+
+  // add data for DataBase to Cart
 
   addtocart = (item) => {
     let serverURL = process.env.REACT_APP_SERVER;
@@ -112,7 +120,6 @@ export class Store extends Component {
 
     return (
       <div>
-        <h3>Discover Below!</h3>
         <SearchBar searchData={this.searchData} />
 
         <hr></hr>
@@ -170,6 +177,8 @@ export class Store extends Component {
           photos={this.state.photos}
           genres={this.state.genres}
           parent_platforms={this.state.parent_platforms}
+          feedback={this.state.feedback}
+          username={this.state.username}
           flage={this.state.flage}
         />
       </div>
