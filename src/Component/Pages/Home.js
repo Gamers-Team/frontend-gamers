@@ -204,7 +204,7 @@ export class Home extends Component {
 
                     <CardGroup>
                         <Card className="tren" >
-                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.firstCard.background_image} />
+                            <Card.Img variant="top" style={{ height: '10rem' }} src={this.state.firstCard.background_image} />
                             <Card.Body>
                                 <Card.Title className="textCard">{this.state.firstCard.name}</Card.Title>
                                 {/* <Card.Text> 
@@ -212,7 +212,7 @@ export class Home extends Component {
                             </Card.Body>
                         </Card>
                         <Card className="tren">
-                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.secondCard.background_image} />
+                            <Card.Img variant="top" style={{ height: '10rem' }} src={this.state.secondCard.background_image} />
                             <Card.Body >
                                 <Card.Title className="textCard">{this.state.secondCard.name}</Card.Title>
                                 {/* <Card.Text> 
@@ -220,7 +220,7 @@ export class Home extends Component {
                             </Card.Body>
                         </Card>
                         <Card className="tren" >
-                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.thirdCard.background_image} />
+                            <Card.Img variant="top" style={{ height: '10rem' }} src={this.state.thirdCard.background_image} />
                             <Card.Body >
                                 <Card.Title className="textCard">{this.state.thirdCard.name}</Card.Title>
                                 {/* <Card.Text> 
@@ -228,14 +228,14 @@ export class Home extends Component {
                             </Card.Body>
                         </Card>
                         <Card className="tren">
-                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.forthcard.background_image} />
+                            <Card.Img variant="top" style={{ height: '10rem' }} src={this.state.forthcard.background_image} />
                             <Card.Body >
                                 <Card.Title className="textCard">{this.state.forthcard.name}</Card.Title>
                                 {/* <Card.Text> 
                                 </Card.Text> */}
                             </Card.Body>
                         </Card>  <Card className="tren" >
-                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.fifthcard.background_image} />
+                            <Card.Img variant="top" style={{ height: '10rem' }} src={this.state.fifthcard.background_image} />
                             <Card.Body >
                                 <Card.Title className="textCard">{this.state.fifthcard.name}</Card.Title>
                                 {/* <Card.Text> 
@@ -259,7 +259,7 @@ export class Home extends Component {
 
                     <CardGroup>
                         <Card className="tren" >
-                            <Card.Img variant="top" style={{ height: '12rem' }} src='https://repack-games.com/wp-content/uploads/2021/06/Dungeons-Dragons-Dark-Alliance-Repack-Games.jpg' />
+                            <Card.Img variant="top" style={{ height: '10rem' }} src='https://repack-games.com/wp-content/uploads/2021/06/Dungeons-Dragons-Dark-Alliance-Repack-Games.jpg' />
                             <Card.Body>
                                 <Card.Title className="textCard">Dungeons & Dragons: Dark Alliance </Card.Title>
                                 {/* <Card.Text> 
@@ -267,7 +267,7 @@ export class Home extends Component {
                             </Card.Body>
                         </Card>
                         <Card className="tren">
-                            <Card.Img variant="top" style={{ height: '12rem' }} src='https://news.xbox.com/en-us/wp-content/uploads/sites/2/2020/05/ScarletNexus_Inline2.jpg?w=1200' />
+                            <Card.Img variant="top" style={{ height: '10rem' }} src='https://news.xbox.com/en-us/wp-content/uploads/sites/2/2020/05/ScarletNexus_Inline2.jpg?w=1200' />
                             <Card.Body >
                                 <Card.Title className="textCard">Scarlet Nexus</Card.Title>
                                 {/* <Card.Text> 
@@ -275,7 +275,7 @@ export class Home extends Component {
                             </Card.Body>
                         </Card>
                         <Card className="tren" >
-                            <Card.Img variant="top" style={{ height: '12rem' }} src='https://cdn1.epicgames.com/snapdragon/offer/M3_Editions_ExpansionPass-3840x2160-723afb6397a0bb817b6409d8d1478cd2d4432478.jpg?h=270&resize=1&w=480' />
+                            <Card.Img variant="top" style={{ height: '10rem' }} src='https://cdn1.epicgames.com/snapdragon/offer/M3_Editions_ExpansionPass-3840x2160-723afb6397a0bb817b6409d8d1478cd2d4432478.jpg?h=270&resize=1&w=480' />
                             <Card.Body >
                                 <Card.Title className="textCard">Metro Exodus: Complete Edition</Card.Title>
                                 {/* <Card.Text> 
@@ -283,14 +283,14 @@ export class Home extends Component {
                             </Card.Body>
                         </Card>
                         <Card className="tren">
-                            <Card.Img variant="top" style={{ height: '12rem' }} src='https://www.allkeyshop.com/blog/wp-content/uploads/buy-cthulhu-saves-christmas-cd-key-compare-prices.jpg' />
+                            <Card.Img variant="top" style={{ height: '10rem' }} src='https://www.allkeyshop.com/blog/wp-content/uploads/buy-cthulhu-saves-christmas-cd-key-compare-prices.jpg' />
                             <Card.Body >
                                 <Card.Title className="textCard">Cthulhu Saves Christmas</Card.Title>
                                 {/* <Card.Text> 
             </Card.Text> */}
                             </Card.Body>
                         </Card>  <Card className="tren" >
-                            <Card.Img variant="top" style={{ height: '12rem' }} src='https://m.media-amazon.com/images/M/MV5BZjZhMzA1ZjYtMWZjOS00MzdjLWFlM2QtNWVmOWFjMmMwZTRjXkEyXkFqcGdeQXVyMjQxNzM0MjI@._V1_.jpg' />
+                            <Card.Img variant="top" style={{ height: '10rem' }} src='https://m.media-amazon.com/images/M/MV5BZjZhMzA1ZjYtMWZjOS00MzdjLWFlM2QtNWVmOWFjMmMwZTRjXkEyXkFqcGdeQXVyMjQxNzM0MjI@._V1_.jpg' />
                             <Card.Body >
                                 <Card.Title className="textCard">
                                     VERDUN</Card.Title>
@@ -320,7 +320,7 @@ export class Home extends Component {
 
                     <CardGroup>
                         <Card className="tren" >
-                            <Card.Img variant="top" style={{ height: '12rem' }} src='https://ksr-ugc.imgix.net/assets/025/227/398/65f6842fc3a4cd6b7ddec5955346d785_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1558524131&auto=format&frame=1&q=92&s=180613fff9d0a1828999ef7fef96c4e5' />
+                            <Card.Img variant="top" style={{ height: '10rem' }} src='https://ksr-ugc.imgix.net/assets/025/227/398/65f6842fc3a4cd6b7ddec5955346d785_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1558524131&auto=format&frame=1&q=92&s=180613fff9d0a1828999ef7fef96c4e5' />
                             <Card.Body>
                                 <Card.Title className="textCard">Unbound: Worlds Apart
                                 </Card.Title>
@@ -329,7 +329,7 @@ export class Home extends Component {
                             </Card.Body>
                         </Card>
                         <Card className="tren">
-                            <Card.Img variant="top" style={{ height: '12rem' }} src='https://sm.ign.com/t/ign_in/news/t/the-anacru/the-anacrusis-officially-announced-former-valve-writer-chet_7q9y.1200.jpg' />
+                            <Card.Img variant="top" style={{ height: '10rem' }} src='https://sm.ign.com/t/ign_in/news/t/the-anacru/the-anacrusis-officially-announced-former-valve-writer-chet_7q9y.1200.jpg' />
                             <Card.Body >
                                 <Card.Title className="textCard">The Anacrusis
                                 </Card.Title>
@@ -338,7 +338,7 @@ export class Home extends Component {
                             </Card.Body>
                         </Card>
                         <Card className="tren" >
-                            <Card.Img variant="top" style={{ height: '12rem' }} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJog8-31WTwJNoWMpKm9xMlCGKvFmsJPCj_Z_J36Jc0YB2lQ-exmQ1YUlr-Ww4w6KMDRE&usqp=CAU' />
+                            <Card.Img variant="top" style={{ height: '10rem' }} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJog8-31WTwJNoWMpKm9xMlCGKvFmsJPCj_Z_J36Jc0YB2lQ-exmQ1YUlr-Ww4w6KMDRE&usqp=CAU' />
                             <Card.Body >
                                 <Card.Title className="textCard">Swords of Legends Online
                                 </Card.Title>
@@ -347,14 +347,14 @@ export class Home extends Component {
                             </Card.Body>
                         </Card>
                         <Card className="tren">
-                            <Card.Img variant="top" style={{ height: '12rem' }} src='https://www.hrkgame.com/media/games/.thumbnails/header_8ijSc4m.jpg/header_8ijSc4m-800x500.jpg' />
+                            <Card.Img variant="top" style={{ height: '10rem' }} src='https://www.hrkgame.com/media/games/.thumbnails/header_8ijSc4m.jpg/header_8ijSc4m-800x500.jpg' />
                             <Card.Body >
                                 <Card.Title className="textCard">Timberborn</Card.Title>
                                 {/* <Card.Text> 
             </Card.Text> */}
                             </Card.Body>
                         </Card>  <Card className="tren" >
-                            <Card.Img variant="top" style={{ height: '12rem' }} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjMFPweDkjMVzjXRNQVivQAFxc-CWB2uQ2q99S6Bl-67NueW_CvfpPy_7ZNo5crCimSis&usqp=CAU' />
+                            <Card.Img variant="top" style={{ height: '10rem' }} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjMFPweDkjMVzjXRNQVivQAFxc-CWB2uQ2q99S6Bl-67NueW_CvfpPy_7ZNo5crCimSis&usqp=CAU' />
                             <Card.Body >
                                 <Card.Title className="textCard">
                                     Tower of Guns
@@ -373,7 +373,7 @@ export class Home extends Component {
                 <div className='buttonHome'>
 
 
-                    <Button className='linkbutton' href="/store" variant="primary" size="lg" active>
+                    <Button className='linkbutton' href="/store" variant='dark' active>
                         Explore More Games
                     </Button>
                 </div>
