@@ -4,6 +4,7 @@ import { withAuth0 } from "@auth0/auth0-react";
 import LoginButton from "./user/LoginButton";
 import LogoutButton from "./user/LogoutButton";
 import "./NavBar.css";
+import logo from "./logo_2.png";
 
 export class NavBar extends Component {
   render() {
@@ -15,11 +16,7 @@ export class NavBar extends Component {
           <Container>
             <Navbar.Brand href="/">
               {" "}
-              <img
-                className="imagelogo"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTAG43vfSQrohK7kLaGgoPyCRrCZYQPM5T5g&usqp=CAU"
-                alt="logo"
-              />{" "}
+              <img className="imagelogo" src={logo} alt="logo" />{" "}
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
