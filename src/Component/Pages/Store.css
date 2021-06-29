@@ -6,32 +6,39 @@ body{
 }
 
 .editCard {
-  margin:20%
+  margin:20%;
+  border-radius: 4%;
 }
 
-.editCard:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+.editImgCard{
+  border-radius: 9%;
 }
+
+ .editCard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+} 
 .editCard Button {
   border-radius: 12px;
   transition-duration: 0.4s;
+  margin:3%
 }
 
 .editCard Button:hover {
-  background-color: rgb(212, 207, 218);
+  background-color: rgb(16, 12, 22);
   color: white;
 }
 
-.editCard Button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+.editCardTitle{
+  font-family: 'Dela Gothic One', cursive;
+  font-weight: bolder;
+  font-size: 1.5rem;
+
 }
 
 .editCardBody{
   text-align: center;
-  font-family: 'Castoro', serif;
-  
+  /* font-family: 'Castoro', serif; */
+  font-family: 'Dela Gothic One', cursive;  
 }
 
 h3{

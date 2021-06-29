@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import axios from "axios";
 import { withAuth0 } from "@auth0/auth0-react";
 import { Card, Button } from "react-bootstrap";
+import "./Cart.css";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 export class Cart extends Component {
   constructor(props) {
@@ -40,35 +44,54 @@ export class Cart extends Component {
       console.log(result.data);
     });
   };
-  
 
   render() {
     const { isAuthenticated } = this.props.auth0;
 
     return (
-      <div>
+      <div className={"cart_page"}>
         {isAuthenticated && this.getcart()}
-        <h2>{this.state.total} </h2>
+        <div className={"cart_Title"}>
+          <h2> Shopping Cart </h2>
+        </div>
+        <hr />
         {this.state.cartData.map((item, idx) => {
           return (
-            <Card className="editCard" style={{ width: "18rem" }} key={idx}>
-              <Card.Img variant="top" src={item.background_image} />
-              <Card.Body>
-                <Card.Title>{item.name}</Card.Title>
-
-                {Number(item.playtime) ? (
-                  <Card.Text>Price : {item.playtime} $ </Card.Text>
-                ) : (
-                  <Card.Text>Price : 15 $ </Card.Text>
-                )}
-
-                <Button variant="primary" onClick={() => this.deletecart(idx)}>
-                  Remove
-                </Button>
-              </Card.Body>
-            </Card>
+            <>
+              <div className="editDataInCart">
+                <Container>
+                  <Row md={4} className="editrow">
+                    <Col>
+                      <img src={item.background_image} />
+                    </Col>
+                    <Col xs={6} className="containerCart">
+                      {item.name}
+                    </Col>
+                    <Col className="containerCartPrice">
+                      {Number(item.playtime) ? (
+                        <h3>{item.playtime}$ </h3>
+                      ) : (
+                        <h3>15 $</h3>
+                      )}
+                    </Col>
+                    <Col>
+                      <Button
+                        className={"cart_removeButton"}
+                        variant="secondary"
+                        onClick={() => this.deletecart(idx)}
+                        active
+                      >
+                        ✖️
+                      </Button>
+                    </Col>
+                  </Row>
+                </Container>
+              </div>
+            </>
           );
         })}
+        <hr />
+        <p className="Total-cart">TOTAL = {this.state.total}$</p>
       </div>
     );
   }
