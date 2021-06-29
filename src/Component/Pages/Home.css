@@ -35,9 +35,15 @@ body {
 .trending {
   margin-top: 30px;
   margin-bottom: 100px;
+  font-size: x-small;
+ 
+}
+.textCard{
+  font-size:x-small ;
 }
 .trendingword {
-  margin-top: 30px;
+  text-align: center;
+  margin-top: 50px;
   margin-bottom: 30px;
   background-color: rgb(43, 43, 43);
   border: rgb(43, 43, 43);
@@ -111,30 +117,34 @@ body {
   width: 400px;
   height: 300px;
 }
-.buttonHome {
-  margin: auto;
-  width: 50%;
-  font-family: "Times New Roman", Times, serif;
-  color: rgb(95, 95, 95);
-  margin-bottom: 40px;
-  height: 100px;
-}
 
-.badge-info  {
+.buttonHome {
   width: 100%;
-  margin: auto;
-  font-size: 2.5rem;
-  font-family: "Times New Roman", Times, serif;
-  background-color: rgb(65, 65, 65);
-  height: 80px;
-  padding-top: 2%;
-  text-decoration:none ;
+  text-align: center;
+  padding-top: 35px;
+  
 }
-.badge-info:hover{
+.linkbutton{
+  width: 50%;
+  height: 100px;
+  color: rgb(95, 95, 95);
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 40px;
+  padding-top: 30px; 
+}
+.linkbutton:hover{
   background-color: whitesmoke;
   color: rgb(65, 65, 65);
+  opacity: 90%;
  
 }
-.badge {
-  margin: auto;
+
+.Top10{
+  text-align: center;
 }
+
+.carousel3d{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
-import { Card, CardGroup, } from 'react-bootstrap';
+import { Card, CardGroup, Button } from 'react-bootstrap';
 import "./Home.css";
 import Carousel from 'react-3d-carousels';
+
 
 
 
@@ -143,63 +144,13 @@ export class Home extends Component {
                     </div>
 
                 </div>
-                <div>
+                <div className='Top10'>
+
                     <Card className='trendingword'>
-                        <Card.Body className='cardbodyyy'>Trending Games</Card.Body>
+                        <Card.Body className='cardbodyyy'>Top 10 Games</Card.Body>
                     </Card>
                 </div>
-                <div className='trending'>
 
-
-
-
-                    <CardGroup>
-                        <Card className="tren" >
-                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.firstCard.background_image} />
-                            <Card.Body>
-                                <Card.Title>{this.state.firstCard.name}</Card.Title>
-                                {/* <Card.Text> 
-                                </Card.Text> */}
-                            </Card.Body>
-                        </Card>
-                        <Card className="tren">
-                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.secondCard.background_image} />
-                            <Card.Body >
-                                <Card.Title>{this.state.secondCard.name}</Card.Title>
-                                {/* <Card.Text> 
-                                </Card.Text> */}
-                            </Card.Body>
-                        </Card>
-                        <Card className="tren" >
-                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.thirdCard.background_image} />
-                            <Card.Body >
-                                <Card.Title>{this.state.thirdCard.name}</Card.Title>
-                                {/* <Card.Text> 
-                                </Card.Text> */}
-                            </Card.Body>
-                        </Card>
-                        <Card className="tren">
-                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.forthcard.background_image} />
-                            <Card.Body >
-                                <Card.Title className="tren">{this.state.forthcard.name}</Card.Title>
-                                {/* <Card.Text> 
-                                </Card.Text> */}
-                            </Card.Body>
-                        </Card>  <Card className="tren" >
-                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.fifthcard.background_image} />
-                            <Card.Body >
-                                <Card.Title>{this.state.fifthcard.name}</Card.Title>
-                                {/* <Card.Text> 
-                                </Card.Text> */}
-                            </Card.Body>
-                        </Card>
-
-                    </CardGroup>
-
-
-
-
-                </div>
 
                 <div className='carousel3d'>
 
@@ -234,15 +185,6 @@ export class Home extends Component {
                             <img src="https://images7.alphacoders.com/926/thumbbig-926636.webp" alt='first' className='cars' data-interval="1" />
                             <img src="https://images4.alphacoders.com/926/thumbbig-926633.webp" alt='first' className='cars' data-interval="1" />
 
-                            {/* <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a> */}
-
                         </Carousel>
 
 
@@ -250,8 +192,67 @@ export class Home extends Component {
                 </div>
 
                 <div>
+
                     <Card className='trendingword'>
-                        <Card.Body className='cardbodyyy'>Recently released</Card.Body>
+                        <Card.Body className='cardbodyyy'>Trending Games</Card.Body>
+                    </Card>
+                </div>
+                <div className='trending'>
+
+
+
+
+                    <CardGroup>
+                        <Card className="tren" >
+                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.firstCard.background_image} />
+                            <Card.Body>
+                                <Card.Title className="textCard">{this.state.firstCard.name}</Card.Title>
+                                {/* <Card.Text> 
+                                </Card.Text> */}
+                            </Card.Body>
+                        </Card>
+                        <Card className="tren">
+                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.secondCard.background_image} />
+                            <Card.Body >
+                                <Card.Title className="textCard">{this.state.secondCard.name}</Card.Title>
+                                {/* <Card.Text> 
+                                </Card.Text> */}
+                            </Card.Body>
+                        </Card>
+                        <Card className="tren" >
+                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.thirdCard.background_image} />
+                            <Card.Body >
+                                <Card.Title className="textCard">{this.state.thirdCard.name}</Card.Title>
+                                {/* <Card.Text> 
+                                </Card.Text> */}
+                            </Card.Body>
+                        </Card>
+                        <Card className="tren">
+                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.forthcard.background_image} />
+                            <Card.Body >
+                                <Card.Title className="textCard">{this.state.forthcard.name}</Card.Title>
+                                {/* <Card.Text> 
+                                </Card.Text> */}
+                            </Card.Body>
+                        </Card>  <Card className="tren" >
+                            <Card.Img variant="top" style={{ height: '12rem' }} src={this.state.fifthcard.background_image} />
+                            <Card.Body >
+                                <Card.Title className="textCard">{this.state.fifthcard.name}</Card.Title>
+                                {/* <Card.Text> 
+                                </Card.Text> */}
+                            </Card.Body>
+                        </Card>
+
+                    </CardGroup>
+
+
+
+
+                </div>
+
+                <div>
+                    <Card className='trendingword'>
+                        <Card.Body className='cardbodyyy'>Recently Released</Card.Body>
                     </Card>
                 </div>
                 <div className='released'>
@@ -260,7 +261,7 @@ export class Home extends Component {
                         <Card className="tren" >
                             <Card.Img variant="top" style={{ height: '12rem' }} src='https://repack-games.com/wp-content/uploads/2021/06/Dungeons-Dragons-Dark-Alliance-Repack-Games.jpg' />
                             <Card.Body>
-                                <Card.Title>Dungeons & Dragons: Dark Alliance </Card.Title>
+                                <Card.Title className="textCard">Dungeons & Dragons: Dark Alliance </Card.Title>
                                 {/* <Card.Text> 
             </Card.Text> */}
                             </Card.Body>
@@ -268,7 +269,7 @@ export class Home extends Component {
                         <Card className="tren">
                             <Card.Img variant="top" style={{ height: '12rem' }} src='https://news.xbox.com/en-us/wp-content/uploads/sites/2/2020/05/ScarletNexus_Inline2.jpg?w=1200' />
                             <Card.Body >
-                                <Card.Title>Scarlet Nexus</Card.Title>
+                                <Card.Title className="textCard">Scarlet Nexus</Card.Title>
                                 {/* <Card.Text> 
             </Card.Text> */}
                             </Card.Body>
@@ -276,7 +277,7 @@ export class Home extends Component {
                         <Card className="tren" >
                             <Card.Img variant="top" style={{ height: '12rem' }} src='https://cdn1.epicgames.com/snapdragon/offer/M3_Editions_ExpansionPass-3840x2160-723afb6397a0bb817b6409d8d1478cd2d4432478.jpg?h=270&resize=1&w=480' />
                             <Card.Body >
-                                <Card.Title>Metro Exodus: Complete Edition</Card.Title>
+                                <Card.Title className="textCard">Metro Exodus: Complete Edition</Card.Title>
                                 {/* <Card.Text> 
             </Card.Text> */}
                             </Card.Body>
@@ -284,14 +285,14 @@ export class Home extends Component {
                         <Card className="tren">
                             <Card.Img variant="top" style={{ height: '12rem' }} src='https://www.allkeyshop.com/blog/wp-content/uploads/buy-cthulhu-saves-christmas-cd-key-compare-prices.jpg' />
                             <Card.Body >
-                                <Card.Title className="tren">Cthulhu Saves Christmas</Card.Title>
+                                <Card.Title className="textCard">Cthulhu Saves Christmas</Card.Title>
                                 {/* <Card.Text> 
             </Card.Text> */}
                             </Card.Body>
                         </Card>  <Card className="tren" >
                             <Card.Img variant="top" style={{ height: '12rem' }} src='https://m.media-amazon.com/images/M/MV5BZjZhMzA1ZjYtMWZjOS00MzdjLWFlM2QtNWVmOWFjMmMwZTRjXkEyXkFqcGdeQXVyMjQxNzM0MjI@._V1_.jpg' />
                             <Card.Body >
-                                <Card.Title>
+                                <Card.Title className="textCard">
                                     VERDUN</Card.Title>
                                 {/* <Card.Text> 
             </Card.Text> */}
@@ -321,7 +322,7 @@ export class Home extends Component {
                         <Card className="tren" >
                             <Card.Img variant="top" style={{ height: '12rem' }} src='https://ksr-ugc.imgix.net/assets/025/227/398/65f6842fc3a4cd6b7ddec5955346d785_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1558524131&auto=format&frame=1&q=92&s=180613fff9d0a1828999ef7fef96c4e5' />
                             <Card.Body>
-                                <Card.Title>Unbound: Worlds Apart
+                                <Card.Title className="textCard">Unbound: Worlds Apart
                                 </Card.Title>
                                 {/* <Card.Text> 
             </Card.Text> */}
@@ -330,7 +331,7 @@ export class Home extends Component {
                         <Card className="tren">
                             <Card.Img variant="top" style={{ height: '12rem' }} src='https://sm.ign.com/t/ign_in/news/t/the-anacru/the-anacrusis-officially-announced-former-valve-writer-chet_7q9y.1200.jpg' />
                             <Card.Body >
-                                <Card.Title>The Anacrusis
+                                <Card.Title className="textCard">The Anacrusis
                                 </Card.Title>
                                 {/* <Card.Text> 
             </Card.Text> */}
@@ -339,7 +340,7 @@ export class Home extends Component {
                         <Card className="tren" >
                             <Card.Img variant="top" style={{ height: '12rem' }} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJog8-31WTwJNoWMpKm9xMlCGKvFmsJPCj_Z_J36Jc0YB2lQ-exmQ1YUlr-Ww4w6KMDRE&usqp=CAU' />
                             <Card.Body >
-                                <Card.Title>Swords of Legends Online
+                                <Card.Title className="textCard">Swords of Legends Online
                                 </Card.Title>
                                 {/* <Card.Text> 
             </Card.Text> */}
@@ -348,14 +349,14 @@ export class Home extends Component {
                         <Card className="tren">
                             <Card.Img variant="top" style={{ height: '12rem' }} src='https://www.hrkgame.com/media/games/.thumbnails/header_8ijSc4m.jpg/header_8ijSc4m-800x500.jpg' />
                             <Card.Body >
-                                <Card.Title className="tren">Timberborn</Card.Title>
+                                <Card.Title className="textCard">Timberborn</Card.Title>
                                 {/* <Card.Text> 
             </Card.Text> */}
                             </Card.Body>
                         </Card>  <Card className="tren" >
                             <Card.Img variant="top" style={{ height: '12rem' }} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjMFPweDkjMVzjXRNQVivQAFxc-CWB2uQ2q99S6Bl-67NueW_CvfpPy_7ZNo5crCimSis&usqp=CAU' />
                             <Card.Body >
-                                <Card.Title>
+                                <Card.Title className="textCard">
                                     Tower of Guns
                                 </Card.Title>
                                 {/* <Card.Text> 
@@ -371,10 +372,13 @@ export class Home extends Component {
                 </div>
                 <div className='buttonHome'>
 
-                    <a href="/store" class="badge badge-info">Explore more games</a>
 
-
+                    <Button className='linkbutton' href="/store" variant="primary" size="lg" active>
+                        Explore More Games
+                    </Button>
                 </div>
+                
+                
 
 
             </>

@@ -1,7 +1,8 @@
+
 .maincard {
   width: 30px;
   height: 30px;
-  background-color: gray;
+  background-color: #212529;
   margin-left: 10px;
   clip: rect(10px, 20px, 10px, 10px);
   border-radius: 35%;
@@ -11,6 +12,7 @@
   flex-direction: row;
   background-color: #212529;
   margin-bottom: 40px;
+  margin-left: 10px;
 }
 .copy {
   text-align: justify;
@@ -22,7 +24,43 @@
 }
 .copuright {
   border: #212529;
+  width: 60%;
+  background-color: #212529;
+  padding: 15px;
+  
 }
 .bigdiv {
   background-color: #212529;
+
+}
+.smaalDiv{
+ margin-left: 10%;
+ margin-right: 10%;
+}
+
+.anas{
+  color: whitesmoke;
+  font-size: x-large;
+  margin: 3px;
+}
+
+.foterNavbar{
+ position: relative;
+  height: 150px;
+  right: 2%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.Resources{
+  color: whitesmoke;
+  font-size: x-large;
+ margin-right: 2%;
+
+}
+.link {
+  color: whitesmoke;
+  font-size: large;
+  margin-right: 2%;
 }
