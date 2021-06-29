@@ -24,11 +24,11 @@ export class NavBar extends Component {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/store">Store</Nav.Link>
-                <Nav.Link href="/news">News</Nav.Link>
-                <Nav.Link href="/community"> Our Community</Nav.Link>
-                <Nav.Link href="/aboutUs"> About us</Nav.Link>
+                <Nav.Link href="/" style={{ color:'whitesmoke' }}>Home</Nav.Link>
+                <Nav.Link href="/store" style={{ color:'whitesmoke' }}>Store</Nav.Link>
+                <Nav.Link href="/news" style={{ color:'whitesmoke' }}>News</Nav.Link>
+                <Nav.Link href="/community" style={{ color:'whitesmoke' }}> Our Community</Nav.Link>
+                <Nav.Link href="/aboutUs" style={{ color:'whitesmoke' }}> About us</Nav.Link>
               </Nav>
               <Nav className="other_side">
                 {isAuthenticated && (
