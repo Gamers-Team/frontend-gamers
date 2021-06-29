@@ -45,7 +45,9 @@ export class Main extends Component {
             </Route>
 
             <Route path="/wishlist">
+            <CardColumns>
               <Wishlist />
+              </CardColumns>
             </Route>
             
             <Route path="/cart">

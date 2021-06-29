@@ -9,7 +9,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import icon1 from '../assets/violet-among-us-3218514-2691062.png';
 import Carousel from 'react-bootstrap/Carousel';
-import './aboutus.css';
+// import './aboutus.css';
 import news from "../assets/newspaper.png";
 import game from "../assets/game-controller.png";
 import newslast from "../assets/newslast.png"

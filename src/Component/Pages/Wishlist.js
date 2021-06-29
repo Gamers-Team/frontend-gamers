@@ -3,6 +3,7 @@ import { withAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
 import { Card, Button } from "react-bootstrap";
 import GamesFromModal from "./GamesFromModal";
+import './Wishlist.css'
 export class Wishlist extends Component {
   constructor(props) {
     super(props);
@@ -75,7 +76,8 @@ export class Wishlist extends Component {
         {isAuthenticated && this.getFavarite()}
         {this.state.wishListData.map((item, idx) => {
           return (
-            <Card className="editCard" style={{ width: "18rem" }} key={idx}>
+            <div className={"wishlistss"}>
+            <Card className="editCard " style={{ width: "18rem" }} key={idx}>
               <Card.Img variant="top" src={item.background_image} />
               <Card.Body>
                 <Card.Title>{item.name}</Card.Title>
@@ -96,6 +98,7 @@ export class Wishlist extends Component {
                 </Button>
               </Card.Body>
             </Card>
+            </div>
           );
         })}
 
