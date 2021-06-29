@@ -4,7 +4,7 @@ import { withAuth0 } from "@auth0/auth0-react";
 import LoginButton from "./user/LoginButton";
 import LogoutButton from "./user/LogoutButton";
 import "./NavBar.css";
-import logo from "./logo_2.png";
+import logo from "./logo_final ";
 
 export class NavBar extends Component {
   render() {
