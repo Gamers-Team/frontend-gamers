@@ -4,18 +4,16 @@ body{
 }
 .headline{
     position: absolute ;
-    top: 20%;
+    top: 15%;
     left:30%;
     color: white;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-.drop{
-    background-color: grey;
-}
 
-.image{
+
+.heroimage{
     width: 100%;
-    max-height: 150vh;
+    max-height: 550px;
     align-items: center;
 }
 .cont{
@@ -51,11 +49,11 @@ body{
     font-family:cursive;
     
 }
-.discover{
+/* .discover{
     color:black;
     margin-top: 3%;
     
-}
+} */
 .cont img{
     width :35%;
 }
@@ -113,10 +111,10 @@ body{
 
 
 
-.cardBodyStyle{
+/* .cardBodyStyle{
   border-radius: 20%;
    
-}
+} */
 .stylingCard{
     width: 30%;
     margin-bottom: 10%;
@@ -127,28 +125,27 @@ body{
     margin-right: 0%;
 }
 
-.slide{
+.cont9{
     width: 60%;
     height:20%;
     margin-left: 20%;
   
 }
-.slide img{
-    width:30%;
-    border-radius: 60%;
-    display: inline-block;
-    margin-left: 10%;
-}
-.slide h3{
+
+.oneitem h3{
     margin-top: 20%;
     display: inline-block;
     width: 30%;
     margin-left: 10%;
 }
-.oneitem{
+.oneitem img{
     align-items: center;
+    width:25%;
+    border-radius: 60%;
+    display: inline-block;
+    margin-left: 10%;
 }
-.slidediv{
+.theEdit{
     margin-bottom: 5%;
 }
 h2{
@@ -159,23 +156,26 @@ h2{
     margin-bottom: 2%;
 }
 
-.api{
+.namesofApi{
    margin-bottom: 10%;
-   width:100%;
+   width:90%;
 }
 .cont5{
-    font-family:cursive;
-        /* position: absolute; */
-        display: inline-block;
-        z-index:1;
+     font-family:cursive; 
+        
         color:rgba(255, 255, 255, 0.63);
-        text-align: center;
-       width:20%;
-       margin-top: 5%;
+       
+      
+       margin-left: 30%;
+       margin-top: 10%;
        margin-bottom: 5%;
-       margin-left: 5%;
+
+     
       
 }
 .cont5 img{
-    width :35%;
+    width :30%;
+}
+.cont5 h4{
+    justify-content: center;
 }

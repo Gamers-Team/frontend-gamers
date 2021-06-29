@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { withAuth0 } from '@auth0/auth0-react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
@@ -17,6 +17,7 @@ import Button from 'react-bootstrap/Button';
 
 import Form from 'react-bootstrap/Form';
 import axios from 'axios';
+import news from './news.css';
 
 export class News extends Component {
     constructor(props) {
@@ -86,7 +87,7 @@ export class News extends Component {
     render() {
         return (
             <div>
-                <Carousel className='car' fade>
+                <Carousel fade>
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
@@ -95,7 +96,7 @@ export class News extends Component {
                         />
                         <Carousel.Caption>
                             <h3>Shadowrun Trilogy is free to claim during the GOG Summer Sale</h3>
-                            <p>Just as one summer sale starts, another is coming to a close. As the GOG Summer Sale winds down, you may want to take a look at these deals even if you have no intention of spending — there’s a 72-hour Shadowrun Trilogy freebie just for showing up.</p>
+                            <p>Just as one summer sale starts, another is coming to a close.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -107,7 +108,7 @@ export class News extends Component {
 
                         <Carousel.Caption>
                             <h3>CDPR confirms no new Witcher game to be revealed at WitcherCon</h3>
-                            <p>As you may have read, CD Projekt RED is teaming up with Neflix in order to present a special live stream next month, entirely based around the fantasy franchise, The Witcher.</p>
+                            <p>CD Projekt RED is teaming up with Neflix in order to present a special live stream next month, entirely based around the fantasy franchise, The Witcher.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -119,7 +120,7 @@ export class News extends Component {
 
                         <Carousel.Caption>
                             <h3>Extremely Giorgio A. Tsoukalos voice:: Dungeons</h3>
-                            <p>Magic: The Gathering‘s Dungeons and Dragons set is so thematic that the lands have flavor text. That was my main takeaway from attending an advanced preview event of the next set, which is ready to debut in both Magic: Arena and paper Magic next month. Wizards put an extraordinary amount of effort into this one.</p>
+                            <p>Magic: The Gathering‘s Dungeons and Dragons set is so thematic that the lands have flavor text. </p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
@@ -158,10 +159,10 @@ export class News extends Component {
                     </InputGroup>
 
                 </Navbar>
-                <Row xs={1} md={3} className="g-4">
+                <Row xs={1} md={3} className="g-4" className='editingblock'>
                     {this.state.defaultData.map(element => {
                         return <Col>
-                            <Card>
+                            <Card className='adding'>
                                 <Card.Img variant="top" src={element.urlToImage} />
                                 <Card.Body>
                                     <Card.Title>{element.title}</Card.Title>

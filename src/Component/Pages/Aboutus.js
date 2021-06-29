@@ -9,21 +9,23 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import icon1 from '../assets/violet-among-us-3218514-2691062.png';
 import Carousel from 'react-bootstrap/Carousel';
-import './aboutus.css';
+
 import news from "../assets/newspaper.png";
 import game from "../assets/game-controller.png";
-import newslast from "../assets/newslast.png"
+import newslast from "../assets/newslast.png";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './aboutus.css';
 
 
 export class Aboutus extends Component {
     render() {
         return (
             <div>
-                <Image className='image' src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" fluid />
+                <Image className='heroimage' src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" fluid />
                 {/* <img className="logo" src={logo} /> */}
                 {/* <Image className='image' src="https://images.unsplash.com/photo-1594652634010-275456c808d0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" fluid /> */}
                 <div className="headline">
-                    <h2>Meet Our Team Members</h2>
+                    <h2>About us</h2>
                 </div>
 
                 <Container className='cont'>
@@ -61,25 +63,25 @@ export class Aboutus extends Component {
 
                 </Container>
                 <h2> Team Members</h2>
-                <div className="slidediv">
+                <div className="theEdit">
 
-                    <Carousel className='slide'>
+                    <Carousel className='cont9'>
                         <Carousel.Item className='oneitem'>
                             <img
 
                                 src="https://ca.slack-edge.com/TNGRRLUMA-U01SMM4H0AC-4c32b771444c-512"
-                                alt="First slide"
+
                             />
                             <Carousel.Caption>
                                 <h3>Anas AbuGhaliha</h3>
                                 <p>Team Leader</p>
                             </Carousel.Caption>
                         </Carousel.Item>
-                        <Carousel.Item>
+                        <Carousel.Item className='oneitem'>
                             <img
 
                                 src={icon1}
-                                alt="Second slide"
+
                             />
 
                             <Carousel.Caption>
@@ -87,11 +89,11 @@ export class Aboutus extends Component {
                                 <p>Team Member</p>
                             </Carousel.Caption>
                         </Carousel.Item>
-                        <Carousel.Item>
+                        <Carousel.Item className='oneitem'>
                             <img
 
                                 src="https://avatars.githubusercontent.com/u/81154074?v=4"
-                                alt="Third slide"
+
                             />
 
                             <Carousel.Caption>
@@ -99,11 +101,11 @@ export class Aboutus extends Component {
                                 <p>Team Member</p>
                             </Carousel.Caption>
                         </Carousel.Item>
-                        <Carousel.Item>
+                        <Carousel.Item className='oneitem'>
                             <img
 
                                 src="https://avatars.githubusercontent.com/u/81154281?v=4"
-                                alt="Third slide"
+
                             />
 
                             <Carousel.Caption>
@@ -111,11 +113,11 @@ export class Aboutus extends Component {
                                 <p>Team Member</p>
                             </Carousel.Caption>
                         </Carousel.Item>
-                        <Carousel.Item>
+                        <Carousel.Item className='oneitem'>
                             <img
 
                                 src="https://avatars.githubusercontent.com/u/81149478?v=4"
-                                alt="Third slide"
+
                             />
 
                             <Carousel.Caption>
@@ -126,33 +128,43 @@ export class Aboutus extends Component {
                     </Carousel>
                 </div>
                 <h2> APIs Used</h2>
-                <div className="api">
-                    <Container className='cont2'>
-                        <a href="https://newsapi.org/">
-                            <img src={news} />
-                        </a>
+
+                <div className="namesofApi">
+                    <Row>
+
+                        <Col>
+                            <Container className='cont5' >
+                                <a href="https://newsapi.org/">
+                                    <img src={news} />
+                                </a>
+                                <h4>News API</h4>
 
 
 
 
 
+                            </Container>
+                        </Col>
+                        <Col>
+                            <Container className='cont5'>
+                                <a href="https://www.gamerpower.com/api-read">
+                                    <img src={game} />
+                                </a>
+                                <h4>Game power API</h4>
 
-                    </Container>
-                    <Container className='cont2'>
-                        <a href="https://www.gamerpower.com/api-read">
-                            <img src={game} />
-                        </a>
 
+                            </Container>
+                        </Col>
+                        <Col>
+                            <Container className='cont5'>
 
-
-                    </Container>
-                    <Container className='cont5'>
-
-                        <a href="https://gnews.io/">
-                            <img src={newslast} />
-                        </a>
-
-                    </Container>
+                                <a href="https://gnews.io/">
+                                    <img src={newslast} />
+                                </a>
+                                <h4>Gnews API</h4>
+                            </Container>
+                        </Col>
+                    </Row>
                 </div>
 
 
