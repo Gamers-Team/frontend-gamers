@@ -173,10 +173,10 @@ export class News extends Component {
                                     </Card.Text>
                                     <Card.Text>
 
-                                        <Navbar bg="dark" variant="dark">
-                                            <Container>
-                                                <Navbar.Brand href={element.author}> Read More</Navbar.Brand>
-                                            </Container>
+                                        <Navbar className="read" bg="dark" variant="dark">
+
+                                            <Navbar.Brand href={element.url}> Read More</Navbar.Brand>
+
                                         </Navbar>
 
 
