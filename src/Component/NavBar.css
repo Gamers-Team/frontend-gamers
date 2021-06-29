@@ -1,4 +1,8 @@
-.other_side{
-    position: absolute;
-    right: 40px;
+.other_side {
+  position: absolute;
+  right: 40px;
+}
+.imagelogo {
+  width: 35x;
+  height: 35px;
 }
