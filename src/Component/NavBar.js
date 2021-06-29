@@ -8,7 +8,7 @@ import logo from "./logo.png";
 
 export class NavBar extends Component {
   render() {
-    const { user, isAuthenticated } = this.props.auth0;
+    const { user, isAuthenticated, logout } = this.props.auth0;
 
     return (
       <div className="navbarall">
@@ -41,20 +41,33 @@ export class NavBar extends Component {
               </Nav>
               <Nav className="other_side">
                 {isAuthenticated && (
-                  <NavDropdown
-                    title={`${user.name}`}
-                    id="collasible-nav-dropdown"
-                  >
-                    <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
-                    <NavDropdown.Item href="/wishlist">
-                      My Wish List
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">
-                      Something
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="/logout">log out</NavDropdown.Item>
-                  </NavDropdown>
+                  <>
+                    <Nav.Link href="/cart">cart 🛒 </Nav.Link>
+
+                    <NavDropdown
+                      title={`${user.name}`}
+                      id="collasible-nav-dropdown"
+                    >
+                      <NavDropdown.Item href="/profile">
+                        Profile
+                      </NavDropdown.Item>
+                      <NavDropdown.Item href="/wishlist">
+                        My Wish List
+                      </NavDropdown.Item>
+                      <NavDropdown.Item href="#action/3.3">
+                        Something
+                      </NavDropdown.Item>
+                      <NavDropdown.Divider />
+                      <NavDropdown.Item
+                        href="/logout"
+                        onClick={() => {
+                          logout({ returnTo: window.location.origin });
+                        }}
+                      >
+                        log out
+                      </NavDropdown.Item>
+                    </NavDropdown>
+                  </>
                 )}
 
                 {isAuthenticated ? " " : <LoginButton />}
@@ -62,7 +75,7 @@ export class NavBar extends Component {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-      </div>
+      </div >
     );
   }
 }

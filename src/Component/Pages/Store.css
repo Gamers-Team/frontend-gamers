@@ -1,0 +1,51 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+body{
+  background-color: #222222;
+}
+
+.editCard {
+  margin:20%;
+  border-radius: 4%;
+}
+
+.editImgCard{
+  border-radius: 9%;
+}
+
+ .editCard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+} 
+.editCard Button {
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  margin:3%
+}
+
+.editCard Button:hover {
+  background-color: rgb(16, 12, 22);
+  color: white;
+}
+
+.editCardTitle{
+  font-family: 'Dela Gothic One', cursive;
+  font-weight: bolder;
+  font-size: 1.5rem;
+
+}
+
+.editCardBody{
+  text-align: center;
+  /* font-family: 'Castoro', serif; */
+  font-family: 'Dela Gothic One', cursive;  
+}
+
+h3{
+  margin-top: 6%;
+  margin-left: 5%;
+  
+  font-family: 'Castoro', serif;
+  color:rgb(172, 171, 171);
+}
+
