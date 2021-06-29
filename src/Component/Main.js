@@ -10,9 +10,8 @@ import LogoutButton from "./user/LogoutButton";
 import Profile from "./user/Profile";
 import Aboutus from "./Pages/Aboutus";
 import Wishlist from "./Pages/Wishlist";
-import Cart from './Pages/Cart';
+import Cart from "./Pages/Cart";
 import CardColumns from "react-bootstrap/CardColumns";
-
 
 export class Main extends Component {
   render() {
@@ -46,14 +45,13 @@ export class Main extends Component {
             </Route>
 
             <Route path="/wishlist">
+            
               <Wishlist />
             </Route>
-            
-            <Route path="/cart">
-              <Cart/>
-            </Route>
 
-           
+            <Route path="/cart">
+              <Cart />
+            </Route>
           </Switch>
         </Router>
       </div>

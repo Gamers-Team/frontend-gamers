@@ -1,61 +1,71 @@
-/* .editDataInCart{
-    margin:10%;
- 
-}
+body {
+  background-color: #222222;
 
-
-
-
-
-.editDataInCart p, h1{
-width:10%;
-color: blanchedalmond;
-display: inline-block;
-}
-
- */
-
-.cart_removeButton {
-  height: 56px;
-  margin-top: 54px;
-}
-.editDataInCart img {
-  width: 29%;
-  height: 350px;
-  display: inline-block;
-}
-
-.editDataInCart {
-  padding: 42px;
-  border: 1px solid white;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  margin: 20px;
-}
-h2 {
-  flex-grow: 1;
-  color: rgb(255, 255, 255);
-  text-align: center;
-}
-h3 {
-  color: rgb(255, 255, 255);
-  text-align: center;
-  flex-grow: 1;
-}
-
-.cart_page {
-  margin: 31px;
-  padding: 24px;
 }
 
 .cart_Title {
   width: 100%;
   display: flex;
   flex-direction: row;
+  align-content: center;
+  color: whitesmoke;
+  font-family: "Dela Gothic One", cursive;
+  margin-top: 3%;
+  margin-left: 3%;
+}
+
+.editDataInCart img {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.editDataInCart {
+  padding: 42px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-content: center;
-  margin: 35px 56px;
+  margin: 20px;
+  color: whitesmoke;
+  border-color: whitesmoke;
+}
+
+h3 {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  flex-grow: 1;
+}
+
+.cart_removeButton {
+  margin-top: 54px;
+  opacity: 60%;
+  margin-left: 14%;
+  margin-top: 20%;
+}
+
+.containerCart {
+  text-align: center;
+  margin-top: 4.5%;
+  font-size:x-large;
+  font-family: "Dela Gothic One", cursive;
+}
+
+.containerCartPrice {
+  text-align: center;
+  margin-top: 3%;
+}
+
+hr {
+  background-color: whitesmoke;
+  width: 80%;
+  margin-left: 3.1%;
+}
+
+.Total-cart{
+  color:whitesmoke;
+  font-family: "Dela Gothic One", cursive;
+  font-size:x-large;
+  margin-left: 73%;
 }

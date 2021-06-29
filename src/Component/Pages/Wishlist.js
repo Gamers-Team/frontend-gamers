@@ -3,6 +3,10 @@ import { withAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
 import { Card, Button } from "react-bootstrap";
 import GamesFromModal from "./GamesFromModal";
+import "./Wishlist.css";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+
 export class Wishlist extends Component {
   constructor(props) {
     super(props);
@@ -69,31 +73,46 @@ export class Wishlist extends Component {
     return (
       <div>
         {isAuthenticated && this.getFavarite()}
-        {this.state.wishListData.map((item, idx) => {
-          return (
-            <Card className="editCard" style={{ width: "18rem" }} key={idx}>
-              <Card.Img variant="top" src={item.background_image} />
-              <Card.Body>
-                <Card.Title>{item.name}</Card.Title>
-                <Card.Text>Rating: {item.rating} /5</Card.Text>
-                <Card.Text>Ratings Count: {item.ratings_count} </Card.Text>
 
-                {Number(item.playtime) ? (
-                  <Card.Text>Price : {item.playtime} $ </Card.Text>
-                ) : (
-                  <Card.Text>Price : 15 $ </Card.Text>
-                )}
+        <div className="wishlist_title">
+          <h2> My WishList ♥️</h2>
+        </div>
+        <hr className="editHR" />
 
-                <Button variant="primary" onClick={() => this.showGames(item)}>
-                  More...
-                </Button>
-                <Button variant="primary" onClick={() => this.delete(idx)}>
-                  Remove
-                </Button>
-              </Card.Body>
-            </Card>
-          );
-        })}
+        <Row xs={1} md={3} className="g-4" className="editRowCard">
+          {this.state.wishListData.map((item, idx) => {
+            return (
+              <Col>
+                <Card style={{ width: "20rem" }} className="wishlistStyle">
+                  <Card.Body>
+                    <>
+                      <button
+                        className="wishlist_removeButton"
+                        variant="outline-dark"
+                        onClick={() => this.delete(idx)}
+                      >
+                        ✖️
+                      </button>
+                      <div className="flip-card">
+                        <div className="flip-card-inner">
+                          <div className="flip-card-front">
+                            <div className="flip-card-back">
+                              <img
+                                src={item.background_image}
+                                style={{ width: 300, height: 300 }}
+                              />
+                            </div>
+                            <h1 className="editNameGame">{item.name}</h1>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  </Card.Body>
+                </Card>
+              </Col>
+            );
+          })}
+        </Row>
 
         <GamesFromModal
           show={this.state.showModal}
