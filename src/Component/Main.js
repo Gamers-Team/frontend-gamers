@@ -26,35 +26,35 @@ export class Main extends Component {
               <Home />
             </Route>
 
-            <Route path="/store">
+            <Route exact path="/store">
               <CardColumns>
                 <Store />
               </CardColumns>
             </Route>
 
-            <Route path="/news">
+            <Route exact path="/news">
               <News />
             </Route>
 
-            <Route path="/community">
+            <Route exact path="/community">
               <Community />
             </Route>
-            <Route path="/profile">
+            <Route exact path="/profile">
               <Profile />
             </Route>
 
-            <Route path="/aboutUs">
+            <Route exact path="/aboutUs">
               <Aboutus />
             </Route>
 
-            <Route path="/wishlist">
+            <Route exact path="/wishlist">
               <Wishlist />
             </Route>
-            <Route path="/logout">
+            <Route exact path="/logout">
               <Home />
             </Route>
 
-            <Route path="/cart">
+            <Route exact path="/cart">
               <Cart />
             </Route>
           </Switch>
