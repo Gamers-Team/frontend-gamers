@@ -90,7 +90,7 @@ export class Cart extends Component {
           );
         })}
         <hr />
-        <p className="Total-cart">TOTAL = {this.state.total}$</p>
+        <p className="Total-cart" >TOTAL = {this.state.total}$</p>
       </div>
     );
   }
