@@ -69,7 +69,7 @@ class GamesFromModal extends Component {
             </Carousel>
 
             <Card>
-              <div class="vl"></div>
+              <div className="vl"></div>
 
               <Card.Body className="editBodyCard1">
                 <Card.Text>
