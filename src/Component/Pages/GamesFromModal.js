@@ -23,7 +23,7 @@ class GamesFromModal extends Component {
   };
 
   AddToList(item) {
-    let serverURL = process.env.REACT_APP_SERVER;
+    let serverURL = process.env.React_APP_SERVER;
     let url = `${serverURL}/addTowishList`;
     let email = this.props.auth0.user.email;
     item["email"] = email;

@@ -10,7 +10,7 @@ export default class Commits extends Component {
     let feedback=event.target.feedback.value
 
     
-    let serverURL = process.env.REACT_APP_SERVER;
+    let serverURL = process.env.React_APP_SERVER;
     let url = `${serverURL}/addfeedback`;
     let object={
       username:username,
