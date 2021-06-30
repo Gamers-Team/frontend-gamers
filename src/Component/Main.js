@@ -20,44 +20,44 @@ export class Main extends Component {
     return (
       <div className="main_body">
         <Router>
-          <Switch>
-            <Route exact path="/">
-              <Test />
-              <Home />
-            </Route>
+          <Route exact path="/">
+            <Test />
+            <Home />
+          </Route>
 
-            <Route exact path="/store">
-              <CardColumns>
-                <Store />
-              </CardColumns>
-            </Route>
+          <Route exact path="/store">
+            <CardColumns>
+              <Store />
+            </CardColumns>
+          </Route>
 
-            <Route exact path="/news">
-              <News />
-            </Route>
+          <Route exact path="/news">
+            <News />
+          </Route>
 
-            <Route exact path="/community">
-              <Community />
-            </Route>
-            <Route exact path="/profile">
-              <Profile />
-            </Route>
+          <Route exact path="/community">
+            <Community />
+          </Route>
+          <Route exact path="/profile">
+            <Profile />
+          </Route>
 
-            <Route exact path="/aboutUs">
-              <Aboutus />
-            </Route>
+          <Route exact path="/aboutUs" component={Aboutus}></Route>
 
-            <Route exact path="/wishlist">
-              <Wishlist />
-            </Route>
-            <Route exact path="/logout">
-              <Home />
-            </Route>
+          {/* <Route exact path="/aboutUs">
+            <Aboutus />
+          </Route> */}
 
-            <Route exact path="/cart">
-              <Cart />
-            </Route>
-          </Switch>
+          <Route exact path="/wishlist">
+            <Wishlist />
+          </Route>
+          <Route exact path="/logout">
+            <Home />
+          </Route>
+
+          <Route exact path="/cart">
+            <Cart />
+          </Route>
         </Router>
       </div>
     );
