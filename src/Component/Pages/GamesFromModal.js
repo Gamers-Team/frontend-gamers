@@ -76,14 +76,15 @@ class GamesFromModal extends Component {
                   Genres : {this.props.genres.map((thing) => thing + " ")}
                 </Card.Text>
                 <Card.Text>
-                  This game released on {this.props.item.released}, <br />
-                  The last update was in {this.props.item.updated}, <br />
-                  game plateforms: <br />
+                  Description :<br />
+                  This game released on {this.props.item.released}, And its last
+                  update was in {this.props.item.updated}. <br />
+                  This game plateforms is:
                   {this.props.parent_platforms.map((thing) => thing + " ")}
                 </Card.Text>
 
                 {this.props.flage && isAuthenticated && (
-                  <Card.Text>
+                  <Card.Text className="editwishlistText">
                     Add To Wishlist
                     <Button variant="outline-dark" className="FavHeart">
                       <FaHeart
@@ -95,18 +96,25 @@ class GamesFromModal extends Component {
 
                 {this.props.flage && (
                   <>
-                    <Card.Body>
-                      <Card.Text>{this.state.username} </Card.Text>
-                      <Card.Text> {this.state.feedback} </Card.Text>
-                    </Card.Body>
-                    {this.props.username.map((item, idx) => {
-                      return (
-                        <Card.Body key={idx} >
-                          <Card.Text> {item} </Card.Text>
-                          <Card.Text> {this.props.feedback[idx]} </Card.Text>
-                        </Card.Body>
-                      );
-                    })}
+                    <div className="feedBackBox">
+                      <Card.Title>
+                        <p className="feedbackTitle">FeedBacks 📜</p>
+                        <Card.Text className="editfeedbackText">Most Recent FeedBack </Card.Text>
+                        <Card.Text className="editfeedbackText">Name :{this.state.username} </Card.Text>
+                        <Card.Text className="editfeedbackText">FeedBack :  {this.state.feedback} </Card.Text>
+                      </Card.Title>
+
+                      {this.props.username.map((item, idx) => {
+                        return (
+                          <Card.Body key={idx} className="editfeedbackText">
+                            <Card.Text>Name : {item} </Card.Text>
+                            <Card.Text>
+                              FeedBack : {this.props.feedback[idx]}{" "}
+                            </Card.Text>
+                          </Card.Body>
+                        );
+                      })}
+                    </div>
                   </>
                 )}
               </Card.Body>

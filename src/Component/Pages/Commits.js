@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {Form,Button} from 'react-bootstrap' 
 import axios from "axios";
+import"./Commits.css"
 
 export default class Commits extends Component {
 
@@ -29,19 +30,19 @@ export default class Commits extends Component {
       <div>
         <Form onSubmit={this.handleFeedback}>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Name</Form.Label>
-            <Form.Control name={'name'} type="text" placeholder="Name" />
+            <Form.Control className="feedbackName" name={'name'} type="text" placeholder="Please Enter Your name" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Feedback</Form.Label>
-            <Form.Control name={'feedback'}  as="textarea" rows={3} />
+            <Form.Label></Form.Label>
+            <Form.Control name={'feedback'}  as="textarea" rows={3} placeholder="Please Enter Your Feedback" />
             <Button
+            className="addFeedBackButton"
               type="submit"
               size="lg"
-              variant="primary"
+              variant="outline-dark"
               id="button-addon2"
             >
-              Submit 
+              Add FeedBack 
             </Button>
           </Form.Group>
         </Form>

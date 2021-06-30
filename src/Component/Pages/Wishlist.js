@@ -76,11 +76,15 @@ export class Wishlist extends Component {
 
     return (
       <div>
-        {isAuthenticated && this.getFavarite()}
+        <div className="wishlistParg">
+          <img className="wishlistImg" src="https://www.destructoid.com/wp-content/uploads/2021/06/BabylonsFall_Lead_061321-1536x858.jpg" />
+        </div>
 
         
+
+        {isAuthenticated && this.getFavarite()} 
           <p className="editWishlistHeader"> My WishList ♥️</p>
-        
+      
 
         <Row xs={1} md={3} className="g-4" className="editRowCard">
           {this.state.wishListData.map((item, idx) => {
