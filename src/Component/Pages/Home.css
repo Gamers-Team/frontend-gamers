@@ -116,9 +116,9 @@ body {
   height: 200px;
 }
 
-/* .tren:hover {
-  opacity: 90%;
-} */
+.tren:hover {
+  opacity: 80%;
+}
 
 .cars {
   width: 400px;
