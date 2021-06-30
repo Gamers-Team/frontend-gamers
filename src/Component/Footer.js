@@ -13,7 +13,7 @@ export class Footer extends Component {
         {/* <section></section> */}
         <footer class="footer-distributed">
           <div class="footer-left">
-            <img className="LogoFooter" src={logo} />
+            <img alt='g' className="LogoFooter" src={logo} />
 
             <p class="footer-links">
               <a href="./" class="link-1">

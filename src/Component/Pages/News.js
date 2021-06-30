@@ -17,7 +17,6 @@ import Button from 'react-bootstrap/Button';
 
 // import Form from 'react-bootstrap/Form';
 import axios from 'axios';
-import news from './news.css';
 
 export class News extends Component {
     constructor(props) {
@@ -159,7 +158,7 @@ export class News extends Component {
                     </InputGroup>
 
                 </Navbar>
-                <Row xs={1} md={3} className="g-4" className='editingblock'>
+                <Row xs={1} md={3} className="g-4 " >
                     {this.state.defaultData.map(element => {
                         return <Col>
                             <Card className='adding'>
