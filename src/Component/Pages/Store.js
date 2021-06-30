@@ -66,6 +66,7 @@ export class Store extends Component {
     this.setState({ showModal: true });
   };
   showGames = (item) => {
+    
     this.setState({
       item: item,
       photos: item.short_screenshots,
