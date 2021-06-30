@@ -49,7 +49,7 @@ export class Store extends Component {
     console.log(this.state.error);
   };
   getGamesInfo = () => {
-    let serverURL = process.env.React_APP_SERVER;
+    let serverURL = process.env.REACT_APP_SERVER;
     let keyWord = "";
     let searchBy = "search";
     let url = `${serverURL}/games?keyword=${keyWord}&searchBy=${searchBy}`;
@@ -78,7 +78,7 @@ export class Store extends Component {
   };
   // add data for DataBase to Cart
   addtocart = (item, id, id2) => {
-    let serverURL = process.env.React_APP_SERVER;
+    let serverURL = process.env.REACT_APP_SERVER;
     let url = `${serverURL}/addToCart`;
     let email = this.props.auth0.user.email;
     let objectItem = {
