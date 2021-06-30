@@ -47,14 +47,14 @@ class GamesFromModal extends Component {
 
     return (
       <div className="divModal">
-        <Modal  show={this.props.show} onHide={this.props.closeFunc}>
+        <Modal show={this.props.show} onHide={this.props.closeFunc}>
           <Modal.Header closeButton>
-            <Modal.Title>{this.props.item.name}</Modal.Title>
+            <Modal.Title className="modalTitle">
+              {this.props.item.name}
+            </Modal.Title>
           </Modal.Header>
           <Modal.Body className="editModal">
             <Carousel>
-
-
               {this.props.photos.map((item, idx) => {
                 return (
                   <Carousel.Item key={idx}>
@@ -67,56 +67,50 @@ class GamesFromModal extends Component {
                 );
               })}
             </Carousel>
+
             <Card>
+              <div class="vl"></div>
+
               <Card.Body className="editBodyCard1">
-                <Card.Title>Card Title</Card.Title>
                 <Card.Text>
                   Genres : {this.props.genres.map((thing) => thing + " ")}
                 </Card.Text>
                 <Card.Text>
-                  This game released on {this.props.item.released}, The last
-                  update was in {this.props.item.updated}, game plateforms{" "}
+                  This game released on {this.props.item.released}, <br />
+                  The last update was in {this.props.item.updated}, <br />
+                  game plateforms: <br />
                   {this.props.parent_platforms.map((thing) => thing + " ")}
                 </Card.Text>
 
                 {this.props.flage && isAuthenticated && (
                   <Card.Text>
-                    Add To Wishlist <br />
+                    Add To Wishlist
                     <Button variant="outline-dark" className="FavHeart">
                       <FaHeart
                         onClick={() => this.AddToList(this.props.item)}
                       />
                     </Button>
                   </Card.Text>
-                  // eslint-disable-next-line react/jsx-no-comment-textnodes
                 )}
 
                 {this.props.flage && (
                   <>
-                    <Card.Body className= "editBodyCard2">
+                    <Card.Body>
                       <Card.Text>{this.state.username} </Card.Text>
                       <Card.Text> {this.state.feedback} </Card.Text>
                     </Card.Body>
                     {this.props.username.map((item, idx) => {
                       return (
-                        <Card
-                          className="editCard"
-                          style={{ width: "18rem" }}
-                          key={idx}
-                        >
-                          <Card.Body>
-                            <Card.Text> {item} </Card.Text>
-                            <Card.Text> {this.props.feedback[idx]} </Card.Text>
-                          </Card.Body>
-                        </Card>
+                        <Card.Body key={idx} >
+                          <Card.Text> {item} </Card.Text>
+                          <Card.Text> {this.props.feedback[idx]} </Card.Text>
+                        </Card.Body>
                       );
                     })}
                   </>
                 )}
               </Card.Body>
-              
             </Card>
-            
 
             {this.props.flage && (
               <Commits

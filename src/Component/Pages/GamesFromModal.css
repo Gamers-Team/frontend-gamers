@@ -2,21 +2,62 @@
   width: 200%;
   margin: auto;
   position: relative;
-  right:50%;
+  right: 50%;
+}
+
+.modal-body {
+  width: 90%;
+  margin: auto;
+}
+
+.modalTitle{
+  font-family: "Dela Gothic One", cursive;
+  font-size: xx-large;
+
+
+}
+
+.editBodyCard1 {
+  float: left;
+
+  writing-mode: vertical;
+  text-orientation: sideways-right;
+  font-family: "Dela Gothic One", cursive;
+}
+
+.editBodyCard2 {
+  float: right;
+  font-family: "Dela Gothic One", cursive;
+}
+
+/* .vl {
+  border-left: 6px solid green;
+  height: 500px;
+  margin-left: 50%;
+
+  font: bold 12px Sans-Serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: #369;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 0 0 10px 0;
+  line-height: 24px;
+  
+} */
+
+
+.FavHeart{
+  margin-left: 2%;
+  cursor: pointer;
+  transform: scale(1.15);
+}
+
+.FavHeart:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 
- .modal-body{
-   width: 90%;
-   margin: auto;
- }
 
-
- .editBodyCard1{
-   color: slateblue;
-   float: left;
- }
-
- .editBodyCard2{
-   float:right;
- }
