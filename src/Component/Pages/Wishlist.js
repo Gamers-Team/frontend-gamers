@@ -28,7 +28,7 @@ export class Wishlist extends Component {
   getFavarite = () => {
     let email = this.props.auth0.user.email;
     // let url = `http://localhost:3001/wishlist?email=${email}`;
-    let url= `${process.env.React_APP_SERVER}/wishlist?email=${email}`;
+    let url= `${process.env.REACT_APP_SERVER}/wishlist?email=${email}`;
     
     axios.get(url).then((result) => {
       this.setState({
@@ -39,7 +39,7 @@ export class Wishlist extends Component {
 
   delete = (idx) => {
     let email = this.props.auth0.user.email;
-    let serverURL = process.env.React_APP_SERVER;
+    let serverURL = process.env.REACT_APP_SERVER;
     let url = `${serverURL}/remove`;
     let params = {
       email: email,

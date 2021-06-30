@@ -33,7 +33,7 @@ export class Store extends Component {
     //   keyWord:data[0],
     //   searchBy:data[1],
     // })
-    let serverURL = process.env.React_APP_SERVER;
+    let serverURL = process.env.REACT_APP_SERVER;
     let keyWord = arr[0];
     let searchBy = arr[1];
     // http://localhost:3001/games?keyword=&searchBy=
