@@ -1,41 +1,74 @@
 import React, { Component } from "react";
-import { Container, Navbar, NavDropdown, Nav } from "react-bootstrap";
+import logo from "./logo.png";
+
+
+import "./Footer.css";
+
+import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
 
 export class Footer extends Component {
   render() {
     return (
       <div>
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-          <Container>
-            <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav className="me-auto">
-                <Nav.Link href="#features">Features</Nav.Link>
-                <Nav.Link href="#pricing">Pricing</Nav.Link>
-                <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
-                    Something
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">
-                    Separated link
-                  </NavDropdown.Item>
-                </NavDropdown>
-              </Nav>
-              <Nav>
-                <Nav.Link href="#deets">More deets</Nav.Link>
-                <Nav.Link eventKey={2} href="#memes">
-                  Dank memes
-                </Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
+        {/* <section></section> */}
+        <footer class="footer-distributed">
+          <div class="footer-left">
+            <img className="LogoFooter" src={logo} />
+
+            <p class="footer-links">
+              <a href="./" class="link-1">
+                Home
+              </a>
+
+              <a href="/store">Store</a>
+
+              <a href="/news">News</a>
+
+              <a href="/community">Our Community</a>
+
+              <a href="/aboutUs">About us</a>
+            </p>
+
+            <p class="footer-company-name">SpaceGames © 2021</p>
+          </div>
+
+          <div class="footer-center">
+            <div>
+              <i class="fa fa-map-marker"></i>
+              <p>
+                <span></span> Amman, Jordan
+              </p>
+            </div>
+
+            <div>
+              <i class="fa fa-phone"></i>
+              <p>+962 777777777</p>
+            </div>
+
+            <div>
+              <i class="fa fa-envelope"></i>
+              <p>
+                <a href="mailto:support@company.com">spacegames@company.com</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="footer-right">
+            <p class="footer-company-about">
+              <span></span>
+              2021, Gamers, Inc. All rights reserved.Gamers , Gamers Games, the
+              Gamers Games logo, Inc. in the Jordan and elsewhere. Other brands
+              or product names are the trademarks of their respective owners.
+              Non-US transactions through Gamers Games International.
+            </p>
+
+            <div class="footer-icons">
+              <FaFacebook className="anas" />
+              <FaTwitter className="anas" />
+              <FaYoutube className="anas" />
+            </div>
+          </div>
+        </footer>
       </div>
     );
   }

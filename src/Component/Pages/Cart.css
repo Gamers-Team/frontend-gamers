@@ -1,0 +1,78 @@
+body {
+  background-color: #222222;
+}
+
+.cartTitle {
+  color: whitesmoke;
+  margin-top: 4%;
+  margin-left: 8%;
+  font-size: xx-large;
+  font-family: "Dela Gothic One", cursive;
+}
+
+.editDataInCart img {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.editDataInCart {
+  padding: 42px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  margin: 20px;
+  color: whitesmoke;
+  border-color: whitesmoke;
+}
+
+h3 {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  flex-grow: 1;
+}
+
+.cart_removeButton {
+  margin-top: 54px;
+  opacity: 60%;
+  margin-left: 14%;
+  margin-top: 20%;
+}
+
+.containerCart {
+  text-align: center;
+  margin-top: 4.5%;
+  font-size: x-large;
+  font-family: "Dela Gothic One", cursive;
+}
+
+.containerCartPrice {
+  text-align: center;
+  margin-top: 3%;
+}
+
+.cartTitle {
+  color: whitesmoke;
+  margin-top: 4%;
+  width: 84%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: xx-large;
+  font-family: "Dela Gothic One", cursive;
+  border-width: 0 0 2px 0;
+  border-style: solid dotted inset double;
+  border-color: #f00 #0f0 rgb(238, 238, 245) #ff0;
+  padding-bottom: 1%;
+}
+
+.Total-cart {
+  margin-left: 70%;
+  font-family: "Dela Gothic One", cursive;
+  color: whitesmoke;
+  font-size: xx-large;
+
+  
+}
+

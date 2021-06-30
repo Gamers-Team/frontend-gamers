@@ -4,7 +4,7 @@ export class Test extends Component {
     render() {
         return (
             <div>
-                    <h1> this is the test page </h1>
+                   
             </div>
         )
     }

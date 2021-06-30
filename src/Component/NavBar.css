@@ -1,4 +1,30 @@
-.other_side{
-    position: absolute;
-    right: 40px;
+.navbarall {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbarall a:hover {
+  background-color: rgba(24, 24, 24, 0.24);
+}
+
+.other_side {
+  position: absolute;
+  right: 40px;
+}
+.imagelogo {
+  width: 5%;
+  height: 60px;
+  position: absolute;
+  left: 6%;
+  top: 0;
+}
+
+.textlink {
+  position: relative;
+  right: 17%;
+}
+.Dropdown.navbar-dark {
+  background-color: black;
 }

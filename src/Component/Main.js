@@ -2,14 +2,18 @@ import React, { Component } from "react";
 import { withAuth0 } from "@auth0/auth0-react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Test from "./Test";
+
 import "./Main.css";
 import Community from "./Pages/Community";
 import News from "./Pages/News";
 import Store from "./Pages/Store";
-import LogoutButton from "./user/LogoutButton";
-import Profile from './user/Profile';
+import Profile from "./user/Profile";
 import Aboutus from "./Pages/Aboutus";
+import Home from "./Pages/Home";
 
+import Wishlist from "./Pages/Wishlist";
+import Cart from "./Pages/Cart";
+import CardColumns from "react-bootstrap/CardColumns";
 
 export class Main extends Component {
   render() {
@@ -19,10 +23,13 @@ export class Main extends Component {
           <Switch>
             <Route exact path="/">
               <Test />
+              <Home />
             </Route>
 
             <Route path="/store">
-              <Store />
+              <CardColumns>
+                <Store />
+              </CardColumns>
             </Route>
 
             <Route path="/news">
@@ -40,12 +47,16 @@ export class Main extends Component {
               <Aboutus />
             </Route>
 
+            <Route path="/wishlist">
+              <Wishlist />
+            </Route>
             <Route path="/logout">
-              
-              <LogoutButton /> 
-
+              <Home />
             </Route>
 
+            <Route path="/cart">
+              <Cart />
+            </Route>
           </Switch>
         </Router>
       </div>
