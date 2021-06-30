@@ -46,9 +46,7 @@ export class NavBar extends Component {
                         title={`${user.name}`}
                         id="collasible-nav-dropdown"
                         >
-                        <NavDropdown.Item href="/Profile"style={{ color: "gray" }} className='Dropdown'>
-                          Profile
-                        </NavDropdown.Item>
+                        
                         <NavDropdown.Item href="/wishlist"style={{ color: "gray" }} className='Dropdown'>
                           My WishList ♥️
                         </NavDropdown.Item>

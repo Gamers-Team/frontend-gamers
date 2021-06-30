@@ -46,7 +46,7 @@ export class Aboutus extends Component {
           {/* <Button className='discover' variant="danger" href='/'>Discover Now!</Button> */}
         </Container>
         <Container className="cont2">
-          <img src="https://icon-library.com/images/about-us-icon/about-us-icon-15.jpg"alt='a' />
+          <img src="https://icon-library.com/images/about-us-icon/about-us-icon-15.jpg" alt='a' />
           <h5>Who we Are?</h5>
           <p>
             We are a group of passionate developers and tech enthusiasts
