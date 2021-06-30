@@ -3,17 +3,13 @@ body {
 }
 
 .editWishlistHeader {
-  color: whitesmoke;
-  margin-top: 4%;
-  width: 84%;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: xx-large;
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+  font-size: 400%;
   font-family: "Dela Gothic One", cursive;
-  border-width: 0 0 2px 0;
-  border-style: solid dotted inset double;
-  border-color: #f00 #0f0 rgb(238, 238, 245) #ff0;
-  padding-bottom: 1%;
+  position: absolute;
+  top: 46%;
+  left: 40%;
 }
 
 .flip-card {
@@ -80,4 +76,13 @@ body {
 .editHR {
   width: 84%;
   margin: auto;
+}
+
+.wishlistParg {
+  position: relative;
+}
+.wishlistImg {
+  height: 470px;
+  width: 100%;
+  opacity: .4;
 }

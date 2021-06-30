@@ -10,11 +10,9 @@
   margin: auto;
 }
 
-.modalTitle{
+.modalTitle {
   font-family: "Dela Gothic One", cursive;
   font-size: xx-large;
-
-
 }
 
 .editBodyCard1 {
@@ -30,34 +28,28 @@
   font-family: "Dela Gothic One", cursive;
 }
 
-/* .vl {
-  border-left: 6px solid green;
-  height: 500px;
-  margin-left: 50%;
-
-  font: bold 12px Sans-Serif;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  background: #369;
-  color: #fff;
-  padding: 5px 10px;
-  margin: 0 0 10px 0;
-  line-height: 24px;
-  
-} */
-
-
-.FavHeart{
+.FavHeart {
   margin-left: 2%;
   cursor: pointer;
   transform: scale(1.15);
 }
 
-.FavHeart:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+.editwishlistText{
+  border-width: 0 0 2px 0;
+  border-style: solid dotted inset double;
+  border-color: #f00 #0f0 rgb(62, 62, 87) #ff0;
+  padding-bottom: 3%;
 }
 
+.feedbackTitle{
+font-weight: bolder;
+padding: 0;
+margin-left: 2.5%;
+margin-top: 3%;
+}
 
-
+.feedBackBox{
+  border-style:double;
+  border-color:rgb(167, 152, 152);
+  border-style:double;
+}
