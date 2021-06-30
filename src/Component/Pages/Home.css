@@ -1,18 +1,15 @@
 body {
   background-color: rgb(43, 43, 43);
 }
-.main_body {
-  width: 80%;
-  margin: auto;
-}
-.main_body {
-  min-height: 700px;
+.mainBODY {
+  width: 85%;
+  margin-left: 8%;
 }
 
 .heroBox {
   display: flex;
   flex-direction: row-reverse;
-  margin-top: 12%;
+  margin-top: 10%;
 }
 
 .rightBar {
@@ -39,11 +36,10 @@ body {
   margin-top: 30px;
   margin-bottom: 100px;
   font-size: x-small;
-  height: 200px ;
- 
+  height: 200px;
 }
-.textCard{
-  font-size:x-small ;
+.textCard {
+  font-size: large;
 }
 .trendingword {
   text-align: center;
@@ -51,11 +47,10 @@ body {
   margin-bottom: 5%;
   padding-top: 3%;
   color: whitesmoke;
-  background-color:#222222;
-   border: 0;
-   font-size: xx-large;
-   font-family: 'Times New Roman', Times, serif;
-
+  background-color: #222222;
+  border: 0;
+  font-size: xx-large;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .cardbodyyy {
@@ -110,23 +105,20 @@ body {
   padding: 1%;
   color: rgb(255, 255, 255);
   height: 300px;
-   /* border: solid .5px gray; */
-   
+  /* border: solid .5px gray; */
 }
 .comingsoon {
   margin-bottom: 100px;
-  height: 200px ;
+  height: 200px;
 }
 .released {
   margin-bottom: 100px;
-  height: 200px ;
+  height: 200px;
 }
-
 
 .tren:hover {
   opacity: 80%;
 }
-
 
 .cars {
   width: 400px;
@@ -137,21 +129,17 @@ body {
   width: 100%;
   text-align: center;
   margin-top: 150px;
- 
-  
 }
-.linkbutton{
+.linkbutton {
   width: 25%;
   height: 50px;
   color: rgb(95, 95, 95);
   font-family: "Times New Roman", Times, serif;
   margin-bottom: 40px;
-  padding-top: 5px; 
+  padding-top: 5px;
   font-size: 25px;
   background-color: #212529;
   border: 0;
-
- 
 }
 /* .linkbutton:hover{
   background-color: whitesmoke;
@@ -159,10 +147,7 @@ body {
   opacity: 90%;
 } */
 
-
-
-.carousel3d{
+.carousel3d {
   margin-top: 50px;
   margin-bottom: 50px;
 }
-

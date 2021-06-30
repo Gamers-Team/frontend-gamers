@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
-// import logo from "../assets/logo_3.png";
-// import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
-// import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import icon1 from "../assets/violet-among-us-3218514-2691062.png";
@@ -38,12 +35,7 @@ export class Aboutus extends Component {
             Access the best giveaways in gaming from free games to newly updated
             games news to top trendy games and lot more
           </p>
-          {/* <Navbar>
-
-                        <Navbar.Brand className='nav' href='/'> Discover Now!</Navbar.Brand>
-
-                    </Navbar> */}
-          {/* <Button className='discover' variant="danger" href='/'>Discover Now!</Button> */}
+         
         </Container>
         <Container className="cont2">
           <img src="https://icon-library.com/images/about-us-icon/about-us-icon-15.jpg" alt='a' />

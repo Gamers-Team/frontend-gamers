@@ -80,9 +80,10 @@ body {
 
 .wishlistParg {
   position: relative;
+  width:100%;
 }
 .wishlistImg {
   height: 470px;
   width: 100%;
-  opacity: .4;
+  opacity: 0.4;
 }

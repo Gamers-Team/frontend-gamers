@@ -2,8 +2,13 @@
 body {
   background-color: #222222;
 }
+
+.storeBODY{
+  width: 80%;
+  margin-left: 20%;
+}
 .editCard {
-  margin: 20%;
+  margin-top: 50%;
   border-radius: 4%;
 }
 .editImgCard {

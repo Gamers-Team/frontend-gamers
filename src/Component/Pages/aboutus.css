@@ -16,18 +16,14 @@ body {
 }
 .cont {
   font-family: cursive;
-  /* position: absolute; */
+
   display: inline-block;
   z-index: 1;
   color: rgba(255, 255, 255, 0.63);
   text-align: center;
   width: 20%;
-  /* margin-top: 5%; */
-  margin-left: 5%;
-  /* font-weight: bolder; */
-  /* right:10%; */
 
-  /* text-align: center; */
+  margin-left: 5%;
 }
 
 .logo {
@@ -43,24 +39,20 @@ body {
 .cont p {
   font-family: cursive;
 }
-/* .discover{
-    color:black;
-    margin-top: 3%;
-    
-} */
+
 .cont img {
   width: 35%;
 }
 
 .cont2 {
   font-family: cursive;
-  /* position: absolute; */
+
   display: inline-block;
   z-index: 1;
   color: rgba(255, 255, 255, 0.63);
   text-align: center;
   width: 20%;
-  /* margin-top: 3%; */
+
   margin-left: 15%;
 }
 .cont2 img {
@@ -74,7 +66,6 @@ body {
 }
 .cont4 {
   font-family: cursive;
-  /* position: absolute; */
   display: inline-block;
   z-index: 1;
   color: rgba(255, 255, 255, 0.63);
@@ -90,18 +81,7 @@ body {
 .cont4 h5 {
   padding-bottom: 30px;
 }
-/* .cont3{
-    position: absolute;
-    top:160vh;
-    z-index:1;
-    left:40%;
-    /* margin-top: 20%;  */
-/* padding: 10px; */
 
-/* .cardBodyStyle{
-  border-radius: 20%;
-   
-} */
 .stylingCard {
   width: 30%;
   margin-bottom: 10%;
@@ -133,11 +113,13 @@ body {
 .theEdit {
   margin-bottom: 5%;
 }
+
 h2 {
   text-align: center;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.63);
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  margin: 169px;
+  margin-top: 10%;
+  margin-bottom: 2%;
 }
 
 .namesofApi {

@@ -105,7 +105,7 @@ export class Store extends Component {
   render() {
     const { isAuthenticated } = this.props.auth0;
     return (
-      <div>
+      <div className="storeBODY">
         {/* <h3>Discover Below!</h3> */}
         <SearchBar searchData={this.searchData} />
         {/* <hr></hr> */}
@@ -128,7 +128,7 @@ export class Store extends Component {
                     <Card.Text>
                       {" "}
                       {/* <ImStarFull className="editRateStar" /> */}
-                      Rating: {item.rating}/5 :star:
+                      Rating: {item.rating}/5 ⭐
                     </Card.Text>
                     <Card.Text>Ratings Count: {item.ratings_count} </Card.Text>
                     {Number(item.playtime) ? (

@@ -15,8 +15,6 @@
 }
 .copy {
   text-align: justify;
-  /* text-size-adjust: 10px; */
-  /* background-color: blue; */
   color: white;
   background-color: #212529;
   padding-bottom: 40px;
@@ -92,6 +90,9 @@ section {
 .footer-distributed .footer-right {
   display: inline-block;
   vertical-align: top;
+}
+.footer-distributed .footer-center{
+  margin-top: 1.2%;
 }
 
 /* Footer left */
@@ -255,4 +256,9 @@ section {
   .footer-distributed .footer-center i {
     margin-left: 0;
   }
+}
+
+.LogoFooter{
+  margin-top: -3%;
+  display: inline-block;
 }

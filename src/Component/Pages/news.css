@@ -1,22 +1,11 @@
-body {
+body{
   background-color: white;
 }
-.editingblock {
+.editingblock{
   margin-top: 5%;
- 
-  
 }
-
-.adding {
+.adding{
   margin-bottom: 5%;
 }
-.textlong1 {
-  height:  37.5vh;
-}
-.textlong2 {
-  height:  22.5vh;
-}
 
-.textlong3 {
-  height:  45vh;
-}
+

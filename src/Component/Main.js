@@ -2,12 +2,11 @@ import React, { Component } from "react";
 import { withAuth0 } from "@auth0/auth0-react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Test from "./Test";
-// import Home from "./Home";
 
 import "./Main.css";
 import Community from "./Pages/Community";
 import News from "./Pages/News";
-import Store from './Pages/Store';
+import Store from "./Pages/Store";
 import Profile from "./user/Profile";
 import Aboutus from "./Pages/Aboutus";
 import Home from "./Pages/Home";
@@ -17,9 +16,6 @@ import Cart from "./Pages/Cart";
 import CardColumns from "react-bootstrap/CardColumns";
 
 export class Main extends Component {
-
-
-
   render() {
     return (
       <div className="main_body">
@@ -52,8 +48,10 @@ export class Main extends Component {
             </Route>
 
             <Route path="/wishlist">
-
               <Wishlist />
+            </Route>
+            <Route path="/logout">
+              <Home />
             </Route>
 
             <Route path="/cart">

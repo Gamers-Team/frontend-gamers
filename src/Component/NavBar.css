@@ -1,29 +1,13 @@
-
-
-
 .navbarall {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
- 
 }
 
 .navbarall a:hover {
-  
   background-color: rgba(24, 24, 24, 0.24);
- 
-
 }
-
-/* .navbarall a.active {
-  background-color: #212529;
-
-} */
-
-/* .profileDiv{
-  z-index: 1000;
-} */
 
 .other_side {
   position: absolute;
@@ -31,20 +15,16 @@
 }
 .imagelogo {
   width: 5%;
-  height:40px;
+  height: 60px;
   position: absolute;
-  left: 0%;
-  top: 25%;
- 
- 
+  left: 6%;
+  top: 0;
 }
-/* .imagelogo:hover {
-  background-color: black;
-} */
-.textlink{
+
+.textlink {
   position: relative;
-  right: 25%; 
+  right: 17%;
 }
-.Dropdown.navbar-dark{
+.Dropdown.navbar-dark {
   background-color: black;
 }
