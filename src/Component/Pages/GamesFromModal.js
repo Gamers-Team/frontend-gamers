@@ -49,7 +49,9 @@ class GamesFromModal extends Component {
       <div className="divModal">
         <Modal show={this.props.show} onHide={this.props.closeFunc}>
           <Modal.Header closeButton>
-            <Modal.Title className="modalTitle">{this.props.item.name}</Modal.Title>
+            <Modal.Title className="modalTitle">
+              {this.props.item.name}
+            </Modal.Title>
           </Modal.Header>
           <Modal.Body className="editModal">
             <Carousel>
@@ -76,14 +78,13 @@ class GamesFromModal extends Component {
                 <Card.Text>
                   This game released on {this.props.item.released}, <br />
                   The last update was in {this.props.item.updated}, <br />
-                  
                   game plateforms: <br />
                   {this.props.parent_platforms.map((thing) => thing + " ")}
                 </Card.Text>
 
                 {this.props.flage && isAuthenticated && (
                   <Card.Text>
-                    Add To Wishlist 
+                    Add To Wishlist
                     <Button variant="outline-dark" className="FavHeart">
                       <FaHeart
                         onClick={() => this.AddToList(this.props.item)}
@@ -100,16 +101,10 @@ class GamesFromModal extends Component {
                     </Card.Body>
                     {this.props.username.map((item, idx) => {
                       return (
-                        <Card
-                          className="editCard"
-                          style={{ width: "18rem" }}
-                          key={idx}
-                        >
-                          <Card.Body className="editBodyCard2">
-                            <Card.Text> {item} </Card.Text>
-                            <Card.Text> {this.props.feedback[idx]} </Card.Text>
-                          </Card.Body>
-                        </Card>
+                        <Card.Body key={idx} >
+                          <Card.Text> {item} </Card.Text>
+                          <Card.Text> {this.props.feedback[idx]} </Card.Text>
+                        </Card.Body>
                       );
                     })}
                   </>
