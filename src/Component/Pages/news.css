@@ -3,18 +3,20 @@ body {
 }
 .editingblock {
   margin-top: 5%;
+ 
+  
 }
 
 .adding {
   margin-bottom: 5%;
 }
 .textlong1 {
-  height: 200px;
+  height:  37.5vh;
 }
 .textlong2 {
-  height: 80px;
+  height:  22.5vh;
 }
 
 .textlong3 {
-  height: 170px;
+  height:  45vh;
 }
