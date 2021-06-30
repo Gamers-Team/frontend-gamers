@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import GamesFromModal from "./GamesFromModal";
 import "./Wishlist.css";
 import Row from "react-bootstrap/Row";
@@ -39,7 +39,7 @@ export class Wishlist extends Component {
 
   delete = (idx) => {
     let email = this.props.auth0.user.email;
-    let serverURL = process.env.REACT_APP_SERVER;
+    let serverURL = process.env.React_APP_SERVER;
     let url = `${serverURL}/remove`;
     let params = {
       email: email,

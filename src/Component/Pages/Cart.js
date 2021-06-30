@@ -35,7 +35,7 @@ export class Cart extends Component {
 
   deletecart = (idx) => {
     let email = this.props.auth0.user.email;
-    let serverURL = process.env.REACT_APP_SERVER;
+    let serverURL = process.env.React_APP_SERVER;
     let url = `${serverURL}/removecart`;
     let params = {
       email: email,

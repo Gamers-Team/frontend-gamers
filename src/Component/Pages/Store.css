@@ -3,6 +3,16 @@
 body{
   background-color: #222222;
 }
+.main_body {
+  width: 80%;
+  margin-top: 50px;
+}
+
+.storDiv{
+margin-top: 100px;
+position: relative;
+width: 80%;
+}
 
 .editCard {
   margin:20%;

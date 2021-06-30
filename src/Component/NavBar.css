@@ -11,13 +11,15 @@
 
 .navbarall a:hover {
   
-  background-color: black;
+  background-color: rgba(24, 24, 24, 0.24);
+ 
 
 }
-.navbarall a.active {
+
+/* .navbarall a.active {
   background-color: #212529;
 
-}
+} */
 
 /* .profileDiv{
   z-index: 1000;
@@ -28,19 +30,20 @@
   right: 40px;
 }
 .imagelogo {
-  width: 45%;
-  height:65px;
-  position: relative;
-  right: 50%;
+  width: 5%;
+  height:40px;
+  position: absolute;
+  left: 0%;
+  top: 25%;
  
  
 }
-.imagelogo:hover {
+/* .imagelogo:hover {
   background-color: black;
-}
+} */
 .textlink{
   position: relative;
-  right: 70%; 
+  right: 25%; 
 }
 .Dropdown.navbar-dark{
   background-color: black;

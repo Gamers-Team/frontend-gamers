@@ -119,6 +119,7 @@ export class Store extends Component {
 
     return (
       <div>
+      <div className="storDiv">
         {/* <h3>Discover Below!</h3> */}
         <SearchBar searchData={this.searchData} />
 
@@ -130,7 +131,7 @@ export class Store extends Component {
           <div className="editDivCard">
             {this.state.gamesData.map((item, idx) => {
               return (
-                <Card className="editCard" style={{ width: "18rem" }} key={idx}>
+                <Card className="editCard" style={{ width: "15rem" }} key={idx}>
                   <Card.Img className="editImgCard" variant="top" src={item.background_image} />
                   <Card.Body className="editCardBody">
                     <Card.Title  className="editCardTitle">{item.name}</Card.Title>
@@ -182,6 +183,7 @@ export class Store extends Component {
           username={this.state.username}
           flage={this.state.flage}
         />
+      </div>
       </div>
     );
   }
