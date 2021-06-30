@@ -144,11 +144,11 @@ export class Home extends Component {
                     </div>
 
                 </div>
-                <div className='Top10'>
+                <div >
 
-                    <Card className='trendingword'>
-                        <Card.Body className='cardbodyyy'>Top 10 Games</Card.Body>
-                    </Card>
+                    <p className='trendingword'>
+                    Top 10 Games
+                    </p>
                 </div>
 
 
@@ -192,10 +192,9 @@ export class Home extends Component {
                 </div>
 
                 <div>
-
-                    <Card className='trendingword'>
-                        <Card.Body className='cardbodyyy'>Trending Games</Card.Body>
-                    </Card>
+                    <p className='trendingword'>
+                    Trending Games
+                    </p>
                 </div>
                 <div className='trending'>
 
@@ -251,9 +250,9 @@ export class Home extends Component {
                 </div>
 
                 <div>
-                    <Card className='trendingword'>
-                        <Card.Body className='cardbodyyy'>Recently Released</Card.Body>
-                    </Card>
+                <p className='trendingword'>
+                        Recently Released
+                    </p>
                 </div>
                 <div className='released'>
 
@@ -306,11 +305,10 @@ export class Home extends Component {
 
                 </div>
                 <div>
-                    <Card className='trendingword'>
-                        <Card.Body className='cardbodyyy'>Coming Soon
-
-                        </Card.Body>
-                    </Card>
+                   
+                    <p className='trendingword'>
+                    Coming Soon
+                    </p>
                 </div>
                 <div className='comingsoon'>
 

@@ -34,13 +34,14 @@ export class Store extends Component {
     //   searchBy:data[1],
     // })
 
-    let serverURL = process.env.REACT_APP_SERVER;
+    let serverURL = process.env.React_APP_SERVER;
     let keyWord = arr[0];
     let searchBy = arr[1];
 
     // http://localhost:3001/games?keyword=&searchBy=
 
     let url = `${serverURL}/games?keyword=${keyWord}&searchBy=${searchBy}`;
+    
     axios
       .get(url)
       .then((data) => {
@@ -54,7 +55,7 @@ export class Store extends Component {
   };
 
   getGamesInfo = () => {
-    let serverURL = process.env.REACT_APP_SERVER;
+    let serverURL = process.env.React_APP_SERVER;
     let keyWord = "";
     let searchBy = "search";
 
@@ -87,7 +88,7 @@ export class Store extends Component {
   // add data for DataBase to Cart
 
   addtocart = (item) => {
-    let serverURL = process.env.REACT_APP_SERVER;
+    let serverURL = process.env.React_APP_SERVER;
     let url = `${serverURL}/addToCart`;
     let email = this.props.auth0.user.email;
     let objectItem = {

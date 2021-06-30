@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
+// import DropdownButton from 'react-bootstrap/DropdownButton';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -15,7 +15,7 @@ import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 
 
-import Form from 'react-bootstrap/Form';
+// import Form from 'react-bootstrap/Form';
 import axios from 'axios';
 import news from './news.css';
 

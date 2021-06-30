@@ -27,7 +27,9 @@ export class Wishlist extends Component {
 
   getFavarite = () => {
     let email = this.props.auth0.user.email;
-    let url = `http://localhost:3001/wishlist?email=${email}`;
+    // let url = `http://localhost:3001/wishlist?email=${email}`;
+    let url= `${process.env.React_APP_SERVER}/wishlist?email=${email}`;
+    
     axios.get(url).then((result) => {
       this.setState({
         wishListData: result.data,
@@ -103,6 +105,7 @@ export class Wishlist extends Component {
                               <img
                                 src={item.background_image}
                                 style={{ width: 300, height: 300 }}
+                                alt='a'
                               />
                             </div>
                             <h1 className="editNameGame">{item.name}</h1>

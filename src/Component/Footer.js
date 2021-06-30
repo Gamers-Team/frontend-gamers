@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Card } from "react-bootstrap";
+
 import "./Footer.css";
-import { Navbar, Container } from "react-bootstrap";
+
 
 import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
 
@@ -47,7 +47,7 @@ export class Footer extends Component {
         <footer class="footer-distributed">
           <div class="footer-left">
             <h3>
-              Space<span>Games</span>
+              Space Games
             </h3>
 
             <p class="footer-links">

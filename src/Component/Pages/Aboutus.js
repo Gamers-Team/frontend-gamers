@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
-import logo from "../assets/logo_3.png";
-import Navbar from "react-bootstrap/Navbar";
+// import logo from "../assets/logo_3.png";
+// import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
+// import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import icon1 from "../assets/violet-among-us-3218514-2691062.png";
@@ -31,7 +31,7 @@ export class Aboutus extends Component {
         </div>
 
         <Container className="cont">
-          <img src="https://www.gurnee.il.us/images/default-source/icons/icon_data.png?sfvrsn=bb5676b1_0" />
+          <img src="https://www.gurnee.il.us/images/default-source/icons/icon_data.png?sfvrsn=bb5676b1_0" alt='a'/>
           {/* <h2>Space Games</h2> */}
           <h5>What is Space Games all about?</h5>
           <p>
@@ -46,7 +46,7 @@ export class Aboutus extends Component {
           {/* <Button className='discover' variant="danger" href='/'>Discover Now!</Button> */}
         </Container>
         <Container className="cont2">
-          <img src="https://icon-library.com/images/about-us-icon/about-us-icon-15.jpg" />
+          <img src="https://icon-library.com/images/about-us-icon/about-us-icon-15.jpg"alt='a' />
           <h5>Who we Are?</h5>
           <p>
             We are a group of passionate developers and tech enthusiasts
@@ -54,7 +54,7 @@ export class Aboutus extends Component {
           </p>
         </Container>
         <Container className="cont4">
-          <img src="https://www.freepnglogos.com/uploads/email-png/email-messages-icon-16.png" />
+          <img src="https://www.freepnglogos.com/uploads/email-png/email-messages-icon-16.png" alt='a'/>
           <h5>Contact Us</h5>
           <p>
             For any questions or suggestions please don't hesitate to contact us
@@ -71,14 +71,14 @@ export class Aboutus extends Component {
         <div className="theEdit">
           <Carousel className="cont9">
             <Carousel.Item className="oneitem">
-              <img src="https://ca.slack-edge.com/TNGRRLUMA-U01SMM4H0AC-4c32b771444c-512" />
+              <img src="https://ca.slack-edge.com/TNGRRLUMA-U01SMM4H0AC-4c32b771444c-512" alt='a' />
               <Carousel.Caption>
                 <h3>Anas AbuGhaliha</h3>
                 <p>Team Leader</p>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item className="oneitem">
-              <img src={icon1} />
+              <img src={icon1}  alt='a'/>
 
               <Carousel.Caption>
                 <h3>Haya Balasmeh</h3>
@@ -86,7 +86,7 @@ export class Aboutus extends Component {
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item className="oneitem">
-              <img src="https://avatars.githubusercontent.com/u/81154074?v=4" />
+              <img src="https://avatars.githubusercontent.com/u/81154074?v=4" alt='a' />
 
               <Carousel.Caption>
                 <h3>Maram Mustafa</h3>
@@ -94,7 +94,7 @@ export class Aboutus extends Component {
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item className="oneitem">
-              <img src="https://avatars.githubusercontent.com/u/81154281?v=4" />
+              <img src="https://avatars.githubusercontent.com/u/81154281?v=4" alt='a'/>
 
               <Carousel.Caption>
                 <h3>Abdelmajeed Abed</h3>
@@ -102,7 +102,7 @@ export class Aboutus extends Component {
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item className="oneitem">
-              <img src="https://avatars.githubusercontent.com/u/81149478?v=4" />
+              <img src="https://avatars.githubusercontent.com/u/81149478?v=4" alt='a'/>
 
               <Carousel.Caption>
                 <h3>Mohammad Hyajneh</h3>
@@ -118,7 +118,7 @@ export class Aboutus extends Component {
             <Col>
               <Container className="cont5">
                 <a href="https://newsapi.org/">
-                  <img src={news} />
+                  <img src={news} alt='a' />
                 </a>
                 <h4>News API</h4>
               </Container>
@@ -126,7 +126,7 @@ export class Aboutus extends Component {
             <Col>
               <Container className="cont5">
                 <a href="https://www.gamerpower.com/api-read">
-                  <img src={game} />
+                  <img src={game} alt='a' />
                 </a>
                 <h4>Game power API</h4>
               </Container>
@@ -134,7 +134,7 @@ export class Aboutus extends Component {
             <Col>
               <Container className="cont5">
                 <a href="https://gnews.io/">
-                  <img src={newslast} />
+                  <img src={newslast}  alt='a'/>
                 </a>
                 <h4>Gnews API</h4>
               </Container>

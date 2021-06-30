@@ -7,7 +7,7 @@ import Test from "./Test";
 import "./Main.css";
 import Community from "./Pages/Community";
 import News from "./Pages/News";
-import Store from "./Pages/Store";
+import Store from './Pages/Store';
 import Profile from "./user/Profile";
 import Aboutus from "./Pages/Aboutus";
 import Home from "./Pages/Home";

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { withAuth0 } from "@auth0/auth0-react";
-import { Card, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import "./Cart.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -18,7 +18,8 @@ export class Cart extends Component {
 
   getcart = () => {
     let email = this.props.auth0.user.email;
-    let url = `http://localhost:3001/cart?email=${email}`;
+    // let url = `http://localhost:3001/cart?email=${email}`;
+    let url= `${process.env.React_APP_SERVER}/cart?email=${email}`;
     axios.get(url).then((result) => {
       let total = 0;
       result.data.forEach((item) => {
@@ -61,7 +62,7 @@ export class Cart extends Component {
                 <Container>
                   <Row md={4} className="editrow">
                     <Col>
-                      <img src={item.background_image} />
+                      <img src={item.background_image} alt='a' />
                     </Col>
                     <Col xs={6} className="containerCart">
                       {item.name}
