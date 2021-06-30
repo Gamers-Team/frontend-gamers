@@ -118,7 +118,7 @@ export class Aboutus extends Component {
             <Col>
               <Container className="cont5">
                 <a href="https://www.gamerpower.com/api-read">
-                  <img src={game} alt='a' />
+                  <img src={game} alt='a'  className="head"/>
                 </a>
                 <h4>Game power API</h4>
               </Container>

@@ -8,6 +8,10 @@ body {
   color: white;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
+.head{
+  margin-left: 9%;
+  width:35%;
+}
 
 .heroimage {
   width: 100%;
@@ -115,11 +119,11 @@ body {
 }
 
 h2 {
-  text-align: center;
   color: rgba(255, 255, 255, 0.63);
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   margin-top: 10%;
   margin-bottom: 2%;
+  margin-left: 40%;
 }
 
 .namesofApi {
