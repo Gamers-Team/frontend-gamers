@@ -81,18 +81,19 @@ export class News extends Component {
 
 getnews=()=>{
 
-    const url=`https://newsapi.org/v2/everything?domains=gameinformer.com,destructoid.com&q=games%20And%20gaming&sortBy=popularity&apiKey=3c9471ccb160424d9d34f0326977cc88`;
-    axios.get(url).then(news=>{
-        this.setState({
-            defaultData: news.data.articles,
-          });
-    })
-    .catch((err)=>{
-        this.setState({
-            errorMessage: err,
-            error: true,
-          });
-    })
+
+  const url=process.env.REACT_APP_SERVER;
+  axios.get( `${url}/news` ).then(news=>{
+      this.setState({
+          defaultData: news.data
+        });
+  })
+  .catch((err)=>{
+      this.setState({
+          errorMessage: err,
+          error: true,
+        });
+  })
 } 
 
   
