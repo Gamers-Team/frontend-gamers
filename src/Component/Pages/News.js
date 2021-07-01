@@ -28,16 +28,24 @@ export class News extends Component {
     };
   }
   changingPlatform = async (choice) => {
+
+    // http://localhost:3001/platform?&plateform=xbox
+
     this.setState({
       platform: choice,
     });
     console.log(this.state.platform);
-    const url = `https://newsapi.org/v2/everything?domains=gameinformer.com,destructoid.com&q=${this.state.platform}&sortBy=popularity&apiKey=3c9471ccb160424d9d34f0326977cc88`;
+
+    
+    const url =process.env.REACT_APP_SERVER ;
+   
+  
+   
     try {
-      const news = await axios.get(url);
-      console.log(news.data.articles);
+      const news = await axios.get(`${url}/platform?&plateform=${this.state.platform}`);
+      console.log(news.data);
       this.setState({
-        defaultData: news.data.articles,
+        defaultData: news.data,
       });
       console.log(this.state.defaultData);
     } catch (err) {
@@ -46,6 +54,9 @@ export class News extends Component {
         error: true,
       });
     }
+
+
+
     // this.setState({
     //     platform: choice,
     // })
