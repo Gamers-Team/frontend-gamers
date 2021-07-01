@@ -3,8 +3,9 @@ body {
 }
 .headline {
   position: absolute;
-  top: 15%;
-  left: 30%;
+  top: 64%;
+    margin-left: 16%;
+    
   color: white;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
@@ -123,9 +124,10 @@ h2 {
 }
 
 .namesofApi {
-  margin-bottom: 10%;
-  width: 100%;
+  margin: auto;
+  width: 81%;
 }
+
 .cont5 {
   font-family: cursive;
 

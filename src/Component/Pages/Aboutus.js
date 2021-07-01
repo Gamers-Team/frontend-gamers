@@ -23,8 +23,8 @@ export class Aboutus extends Component {
         />
         {/* <img className="logo" src={logo} /> */}
         {/* <Image className='image' src="https://images.unsplash.com/photo-1594652634010-275456c808d0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" fluid /> */}
-        <div className="headline">
-          <h2>About us</h2>
+        <div className="headline" >
+          <h2 > About us</h2>
         </div>
 
         <Container className="cont">
