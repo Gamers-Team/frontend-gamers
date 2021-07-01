@@ -33,14 +33,17 @@ class GamesFromModal extends Component {
     });
   }
 
-  updata = (object) => {
+  
+  getfeedback = (feed) => {
+    console.log(feed);
     this.setState({
       feedflage: true,
-      username: object.username,
-      feedback: object.feedback,
+      username: feed.username,
+      feedback: feed.feedback,
     });
+    
+    console.log('testssss');
   };
-  getfeedback = (feed) => {};
 
   render() {
     const { isAuthenticated } = this.props.auth0;
@@ -122,7 +125,6 @@ class GamesFromModal extends Component {
 
             {this.props.flage && (
               <Commits
-                updata={this.updata}
                 getfeedback={this.getfeedback}
                 id={this.props.item.id}
               />

@@ -17,11 +17,14 @@ export default class Commits extends Component {
       username:username,
       feedback:feedback,
       id:this.props.id,
-    }
+    };
+
     axios.post(url, object).then((result) => {
       // console.log(result.data);
     });
     
+    this.props.getfeedback(object)
+    // this.props.update(object)
 
   }
   render() {
