@@ -61,22 +61,22 @@ export class News extends Component {
   };
   componentDidMount = async () => {
 
-    console.log(this.state.platform);
-    const url = `https://newsapi.org/v2/everything?domains=gameinformer.com,destructoid.com&q=games%20And%20gaming&sortBy=popularity&apiKey=3c9471ccb160424d9d34f0326977cc88`;
-    try {
-      const news = await axios.get(url);
-      console.log(news.data.articles);
-      this.setState({
-        defaultData: news.data.articles,
-      });
-      console.log(this.state.defaultData);
-    } catch (err) {
-      this.setState({
-        errorMessage: err,
-        error: true,
-      });
-    }
-    // this.getnews();
+    // console.log(this.state.platform);
+    // const url = `https://newsapi.org/v2/everything?domains=gameinformer.com,destructoid.com&q=games%20And%20gaming&sortBy=popularity&apiKey=3c9471ccb160424d9d34f0326977cc88`;
+    // try {
+    //   const news = await axios.get(url);
+    //   console.log(news.data.articles);
+    //   this.setState({
+    //     defaultData: news.data.articles,
+    //   });
+    //   console.log(this.state.defaultData);
+    // } catch (err) {
+    //   this.setState({
+    //     errorMessage: err,
+    //     error: true,
+    //   });
+    // }
+    this.getnews();
   };
 
 getnews=()=>{
